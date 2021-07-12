@@ -1245,7 +1245,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f249ff;
+  background: #c15cff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2772,4 +2772,20 @@ body {
   padding: 40px 20px;
   border-radius: 10px;
   background: rgba(255,255,255,0.5);
+}
+.back-to-top {
+  right: 60px;
+  width: 70px;
+  height: 900px;
+  top: -900px;
+  bottom: unset;
+  transition: all 0.5s ease-in-out;
+  background: url("/scroll.png");
+}
+.back-to-top > i {
+  display: none;
+}
+.back-to-top.back-to-top-on {
+  bottom: unset;
+  top: calc(100vh - 900px - 200px);
 }
