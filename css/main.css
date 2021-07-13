@@ -1261,7 +1261,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #26cd54;
+  background: #cfff13;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2765,7 +2765,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/bg.jpg");
+  background: url("https://raw.githubusercontent.com/lcrazyl/image/master/image/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
