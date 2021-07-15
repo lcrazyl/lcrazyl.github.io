@@ -6,7 +6,7 @@
   <link href="http://www.swiftslee.me/atom.xml" rel="self"/>
   
   <link href="http://www.swiftslee.me/"/>
-  <updated>2021-07-15T10:18:48.563Z</updated>
+  <updated>2021-07-14T07:24:40.859Z</updated>
   <id>http://www.swiftslee.me/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>高度塌陷</title>
-    <link href="http://www.swiftslee.me/2021/07/15/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7/"/>
-    <id>http://www.swiftslee.me/2021/07/15/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7/</id>
-    <published>2021-07-15T09:44:45.783Z</published>
-    <updated>2021-07-15T10:18:48.563Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为-0）。"><a href="#原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为-0）。" class="headerlink" title="原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为 0）。"></a>原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为 0）。</h2><p>动图演示：</p><p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B72.gif" alt="高度塌陷演示"></p><span id="more"></span><h1 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h1><ul><li>1、给父元素添加声明overflow：hidden；</li></ul><p>优点：代码少、简单；<br>缺点：1、只适用于高版本游览器，IE6不支持；</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为-0）。&quot;&gt;&lt;a href=&quot;#原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为-0）。&quot; class=&quot;headerlink&quot; title=&quot;原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为 0）。&quot;&gt;&lt;/a&gt;原理：父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为 0）。&lt;/h2&gt;&lt;p&gt;动图演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/lcrazyl/image/master/image/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B72.gif&quot; alt=&quot;高度塌陷演示&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="html&amp;css" scheme="http://www.swiftslee.me/categories/html-css/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>即将</title>
