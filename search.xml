@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML元素分类</title>
-    <url>/2021/07/20/htmlLabel/</url>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
     <content><![CDATA[<p>-</p>
-<h2 id="HTML元素分类："><a href="#HTML元素分类：" class="headerlink" title="HTML元素分类："></a>HTML元素分类：</h2><ul>
+<blockquote>
+<p>天波易谢，寸暑难留。即将开始新的学习。既有激动也有不安，希望家人身体健康，希望和女朋友坚持下去，希望希望…，<del>担心</del>的事终会安好。    </p>
+</blockquote>
+<p><strong>我们加油!</strong></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>安好</title>
+    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
+    <content><![CDATA[<hr>
+<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+</center>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>标签分类</title>
+    <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<p>-</p>
+<h2 id="HTML常用标签分类"><a href="#HTML常用标签分类" class="headerlink" title="HTML常用标签分类"></a>HTML常用标签分类</h2><ul>
 <li><p>行内元素：没有自己的独立空间，和其他非块级元素在一行，宽度会随着内容的变化而变化，因此不能设定宽高。</p>
 </li>
 <li><p>块级元素：大小可以任意调节，独立成行，也就是块级元素是有自己的大小的，可以设定其宽高。</p>
@@ -63,28 +86,8 @@
       <categories>
         <category>HTML</category>
       </categories>
-  </entry>
-  <entry>
-    <title>安好</title>
-    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
-    <content><![CDATA[<hr>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
-</center>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>即将</title>
-    <url>/2021/07/12/Coming%20soon/</url>
-    <content><![CDATA[<p>-</p>
-<blockquote>
-<p>天波易谢，寸暑难留。即将开始新的学习。既有激动也有不安，希望家人身体健康，希望和女朋友坚持下去，希望希望…，<del>担心</del>的事终会安好。    </p>
-</blockquote>
-<p><strong>我们加油!</strong></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
   </entry>
 </search>
