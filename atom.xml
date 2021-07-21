@@ -6,7 +6,7 @@
   <link href="http://www.swiftslee.me/atom.xml" rel="self"/>
   
   <link href="http://www.swiftslee.me/"/>
-  <updated>2021-07-21T08:10:55.873Z</updated>
+  <updated>2021-07-21T08:37:50.074Z</updated>
   <id>http://www.swiftslee.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.swiftslee.me/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/"/>
     <id>http://www.swiftslee.me/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</id>
     <published>2021-07-21T02:15:22.112Z</published>
-    <updated>2021-07-21T08:10:55.873Z</updated>
+    <updated>2021-07-21T08:37:50.074Z</updated>
     
     <content type="html"><![CDATA[<p>-</p><h2 id="HTML常用标签分类"><a href="#HTML常用标签分类" class="headerlink" title="HTML常用标签分类"></a>HTML常用标签分类</h2><ul><li><p>行内元素：没有自己的独立空间，和其他非块级元素在一行，宽度会随着内容的变化而变化，因此不能设定宽高。</p></li><li><p>块级元素：大小可以任意调节，独立成行，也就是块级元素是有自己的大小的，可以设定其宽高。</p></li><li><p>行内块元素：并不独立成行，可改变宽高</p><span id="more"></span><h3 id="常用行内元素："><a href="#常用行内元素：" class="headerlink" title="常用行内元素："></a>常用行内元素：</h3><ul><li><code>a</code></li><li><code>i</code> - 斜体</li><li><code>img</code> - 图片</li><li><code>input</code> - 输入框</li><li><code>label</code> - 表格标签</li><li><code>select</code> - 项目选择</li><li><code>span</code> - 常用内联容器，定义文本内区块</li><li><code>textarea</code> - 多行文本输入框</li></ul></li></ul><h3 id="常用块级元素-："><a href="#常用块级元素-：" class="headerlink" title="常用块级元素 ："></a>常用块级元素 ：</h3><ul><li><p><code>div</code> - 常用块级</p></li><li><p><code>dl</code> - 自定义列表</p></li><li><p><code>fieldset</code> - form控制组</p></li><li><p><code>form</code> - 交互表单</p></li><li><p><code>h1</code>-<code>h6</code>-标题</p></li><li><p><code>hr</code> - 水平分隔线</p></li><li><p><code>menu</code> - 菜单列表</p></li><li><p><code>ol</code> - 有序表单</p></li><li><p><code>p</code> - 段落</p></li><li><p><code>table</code> - 表格</p></li><li><p><code>ul</code> - 无序列表</p></li></ul><h3 id="可变元素："><a href="#可变元素：" class="headerlink" title="可变元素："></a>可变元素：</h3><pre><code> 即可根据上下文决定是块级元素或是行内元素，即设置display属性。</code></pre><h3 id="空元素："><a href="#空元素：" class="headerlink" title="空元素："></a>空元素：</h3><p>​    没有内容的元素即为空元素，例如<code>br</code>、<code>hr</code>、<code>input</code>、<code>img</code>、<code>link</code></p><blockquote><p>从元素本身特点来说，可以分为不可替换元素和替换元素</p></blockquote><h3 id="不可替换元素"><a href="#不可替换元素" class="headerlink" title="不可替换元素"></a>不可替换元素</h3><p>​    HTML大多数元素是不可替换元素，就是直接表现出来的。</p><h3 id="可替换元素："><a href="#可替换元素：" class="headerlink" title="可替换元素："></a>可替换元素：</h3><p>​    根据元素标签和属性，决定显示内容；替换元素一般都有内在尺寸，例如<code>img</code>、<code>input</code>。</p><hr><h3 id="img真的是行内元素吗？"><a href="#img真的是行内元素吗？" class="headerlink" title="img真的是行内元素吗？"></a><code>img</code>真的是行内元素吗？</h3><p>​    既然是行内元素为什么可以设置宽高呢？<strong>其实<code>img</code>属于替换元素，其内有设置宽高属性。</strong></p><p>​    <code>img</code>标签同时具有行内、行内块和块级元素特性。</p>]]></content>
     
@@ -44,53 +44,45 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>即将</title>
     <link href="http://www.swiftslee.me/2021/07/12/%E5%8D%B3%E5%B0%86/"/>
     <id>http://www.swiftslee.me/2021/07/12/%E5%8D%B3%E5%B0%86/</id>
     <published>2021-07-12T02:19:07.785Z</published>
-    <updated>2021-07-21T08:30:06.930Z</updated>
+    <updated>2021-07-21T08:41:57.939Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: 即将</p><p>categories: 随笔</p><p>password: swiftslee</p><p>message: 请输入密码</p><hr><blockquote><p>天波易谢，寸暑难留。即将开始新的学习。既有激动也有不安，希望家人身体健康，希望和女朋友坚持下去，希望希望…，<del>担心</del>的事终会安好。    </p></blockquote><p><strong>我们加油!</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;title: 即将&lt;/p&gt;
-&lt;p&gt;categories: 随笔&lt;/p&gt;
-&lt;p&gt;password: swiftslee&lt;/p&gt;
-&lt;p&gt;message: 请输入密码&lt;/p&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;天波易谢，寸暑难留。即将开始新的学习。既有激动也有不</summary>
-      
+    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19QVbd+XtzPHpwXdO4l/FzK7r1JSmdSt/VwxeAe7oHgodfzWKOemC/9+22Me4XWhGpzosUrbYRtoAzpj+6IcxCM46xNiL5nC9vCKDCnC1ubmuQG3XqUByzF9Q7aY6hU3zTafkbDA4ANg2Jqnn6PwPRZxZXtRktwsPnKybkeHDV5da+hbi1G2TdqWi8p58t7133ArCbC3mTbAUIezFfw7HqLcw/w3dZRxw2dbygJZVIL8/fMCTU0P4k7fNj4Bdy3XzmpXYw7ozaHCW4ulUT2UCzEFbcQup2J2rC0qGXgEkIUqgCK5M2Nh7jKW65ttY+PucS2CQFCTXW3Omkt/WbyEgtPeSnGTNm+8e3vIrSFRrfDIQ7XRO1eE7Aopn9O9PDH6+3UvXP4RUwBm/XxW61KzHW/bjhSzO51bQBNs81sghh+cLmJ8Db63cJ9F2sALuV4VE6YtBUrwT4D0z1e5gB4rmBepPMBMRBuH1dOjei7bxqsqcUz7o4iNVWD2TMi+6mdHRkqaDg4MUAakSRwhyAt7jay1AcgZ/wzjIdybWvYSZh5ogfXU3svtFyM2HOkMACVh8HxNWDQ3Ntwvmr5woSGjGqSDSkP4CbCz3EYLOZO9s0sE+lwF+o3j2/NSeXz1e7pQDUoZXh0Q/575xqQRNRGbcQtuJGwS6T1279OMYJrlc+N5v83dmMPaukl1C/9oQTKUJgcpkf4HKbjLsXnK2RfF4CF2tf5E38J+ikGp1vt0l/6BNLGC615lEClWio3AGNISWVdb7immknkTYYMH/9hM0fS74fD8u1paN4wwT6BQvSy571l2yMwbZtxVam+TysAP7wCZS8u8cB7cMknWKi0QRPu4B9wg/YC8kt7HWNQJ/wDwgGtjjcE+FXdApnssuZyGaUXBcJncAoILsTvYltpdGorgJPxjf2Bvy8nH/SWV7wPmwiVPrlcBU4nhYTMMoIEIg0if6Mhw9QHC1IfL15U5/EoL4j4SFp3rkGmyE0Ryc/MPgIw9cHQ1Uul </div>]]></content>
     
     
+    <summary type="html">The article has been encrypted, please enter your password to view.&lt;br&gt;</summary>
+    
+    
+    
+    <category term="随笔" scheme="http://www.swiftslee.me/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>安好</title>
     <link href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/"/>
     <id>http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/</id>
     <published>2021-07-12T02:00:52.972Z</published>
-    <updated>2021-07-21T08:29:11.118Z</updated>
+    <updated>2021-07-21T08:38:49.996Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: 安好</p><p>categories: 随笔</p><hr><center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。</center>]]></content>
+    <content type="html"><![CDATA[<p>-</p><center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。</center>]]></content>
     
     
       
       
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;title: 安好&lt;/p&gt;
-&lt;p&gt;categories: 随笔&lt;/p&gt;
-&lt;hr&gt;
+    <summary type="html">&lt;p&gt;-&lt;/p&gt;
 &lt;center&gt;媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+
 &lt;/center&gt;</summary>
       
     
     
+    
+    <category term="随笔" scheme="http://www.swiftslee.me/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
