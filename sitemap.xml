@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.swiftslee.me/2021/07/20/htmlLabel/</loc>
+    
+    <lastmod>2021-07-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.swiftslee.me/about/index.html</loc>
     
     <lastmod>2021-07-14</lastmod>
@@ -9,7 +16,7 @@
   </url>
   
   <url>
-    <loc>http://www.swiftslee.me/2021/07/12/%E5%8D%B3%E5%B0%86/</loc>
+    <loc>http://www.swiftslee.me/2021/07/12/Coming%20soon/</loc>
     
     <lastmod>2021-07-14</lastmod>
     
@@ -81,7 +88,7 @@
 
   <url>
     <loc>http://www.swiftslee.me/</loc>
-    <lastmod>2021-07-18</lastmod>
+    <lastmod>2021-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -90,8 +97,15 @@
 
   
   <url>
+    <loc>http://www.swiftslee.me/categories/HTML/</loc>
+    <lastmod>2021-07-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.swiftslee.me/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-07-18</lastmod>
+    <lastmod>2021-07-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

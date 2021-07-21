@@ -6,7 +6,7 @@
   <link href="http://www.swiftslee.me/atom.xml" rel="self"/>
   
   <link href="http://www.swiftslee.me/"/>
-  <updated>2021-07-14T07:24:40.859Z</updated>
+  <updated>2021-07-21T00:33:43.375Z</updated>
   <id>http://www.swiftslee.me/</id>
   
   <author>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTML元素分类</title>
+    <link href="http://www.swiftslee.me/2021/07/20/htmlLabel/"/>
+    <id>http://www.swiftslee.me/2021/07/20/htmlLabel/</id>
+    <published>2021-07-20T13:04:12.164Z</published>
+    <updated>2021-07-21T00:33:43.375Z</updated>
+    
+    <content type="html"><![CDATA[<p>-</p><h2 id="HTML元素分类："><a href="#HTML元素分类：" class="headerlink" title="HTML元素分类："></a>HTML元素分类：</h2><ul><li><p>行内元素：没有自己的独立空间，和其他非块级元素在一行，宽度会随着内容的变化而变化，因此不能设定宽高。</p></li><li><p>块级元素：大小可以任意调节，独立成行，也就是块级元素是有自己的大小的，可以设定其宽高。</p></li><li><p>行内块元素：并不独立成行，可改变宽高</p><span id="more"></span><h3 id="常用行内元素："><a href="#常用行内元素：" class="headerlink" title="常用行内元素："></a>常用行内元素：</h3><ul><li><code>a</code></li><li><code>i</code> - 斜体</li><li><code>img</code> - 图片</li><li><code>input</code> - 输入框</li><li><code>label</code> - 表格标签</li><li><code>select</code> - 项目选择</li><li><code>span</code> - 常用内联容器，定义文本内区块</li><li><code>textarea</code> - 多行文本输入框</li></ul></li></ul><h3 id="常用块级元素-："><a href="#常用块级元素-：" class="headerlink" title="常用块级元素 ："></a>常用块级元素 ：</h3><ul><li><p><code>div</code> - 常用块级</p></li><li><p><code>dl</code> - 自定义列表</p></li><li><p><code>fieldset</code> - form控制组</p></li><li><p><code>form</code> - 交互表单</p></li><li><p><code>h1</code>-<code>h6</code>-标题</p></li><li><p><code>hr</code> - 水平分隔线</p></li><li><p><code>menu</code> - 菜单列表</p></li><li><p><code>ol</code> - 有序表单</p></li><li><p><code>p</code> - 段落</p></li><li><p><code>table</code> - 表格</p></li><li><p><code>ul</code> - 无序列表</p></li></ul><h3 id="可变元素："><a href="#可变元素：" class="headerlink" title="可变元素："></a>可变元素：</h3><pre><code> 即可根据上下文决定是块级元素或是行内元素，即设置display属性。</code></pre><h3 id="空元素："><a href="#空元素：" class="headerlink" title="空元素："></a>空元素：</h3><p>​    没有内容的元素即为空元素，例如<code>br</code>、<code>hr</code>、<code>input</code>、<code>img</code>、<code>link</code></p><blockquote><p>从元素本身特点来说，可以分为不可替换元素和替换元素</p></blockquote><h3 id="不可替换元素"><a href="#不可替换元素" class="headerlink" title="不可替换元素"></a>不可替换元素</h3><p>​    HTML大多数元素是不可替换元素，就是直接表现出来的。</p><h3 id="可替换元素："><a href="#可替换元素：" class="headerlink" title="可替换元素："></a>可替换元素：</h3><p>​    根据元素标签和属性，决定显示内容；替换元素一般都有内在尺寸，例如<code>img</code>、<code>input</code>。</p><hr><h3 id="img真的是行内元素吗？"><a href="#img真的是行内元素吗？" class="headerlink" title="img真的是行内元素吗？"></a><code>img</code>真的是行内元素吗？</h3><p>​    既然是行内元素为什么可以设置宽高呢？<strong>其实<code>img</code>属于替换元素，其内有设置宽高属性。</strong></p><p>​    <code>img</code>标签同时具有行内、行内块和块级元素特性。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;-&lt;/p&gt;
+&lt;h2 id=&quot;HTML元素分类：&quot;&gt;&lt;a href=&quot;#HTML元素分类：&quot; class=&quot;headerlink&quot; title=&quot;HTML元素分类：&quot;&gt;&lt;/a&gt;HTML元素分类：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;行内元素：没有自己的独立空间，和其他非块级元素在一行，宽度会随着内容的变化而变化，因此不能设定宽高。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;块级元素：大小可以任意调节，独立成行，也就是块级元素是有自己的大小的，可以设定其宽高。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;行内块元素：并不独立成行，可改变宽高&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="HTML" scheme="http://www.swiftslee.me/categories/HTML/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>即将</title>
-    <link href="http://www.swiftslee.me/2021/07/12/%E5%8D%B3%E5%B0%86/"/>
-    <id>http://www.swiftslee.me/2021/07/12/%E5%8D%B3%E5%B0%86/</id>
+    <link href="http://www.swiftslee.me/2021/07/12/Coming%20soon/"/>
+    <id>http://www.swiftslee.me/2021/07/12/Coming%20soon/</id>
     <published>2021-07-12T02:19:07.785Z</published>
     <updated>2021-07-14T07:24:40.859Z</updated>
     
