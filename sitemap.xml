@@ -118,14 +118,14 @@
 
   
   <url>
-    <loc>http://www.swiftslee.me/categories/HTML/</loc>
+    <loc>http://www.swiftslee.me/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2021-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.swiftslee.me/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>http://www.swiftslee.me/categories/HTML/</loc>
     <lastmod>2021-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
