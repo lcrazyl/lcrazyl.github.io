@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS浮动</title>
+    <url>/2021/07/22/CSS%E6%B5%AE%E5%8A%A8/</url>
+    <content><![CDATA[<p>-</p>
+<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
+<p>众所周知，块级元素在页面独占一行，即自上而下排列，如下图：</p>
+<span id="more"></span>
+
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/浮动1.png" alt="浮动1" style="zoom: 50%;">
+这就是所谓的标准文档流，因此想脱离文档流，让块级元素在一行显示就必须使用浮动。
+
+<blockquote>
+<p>浮动就是脱离文档流，漂浮在文档流之上。</p>
+</blockquote>
+<h2 id="浮动折叠："><a href="#浮动折叠：" class="headerlink" title="浮动折叠："></a>浮动折叠：</h2><p>由于浮动元素会在其他元素上方，因此会造成遮挡问题，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/浮动2.png" alt="浮动2" style="zoom:50%;"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.div1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: gold;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>div1</code>设置左浮动后，<code>div2</code>移到上方。原因是<code>div1</code>脱离文档流，因此位置变为空，<code>div2</code>就会移到上方。</p>
+<h6 id="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"><a href="#由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？" class="headerlink" title="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"></a>由此可知，浮动会导致重叠，那下方<code>div2</code>浮动后会不会在<code>div1</code>的位置呢？</h6><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/浮动3.png" alt="浮动3" style="zoom:50%;">
+答案是不会，`div3`会在`div2`的位置，而`div2`位置则不会变。
+
+<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2</code>不会浮动。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"></a><font color="red" size="5">浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。</font></h3><h2 id="高度塌陷："><a href="#高度塌陷：" class="headerlink" title="高度塌陷："></a>高度塌陷：</h2><p>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</p>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/高度塌陷.gif" alt="高度塌陷" style="zoom:50%;">
+
+<h2 id="解决高度塌陷常用方法："><a href="#解决高度塌陷常用方法：" class="headerlink" title="解决高度塌陷常用方法："></a>解决高度塌陷常用方法：</h2><ul>
+<li><ol>
+<li>容器元素添加<code>overflow：hidden</code><br><br>缺点：兼容性问题；不能和positio共存，超出的尺寸会被隐藏</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<br><br>缺点：需要添加多余的空标签并添加属性。<br></li>
+</ol>
+</li>
+<li><ol start="3">
+<li>父元素添加浮动<br><br>缺点：产生新的浮动。</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>最佳方法：添加<code>::after</code><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">		<span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">clear</span>: both;</span><br><span class="line"> 		<span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">overflow</span>: hidden;</span><br><span class="line">     <span class="comment">/*visibility:hidden;为了去隐藏content中的内容 */</span></span><br><span class="line">		<span class="attribute">visibility</span>: hidden;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+63GZqWxCBkykwnVyhA7ZJocx6jhnffJXLeEU32sz6Dt0kDxjIWF7Ne6oM0cTEPGj3Ef/YH4eUmz7/DyxdUDTYGUt3GkIPqXBAw8ybn43PUfIKRfvu7c1/yUbhl21jQIRDKLGVQ0r42IUMTydiS5nSkSvkCp+lHMZVUIhB0RSYwzs2+coOr20JNCSzysc5Kd3r/yMn8x129GMQFBtoG8IptE4HPFOrPLlvW/jojhxtXSW/lqIaX/+P83cm8OU6xQg2HjTyj+7BHJV/lG3mJI4OHZq2S6u33FOVVW5Otcdo+GXu3oyssLz0m5cCD3FsDh1c3e5F+Sq2M1laAXEWcbXxqAXx1rajzfR3g3MSmgFw2pLa8Y0JqSUJC1rX1GmAfrB625FtL8N7vE3+9l3v0foqF7A01nh9nSpxYRgg7SMi85fPkVKvZMj+7pSmKHxBSMizDpxfVKWbJwczXtpvNXl1eFUbK4Qy+2V1eCZRxF1uHp9fnUkRPUU7uXB8JRbH3TSUMVlZNxz6sCS9yc00lgyMwv67i3bcoOgz2zUTaxBvj20hgMF98XzcZero35+MSLBbdU5HlLiSyXgSN6P0+279gdRgLntYJ0Kjn4Svw6R8rG6ObimQuzUCQ3fDar9hcwM6BRR15pYiuXM0NLIc44DeMGn9g+lJ1/Pd7Xlu9v2bH1+Fio5AntqqxpWYmms5hiNHmQYZ/dymhTDrMrRgPLePTgXEGQvujXIYnzXCimAKERC0+wj8n5sBMnAaSJzNi8E6SNJFe/fRUBrXy8gsf+KL5L97bghXto/InQfOjdmblCxjE28tCo5WStCoMvLECDd+EzihCOrQywEBZZR7KQ0gR2MLuE1A+b7oB72rb+Ufr6zZJcT94AhSJ2dq+KwLRgGciY7yaiJZTtC9AAIxjD57qQB68ResERmR9Bf8KurE5OnJD4xLLJKGhUcSS9Zm8qkahYa03pWPDBxUesQWwbXI9n+y7Y5iBvy+R6m6PmZMvJ9jbfgUaU/r </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
     <title>标签分类</title>
     <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<p>-</p>
@@ -66,64 +124,6 @@
       <tags>
         <tag>HTML</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>CSS浮动</title>
-    <url>/2021/07/22/CSS%E6%B5%AE%E5%8A%A8/</url>
-    <content><![CDATA[<p>-</p>
-<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
-<p>众所周知，块级元素在页面独占一行，即自上而下排列，如下图：</p>
-<span id="more"></span>
-
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/浮动1.png" alt="浮动1" style="zoom: 50%;">
-这就是所谓的标准文档流，因此想脱离文档流，让块级元素在一行显示就必须使用浮动。
-
-<blockquote>
-<p>浮动就是脱离文档流，漂浮在文档流之上。</p>
-</blockquote>
-<h2 id="浮动折叠："><a href="#浮动折叠：" class="headerlink" title="浮动折叠："></a>浮动折叠：</h2><p>由于浮动元素会在其他元素上方，因此会造成遮挡问题，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/浮动2.png" alt="浮动2" style="zoom:50%;"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.div1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: gold;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>div1</code>设置左浮动后，<code>div2</code>移到上方。原因是<code>div1</code>脱离文档流，因此位置变为空，<code>div2</code>就会移到上方。</p>
-<h6 id="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"><a href="#由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？" class="headerlink" title="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"></a>由此可知，浮动会导致重叠，那下方<code>div2</code>浮动后会不会在<code>div1</code>的位置呢？</h6><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/浮动3.png" alt="浮动3" style="zoom:50%;">
-答案是不会，`div3`会在`div2`的位置，而`div2`位置则不会变。
-
-<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2</code>不会浮动。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"></a><font color="red" size="5">浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。</font></h3><h2 id="高度塌陷："><a href="#高度塌陷：" class="headerlink" title="高度塌陷："></a>高度塌陷：</h2><p>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</p>
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/高度塌陷.gif" alt="高度塌陷" style="zoom:50%;">
-
-<h2 id="解决高度塌陷常用方法："><a href="#解决高度塌陷常用方法：" class="headerlink" title="解决高度塌陷常用方法："></a>解决高度塌陷常用方法：</h2><ul>
-<li><ol>
-<li>容器元素添加<code>overflow：hidden</code><br><br>缺点：兼容性问题；不能和positio共存，超出的尺寸会被隐藏</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<br><br>缺点：需要添加多余的空标签并添加属性。<br></li>
-</ol>
-</li>
-<li><ol start="3">
-<li>父元素添加浮动<br><br>缺点：产生新的浮动。</li>
-</ol>
-</li>
-<li><ol start="4">
-<li>最佳方法：添加<code>::after</code><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">		<span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">clear</span>: both;</span><br><span class="line"> 		<span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">overflow</span>: hidden;</span><br><span class="line">     <span class="comment">/*visibility:hidden;为了去隐藏content中的内容 */</span></span><br><span class="line">		<span class="attribute">visibility</span>: hidden;</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+spiFZUCX6YPHYH0G0QinNPQhMF0ni7rz6Ozf5/uApGtRhBzaX5/04LgWbQNGSU6xEUD4sheDAcRFIO+FAfXE1tFu56hotsla0qg0QVfzCA6NhcVsiKoyuFUg7sLn26VsLkNoxtW4lC2tAmctNBKTRJvISLeMXbm1b6lfdINqicKnAN/pEjAArIJSJNlk657pWJOautXpwEa6rHVl8+4hs46J85Nnwn1Zmzu/2uuRIOwpITMhoSOgMtaLRDx7vWpCUaCyO7DNnAgQjkTeZ+QyKWCgUizU/O2BtmHPQ3jE6vyMvBITNQ3ILfvwD59D2h4fcETE8VW6lc7x1kShUawVD4OBOQ3srZVoSzJ9qquVgKuXcZuybY3e7686lIa/UQiBCIl9OcyhkI685LsQR0IalnUvTLHUE+gDU4GptJG9QVncj4s10USDjs4jPA073a7O9qUTH1KWpoKCCqtvPF9LHkrEnOdVFuz/6YQ5XMY+OvCobol/Fiw4rT+vHhCLHI6K4DLlUJZJtnE1JDro6j0NhvYFH8cthLyE4ftRu7H/gIKR+jAfGgE+qxbuDqu2T0xejxLiiE8JDvyf5eyEnXkZHyHlTITf1h9HfDePwQ7TDRAiIkb/VLF8ufLjgAvR4PR74Q1RJFWPEiCEbN8kjSzNJKZyN4uUgfgaSrMry7FW0OZXuXXj7cyPKUTzfqAnm1ELX9eIy+RTwSAMumI1MyBvKC4K2lIYAdOchp2bMJwfafbdHfJ1i1RSUCvCD95KYSSnh2dn2UlAkT23qzQXVlpx0unQYqCriXvNVs0+mWWAL/YQmcQY1vihcFP6duPLXFspLGMfG+zh/sBFE4M4QncnI3WFv6nMVtTnc8HnfFfPJk2prNCM8Rm1vjW2qIyiThfeNsXGDFZ6W22fiJb3jy5x/brbYFpLXVy0t0S63Yur0clu+snMc2oxQIvRDvLx7bOA5tn18tDFCYuTtCKT2a9MisQcyH4GvV1/j9r0s904dlf4HcfSz8htG </div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
   </entry>
   <entry>
     <title>安好</title>
