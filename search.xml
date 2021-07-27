@@ -1,73 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>标签分类</title>
-    <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[<p>-</p>
-<h2 id="HTML常用标签分类"><a href="#HTML常用标签分类" class="headerlink" title="HTML常用标签分类"></a>HTML常用标签分类</h2><ul>
-<li><p>行内元素：没有自己的独立空间，和其他非块级元素在一行，宽度会随着内容的变化而变化，因此不能设定宽高。</p>
-</li>
-<li><p>块级元素：大小可以任意调节，独立成行，也就是块级元素是有自己的大小的，可以设定其宽高。</p>
-</li>
-<li><p>行内块元素：并不独立成行，可改变宽高</p>
-<span id="more"></span>
-
-<h3 id="常用行内元素："><a href="#常用行内元素：" class="headerlink" title="常用行内元素："></a>常用行内元素：</h3><ul>
-<li><code>a</code></li>
-<li><code>i</code> - 斜体</li>
-<li><code>img</code> - 图片</li>
-<li><code>input</code> - 输入框</li>
-<li><code>label</code> - 表格标签</li>
-<li><code>select</code> - 项目选择</li>
-<li><code>span</code> - 常用内联容器，定义文本内区块</li>
-<li><code>textarea</code> - 多行文本输入框</li>
-</ul>
-</li>
-</ul>
-<h3 id="常用块级元素-："><a href="#常用块级元素-：" class="headerlink" title="常用块级元素 ："></a>常用块级元素 ：</h3><ul>
-<li><p><code>div</code> - 常用块级</p>
-</li>
-<li><p><code>dl</code> - 自定义列表</p>
-</li>
-<li><p><code>fieldset</code> - form控制组</p>
-</li>
-<li><p><code>form</code> - 交互表单</p>
-</li>
-<li><p><code>h1</code>-<code>h6</code>-标题</p>
-</li>
-<li><p><code>hr</code> - 水平分隔线</p>
-</li>
-<li><p><code>menu</code> - 菜单列表</p>
-</li>
-<li><p><code>ol</code> - 有序表单</p>
-</li>
-<li><p><code>p</code> - 段落</p>
-</li>
-<li><p><code>table</code> - 表格</p>
-</li>
-<li><p><code>ul</code> - 无序列表</p>
-</li>
-</ul>
-<h3 id="可变元素："><a href="#可变元素：" class="headerlink" title="可变元素："></a>可变元素：</h3><pre><code> 即可根据上下文决定是块级元素或是行内元素，即设置display属性。
-</code></pre>
-<h3 id="空元素："><a href="#空元素：" class="headerlink" title="空元素："></a>空元素：</h3><p>​    没有内容的元素即为空元素，例如<code>br</code>、<code>hr</code>、<code>input</code>、<code>img</code>、<code>link</code></p>
-<blockquote>
-<p>从元素本身特点来说，可以分为不可替换元素和替换元素</p>
-</blockquote>
-<h3 id="不可替换元素"><a href="#不可替换元素" class="headerlink" title="不可替换元素"></a>不可替换元素</h3><p>​    HTML大多数元素是不可替换元素，就是直接表现出来的。</p>
-<h3 id="可替换元素："><a href="#可替换元素：" class="headerlink" title="可替换元素："></a>可替换元素：</h3><p>​    根据元素标签和属性，决定显示内容；替换元素一般都有内在尺寸，例如<code>img</code>、<code>input</code>。</p>
-<hr>
-<h3 id="img真的是行内元素吗？"><a href="#img真的是行内元素吗？" class="headerlink" title="img真的是行内元素吗？"></a><code>img</code>真的是行内元素吗？</h3><p>​    既然是行内元素为什么可以设置宽高呢？<strong>其实<code>img</code>属于替换元素，其内有设置宽高属性。</strong></p>
-<p>​    <code>img</code>标签同时具有行内、行内块和块级元素特性。</p>
-]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS浮动</title>
     <url>/2021/07/22/CSS%E6%B5%AE%E5%8A%A8/</url>
     <content><![CDATA[<p>-</p>
@@ -120,7 +53,7 @@
   <entry>
     <title>即将</title>
     <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19jGDWtZ8KaaqSvNSoIzeRs7mCqLXDjEOtkW7ZjckqXbMFtV90S2k7MK4b/nkbxl4toL0j8iZKStdsxh8DR4OIBp/5pnO2O25xE/1AnzqQTRJIi7KsY5w80+9l+ds4vRGa61z9DK+6yw8r5F9in8Dg7Dk8KA6ZRpTz3koCm4hHTNR5TQlxJYQJs4AT+sjTXvziv/VIHrZE/dX6Tv5aLpvkxEyLfdbaMUS+W+EpvH2xZZeidbMKQEWGzmhQB3o5RDXHbG8HP1invld0+pFwHupnkCICElNnsdF6Bwtha5Wn01mLA88ZQeRGG9ffrKrsEKAuDSh0n6nEO7IQb2b8hvM2RvULflfAaxnhFzdu+Lc/WbCmofH3pFoMiCVCdw8AJb0DvcOC3R3UNaTKz2KBYiRWZYFYruqBtOMcASfdI6UWi4IIcTYc8GKsU+Zr1oyKIoNo6AaPCc8DsWEToPuQluRWQxXlrdZ5OWfAPTOTfvcnxBt4YtsukjYXaPfG7/488W3aGmoVFzjt3P2e70zVRBHb0YazXnD5l7FiBgLP2M5ZimHSH5SA0cWs7r85VRfaiAV1LcCeN8jNNcNYcCIa34RpfK8JYZl+T0mAZ8lFNnNuwPQEj7EwsLTz1IM3SPp+0k0LH2TDWcteuJjimHL/tZ+q4uqOfcBrkKkC9bWKtG8QtVtDOpRpEXYC4LZPYOUHqSJ/QRxZr7QvTh0e0Jxy0On5gu30RQgagEz+7m4EPgXf3U52idlGVgzYIvjTEZ/8BlhXUXLg/npl4AwfOdSj3GSpdbm4Ivrn0d2C3guhz2FlJvwINMwmnNre1kj9FnOGmaPiHEqp5YigcBOQKjqBjj0YCPLBfmf8gDHVVZ0k5mPJ2mnXgE5dVXaw5ZBVOxWwrUiXU6C01ksyVz5hds+0tw2QnMtvLgdWPl/LYeXFuhncqU8g3pZP6/XGjtch+jXS+dJ0oymph1M5xuIyCyH4f9sXF3MLafOabj9hpb48iUXfjz0vjv4iPzTsU </div>]]></content>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+c/AnyOKB6Cjh4PIioi4nz2XoVnY52dzC7YhU7EPCrIhA/4G1wtOyziqDbyeJSrstjSXN3M6tNuOpiEqFWZRPToa1I2j98p25Fr2uTKrdV1fCr6aoKw7L2OxZHDqHls7WqskqTl3a1OKuZ8My9njcGg1ReeDLepZbr2F6k5aFElPNbrtttI9438MrVqpjgcx7x51XGQC4LQcAtqiNgRZVURnJIW42vP0Dd0MhBj9eWeO/XUywoKC/zYwIJOc4lgQ86ZGxWLEMGqin+6Gs9WrYKbuw5z8ZDPMGSN6S5zQ2UtG0bC/x4Olgm3fftxP0ahgpyK8yLOLCWb8mrMUTzYB5kDjJjKCQVm5tEy25VXVtkPWR58ujbYJYEElDX0qGX99UFo7ETpELaG9rcRlnXBMVCDpcH6hgNWTu5MxXWEovFl5+VSQWhW86DAAJvg4A/iTUHexj6uEigbrWeeNdNh2IBC/rva87pmEvRwFmx78KGBv0yDZQ3Oe6s/ntYWYcxJRsHFV29PoOMQIAmve/RtkhHuZsVyh3pdDcL6RpX6sGszqzqEPt8cssJH7R7vEWn02sIkqKfblEza3igzOEAZrNr1TxBgj90aJ0iB1KjVeQ79JDCg350cSfpV8/G4ZeQvzMW7dR1wok52QB2+xEabAvyhGDGPe9yEImxVDfvjSXCBUH8zUV6Tn/H3WVIZWozervyYt+6BWdVv+7cphtWrQ9Uqf7trT0EDNitvR39YgU0b0tWAkybTh4UQfW3T65rgTqEkU+cPaM+iqXyVZvQJhMbb7lhA5V3XXR2lmyzMhlCd2rPxLjspZCizeLrDA1AXMf64TU7ZeUEVWtwDqwBX8HmD2gGdLhgdHpDxCe3Unv7g99/2G4K6E4/Zuczb5kxMgg170llp9fnJcqEFqzNe0FccVobdX+m5qFXvKu8Uqlf7AuIq/1RPRaf8ZBBjGGNSmZ1OH5C2QJ3zJtbof4rUfs5LzBUtM25BLLdYrnzFZn7vg5qRLZnYR2o </div>]]></content>
       <categories>
         <category>随笔</category>
       </categories>
@@ -135,5 +68,60 @@
       <categories>
         <category>随笔</category>
       </categories>
+  </entry>
+  <entry>
+    <title>标签分类</title>
+    <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<p>-</p>
+<h2 id="HTML常用标签分类"><a href="#HTML常用标签分类" class="headerlink" title="HTML常用标签分类"></a>HTML常用标签分类</h2><ul>
+<li><p>行内元素：不独立成行；不能设定宽高；只嵌套文本；添加<code>margin-top/bottom</code>与<code>padding-top/bottom</code>无效。</p>
+</li>
+<li><p>块级元素：独立成行；可以设定其宽高；可作为其他元素的父元素（<code>p</code>标签除外）。</p>
+</li>
+<li><p>行内块元素：不独立成行，可改变宽高。</p>
+<span id="more"></span>
+
+<h3 id="常用行内元素："><a href="#常用行内元素：" class="headerlink" title="常用行内元素："></a>常用行内元素：</h3><ul>
+<li><code>a</code> - 超链接</li>
+<li><code>i</code> - 斜体</li>
+<li><code>img</code> - 图片（行内块元素）</li>
+<li><code>input</code> - 输入框(行内块元素)</li>
+<li><code>label</code> - 表格标签</li>
+<li><code>select</code> - 项目选择</li>
+<li><code>span</code> - 定义文本区块</li>
+<li><code>textarea</code> - 多行文本输入框</li>
+</ul>
+<h3 id="常用块级元素-："><a href="#常用块级元素-：" class="headerlink" title="常用块级元素 ："></a>常用块级元素 ：</h3><ul>
+<li><code>div</code> - 常用块级</li>
+<li><code>dl</code> - 自定义列表</li>
+<li><code>fieldset</code> - form控制组</li>
+<li><code>form</code> - 交互表单</li>
+<li><code>h1</code>-<code>h6</code>-标题</li>
+<li><code>hr</code> - 水平分隔线</li>
+<li><code>menu</code> - 菜单列表</li>
+<li><code>ol</code> - 有序表单</li>
+<li><code>p</code> - 段落</li>
+<li><code>table</code> - 表格</li>
+<li><code>ul</code> - 无序列表</li>
+</ul>
+<h3 id="可变元素："><a href="#可变元素：" class="headerlink" title="可变元素："></a>可变元素：</h3><p>   即可根据上下文决定是块级元素或是行内元素，即设置display属性。</p>
+</li>
+</ul>
+<h3 id="空元素："><a href="#空元素：" class="headerlink" title="空元素："></a>空元素：</h3><p>​    没有内容的元素即为空元素，例如<code>br</code>、<code>hr</code>、<code>input</code>、<code>img</code>、<code>link</code></p>
+<blockquote>
+<p>从元素本身特点来说，可以分为不可替换元素和替换元素</p>
+</blockquote>
+<h3 id="不可替换元素"><a href="#不可替换元素" class="headerlink" title="不可替换元素"></a>不可替换元素</h3><p>​    HTML大多数元素是不可替换元素，就是直接表现出来的。</p>
+<h3 id="可替换元素："><a href="#可替换元素：" class="headerlink" title="可替换元素："></a>可替换元素：</h3><p>​    根据元素标签和属性，决定显示内容；替换元素一般都有内在尺寸，例如<code>img</code>、<code>input</code>。</p>
+<hr>
+<h3 id="img真的是行内元素吗？"><a href="#img真的是行内元素吗？" class="headerlink" title="img真的是行内元素吗？"></a><code>img</code>真的是行内元素吗？</h3><p>​    既然是行内元素为什么可以设置宽高呢？<strong>其实<code>img</code>属于替换元素，其内有设置宽高属性。</strong></p>
+<p>​    <code>img</code>标签同时具有行内、行内块和块级元素特性。</p>
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
   </entry>
 </search>
