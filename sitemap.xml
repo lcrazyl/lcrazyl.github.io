@@ -102,14 +102,14 @@
 
   
   <url>
-    <loc>http://www.swiftslee.me/tags/HTML/</loc>
+    <loc>http://www.swiftslee.me/tags/CSS/</loc>
     <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.swiftslee.me/tags/CSS/</loc>
+    <loc>http://www.swiftslee.me/tags/HTML/</loc>
     <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -118,14 +118,14 @@
 
   
   <url>
-    <loc>http://www.swiftslee.me/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>http://www.swiftslee.me/categories/HTML/</loc>
     <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.swiftslee.me/categories/HTML/</loc>
+    <loc>http://www.swiftslee.me/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2021-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
