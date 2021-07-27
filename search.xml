@@ -38,7 +38,7 @@
 </ol>
 </li>
 <li><ol start="4">
-<li>最佳方法：添加<code>::after</code><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">		<span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">clear</span>: both;</span><br><span class="line"> 		<span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">overflow</span>: hidden;</span><br><span class="line">     <span class="comment">/*visibility:hidden;为了去隐藏content中的内容 */</span></span><br><span class="line">		<span class="attribute">visibility</span>: hidden;</span><br></pre></td></tr></table></figure></li>
+<li>最佳方法：父元素添加<code>::after</code>并添加如下属性<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="attribute">clear</span>: both;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="comment">/*visibility:hidden;为了去隐藏content中的内容 */</span></span><br><span class="line"><span class="attribute">visibility</span>: hidden;</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ul>
@@ -49,25 +49,6 @@
       <tags>
         <tag>CSS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>安好</title>
-    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
-    <content><![CDATA[<p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
-
-</center>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19b+9taYtifoebTgp6N8Urkgu/LNl6qj6wzRg2W6kgaZoFSJ+mq+Uee9t4hmQFBfkiESscaMHbmyCutb3aMKQlCpWEanGW7VVCkhEXo0kgx7q6wy7ldIku80WFzNOp3kW+xzyhpw6pHPGXSgKs+z0ebKBgMgfh1gYaqjKyfO6H2V4mOLWXOIKgkdE25LBbLeqbXVR1RhTsWdAvLHzWSWugu5TbwO+QmATpM/aqw/Lmmd4x98hvFurntalaa0iG2F4nZ3Qmp0SV6Y2QtacAg/mdQoEvZ5rhEUsdXCQh0xhH5ikJAplZn55eiw2xSI4iU7a7ycUX3Rjs8VegaV2UV7M6+CFc+95b2gdPMT9JdrGzjyF2+PqNylmIgLqizXk9pwOfuca48dPgLoHcLv3I3fVA3r2hLvvvLfRPyVs8APwKiJLYORPAGH20AL1ByW4b15y2g+9+mPC2zq9sPTbytTrgX6mPlYERtgscNAR5qUr2QWfvAu/Zfz6bUPPvfBplATKACS6Cc8uQ2zoxYeJLLy1Oo8BziQrlni1W9f1XfKQRTgAwcUv1InwUqUP0uUMSdixiZ9Fx3DslklRfXwwCKGVbDKudEzbuieiXVMPBK0NfjqeYZnUYFl8AS3heGYKN1KKO5GNoclf81FxGVyrUGuezp+sl9Owp8HFQNt2KiOQ0v7unjxVjKL2KWPJ1klBLcOhBVGJ3tztHh3OMXkOWgU+sjjAh6RYgy/aXwk4ayoiLfXZXvTlOrL5r0eHLI270uaEaViNjaEaJJhnnUDtth5WMdDZw13RKf9eiR/PKNsNMZrtUNxnVrjoj3yvJ1HVD1g0ZA4813G3c+rhQMNwDtpnbaQboAQLZFa4G9s+UyworaHt0HH1uYyZJxIOwCrxmbFxonlq6wURFbinPKB5W0vCS4i/LdJUxUjlGkeVbaJJ54lDFfzrNs8RAlWiS5Px4M58obWuYkJARD+HPq5FeQWfBhFUsYdi6OPgILrZqu5JqmaDHSfggGnfPl </div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
   </entry>
   <entry>
     <title>标签分类</title>
@@ -131,5 +112,24 @@
       <tags>
         <tag>HTML</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+uO8m8Wl73In1SUqCStdEBkSmnijHf7S7BbkzeIg3IlZXiY/1FXZhqYU5ge9vHuvH56y4kGIXJpX0AfMmYmWPMNetb+0s2p1dVW1ZY8/kj9+ukM9awCQzQLLz5UUksNJQiL0iJX+laUoL6ZZs8G2WFxzcJvylKXf9/wR+qDt7n8kCgScNl2rbCBxyi6CWrDlRSrjBU8GolgriVy48QyX7si3mIRvE4dsfQ2WOAuIIOoMBiSPu77sBuJMbE7QdBgXlM2jemXGURtIZ9fn/ea3KJhOvuKiaP7KFcuyrF9W+t+JE6bSVFhHX6NR9K9obDdMKevbFtnu8huFFmvS/tuyOMWnVdqB8kskAS88DxegmJXfauy7FaB56A+JYVyCpn4vTMx5cj0h9G0DoKwAYOARnCoI+TfyMXYHxqxTrhPqeAecePmz/ByigovSd9UHNYPtRHUbKLymhp7tjfaIyGKPS37TCr8SihzjKUXh5JUEgyXkjKPhc/3fLsAMsQPX6Ja1Ye69NrBdney7myMgZ2WIwh7Lk/8+heokZtqprWIagE63jIGxGK018G/MQ+xxpWADtiDhTj79IKvPSOuraMidLz8R89nO4gBXmwkUyatNwC0B74W2sM4DBdhtag0o2EGEi1to9LAOAib7WZFzBP4QPlAni0GPdZayjSm3Q76jof4CB4C0IBnfl1H7Fuuv/Yn5gmZQaQcmNVjhO/p/TY/GS1QoLL+urZWpnn8ywilR1q9QrC3tBqGLVYNqrt5WpQJuKdhGtdh03DzlNDZjuK8PL8AebKF13DiQtt82Z015w8cvCgQq9K58lb7+X7n3FxoPsyh/Zog/JyRLWJn3riy07fv2uubkvwMeT0eq93pMHDcRah+qWyqZqlGdVK5nuiZ41q8vYE1mC9FwG8/IYtVyp0+WZaOZxMGHIMdDMlQU9bdM4z74XgHdTvWg/ReOLRgZToz/L5ScMakCW54scOVvqcINPxj4fF4luE+oF8iim1ZHQ+dkBTwpED </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>安好</title>
+    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
+    <content><![CDATA[<p>-</p>
+<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+
+</center>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
   </entry>
 </search>
