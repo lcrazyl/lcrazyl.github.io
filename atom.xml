@@ -6,7 +6,7 @@
   <link href="http://www.swiftslee.me/atom.xml" rel="self"/>
   
   <link href="http://www.swiftslee.me/"/>
-  <updated>2021-07-29T12:43:56.254Z</updated>
+  <updated>2021-07-29T12:52:40.570Z</updated>
   <id>http://www.swiftslee.me/</id>
   
   <author>
@@ -21,16 +21,19 @@
     <link href="http://www.swiftslee.me/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/"/>
     <id>http://www.swiftslee.me/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</id>
     <published>2021-07-29T12:37:51.912Z</published>
-    <updated>2021-07-29T12:43:56.254Z</updated>
+    <updated>2021-07-29T12:52:40.570Z</updated>
     
-    <content type="html"><![CDATA[<p>-</p><h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><ul><li>img标签增加<code>vertical-align:top/middle/bottom</code>；</li><li>img标签的父标签增加<code>font-size:0</code>；</li><li>img标签增加<code>display:block</code>；</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>-</p><h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此img图片下方会多出三像素，可采用以下解决方案：</p><ul><li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p></li><li><p>img标签的父标签增加<code>font-size:0</code>；</p></li><li><p>img标签增加<code>display:block</code>；</p><span id="more"></span><p>三像素示意图：</p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li></ul>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;-&lt;/p&gt;
-&lt;h1 id=&quot;怎样解决img标签在严格模式下渲染会有三像素空白问题？&quot;&gt;&lt;a href=&quot;#怎样解决img标签在严格模式下渲染会有三像素空白问题？&quot; class=&quot;headerlink&quot; title=&quot;怎样解决img标签在严格模式下渲染会有三像素空白问题？&quot;&gt;</summary>
-      
+&lt;h1 id=&quot;怎样解决img标签在严格模式下渲染会有三像素空白问题？&quot;&gt;&lt;a href=&quot;#怎样解决img标签在严格模式下渲染会有三像素空白问题？&quot; class=&quot;headerlink&quot; title=&quot;怎样解决img标签在严格模式下渲染会有三像素空白问题？&quot;&gt;&lt;/a&gt;怎样解决&lt;code&gt;img&lt;/code&gt;标签在严格模式下渲染会有三像素空白问题？&lt;/h1&gt;&lt;p&gt;由于基线对齐，因此img图片下方会多出三像素，可采用以下解决方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;img标签增加&lt;code&gt;vertical-align:top/middle/bottom&lt;/code&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;img标签的父标签增加&lt;code&gt;font-size:0&lt;/code&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;img标签增加&lt;code&gt;display:block&lt;/code&gt;；&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary>
     
     
     
@@ -98,7 +101,7 @@
     <published>2021-07-12T02:19:07.785Z</published>
     <updated>2021-07-21T08:41:57.939Z</updated>
     
-    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+u5/9nxajWV176mRgWcJfZLL55sXRP2ID/H9p0vyk9Ro7cfTSPxQ3uEdhXpbpsGWDYtWwFuIlL2C5/7PzULGzLvsCCoC08Z+8hxGjXUE9qmALJFWoQaIYvkJh5NhNXgc1tDi+Jo9IBCUF4epUzbuJcxi60N5TeFPFDuyuyjHnX6pMzBaAkf0GExmG1G+fi3wubiR2JKREUU4oTxX2vxy5bPCKuvhOIjb/ST3UhOBduMOWx7XyTxpfVfg2WEpe6lE0ZGMzmx2sCNi7y+gFuwdxuk+/AYV+wqusncTYOnEJ4cnk1VRnXVsidItiRl/2zqcFb2LkZVFu1B9fxpGkErvW8QPXOXzUzy1AjB0a6ixKjxXc/pYQm3wRIkhkkWpNXm8/p4tUbFaF84+Ei80veRnHuRwBktbmakK7xDS3Ca1RGiVKEatV6l8BrWif35d/RnYhtc4fd7d+IIHf+6xjsJTL+bWsFXDqqzmkOHNtkghOtXpiRRFKFIkaOO1bxkZQVdUp3JVBinE7+2+ev0l/rhoT1V0KixPZzvltv+aBP2oMyUuDN3c5ktLVw+ek7ymKxawPWuIH//BWo4zOKKd8/DsGhGWcaU5RyXSKYMZlqG6zm2PY3ThES/n8uSWPtsLKz7vpylHPXeVgXZBEUa/yE0k100bikyoSpHJtXWkfnGEwQ5VzTCXzDlfFu7xGP9tkJXCpzW/8H2tM1uPD8sHrtw7GoBpawKzQrF4p91REJG+pXw2nn0x2ph+b8/EYpwF4bQYdKOB0hxYT2w8Lza0Ikhj+LTC45aHvk44TVlJPvWmQfXqhacv2E87AUKKhKnYor0R6K08Uk5yl+unhEbxEiHZ8d+F1OW+k6CVX7WJRsFcd/2jmXjoebLv4fMoVz8NFyyakRj11EbbA3F8P6msbid7nzUmEGVFDTwWTONwv3ljg+JdQQ3Ygh76yrvoVO99JY05nf8WGfKlh+Oefe0dECjxXUbXzUrGq0bROQ01likInpiV0yRyQ5KjEo </div>]]></content>
+    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+VtwdDU+ZYElz8iODjnvQ1NxPipseiL71nkJIaFuzjinr1esbD+8V2XKGkWNNtngQKYkwZ3TeIxEwXtwLqkKXsitTRlqIza7Y/A9JCLZI7JgSdYlDUIZeIHe4x4UXeUeMhtBr5QbAwNJN0rUb7hJJ+eoKVsAdMNI9OKKHKSHuIyEk+x6c96SjcznWUFY2stUfJJUHokactYNuqvlFVvBGDDKmr5lAeG5/AbVJrKy62Tj/I5R4a3b7DgbHkWsFyTfma1mElqqZtNTrk+FoGVb4Bb2j+Oe/aTrNIEPJ/HkFMf2B6MsNZiZ+u5kK6bzh2e7FOYwtHkoY2jztW7gXkF2FW6ucavozueKIDzqpUNzj2viR/uyZIhFDMmptvtKLdqmgWAzCcf1b7R4VBmCqSFGUQYKNEPbf1w0a3lHGZ9vHPqVPHYcpmEDMlarT/hRuPscYM395VakI+O76BP1NxX38v29kDySDgwzlcj8eMTVL4rba3YgwbOEhUFzqb0IGIU8rIdqevmkDed2HVOjUYRYq90GuewAtrKOig74XtVgjDA19ATI9Oe3VLBhQzxVhWWOpvQxc5m6+gBRq9OaTWQmhb8FwRI5yQgpn7GjWQVz4SAOvCa5kQRsZ0ibtm7j3qeb5YeCKrZay70LR4WpDJnQOyJz0pDESL1Y5BhTgVAr5mmLvAmUCcX8uyIaECHxbyTI7UX/LiTWT4+jGMGhqlj1vEKSydGfYjXKeIfD3LZCcREc2uzlsO1/jkhsBNYSsPSizu0G88wogH1s7yPVVMRUJBVOg2a4DmlkLUU7cFH6o7rbKXKsCxgZIeCZjCb5WmHAbuy41Vjv9OXvxUcJfBv/tm9SyWsQ6w9rdyJf3uSlN7AG/J071742UU3dHUIDVn66c4GoVo053J9euhYYbt6Bz5RkLEl4PRc4cYPmd79Oh0uCMEz5ATUsja3xEjLDEcgm4TmQgSsLgXHPMkOk9pjFpHeCiSFWtncoTmkwhkwDULB5zC4DhzCg3J </div>]]></content>
     
     
     <summary type="html">The article has been encrypted, please enter your password to view.&lt;br&gt;</summary>
