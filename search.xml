@@ -66,6 +66,27 @@
 </ol>
 </li>
 </ul>
+<hr>
+<h2 id="什么是BFC？"><a href="#什么是BFC？" class="headerlink" title="什么是BFC？"></a>什么是BFC？</h2><blockquote>
+<p>Block Formatting Contexts（BFC），块级元素格式化上下文。它是一个独立的渲染区域，只有块元素参与，它规定了内部如何布局，并且与外界毫不相干。</p>
+</blockquote>
+<h3 id="BFC触发条件是什么？"><a href="#BFC触发条件是什么？" class="headerlink" title="BFC触发条件是什么？"></a>BFC触发条件是什么？</h3><ol>
+<li><code>float</code>的值为<code>left/right</code>;<br></li>
+<li><code>overflow</code>的值为<code>auto/hidden/scroll</code>;<br></li>
+<li><code>position</code>的值为<code>absolute/fixed</code>;<br></li>
+<li><code>display</code>的值为<code>table-cell/table-caption/inline-block</code>;<br></li>
+<li>当前元素转换为根元素<code>display:flow-root</code>;(不推荐)<br> <h3 id="BFC触发方式是什么？"><a href="#BFC触发方式是什么？" class="headerlink" title="BFC触发方式是什么？"></a>BFC触发方式是什么？</h3></li>
+</ol>
+<ul>
+<li>若元素为父子关系，触发条件则添加给父元素。</li>
+<li>若元素为兄弟关系，触发条件添加给第二个元素。<h3 id="BFC可以解决什么问题？"><a href="#BFC可以解决什么问题？" class="headerlink" title="BFC可以解决什么问题？"></a>BFC可以解决什么问题？</h3></li>
+</ul>
+<ol>
+<li>高度塌陷</li>
+<li>margin折叠</li>
+<li>浮动脱离文档流</li>
+<li>子元素传递给父元素的<code>margin-top</code></li>
+</ol>
 ]]></content>
       <categories>
         <category>HTML</category>
@@ -140,7 +161,7 @@
   <entry>
     <title>即将</title>
     <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+ZwlIOaD7dVHPh+IKxzpBn5VtJtSUfMUW4fshIw6VX7vl4aYKMESeEbZ/oar8dcnbSd11h/CDT0uOnUuKEMhSsZKwnSDGUlzHRh8W7gzOEQ0oDNy6F1K/QmpY+QzPKDEoIgoA1FvVQWhOOqa762lt+U8CJPqDRDZWu/QfdezAWI/uWQxDcX98y2lT4LEVbFp/dmhZPiwg0CM4+UNqNet8FGgXaaUap1Zmo7cn8fFPgq5v3kgWgXGoO8B316JZY2rMPgEGryzE/fkhPZMSJcMTO0eKnlYH9kDp6uJgRyE7FiL8i352FhpHUp9+7S5tHCAlySUyvPPS9uAQYM3EKcFlE2+xCOL847Xi0+WOmLwQNnMV4tHoGE4aYYhaMQzIVxNU88mG2KalWvyxBAC190+Yen9XNr77/IbQ9bB0bxwhz6pKQ4CGWTjorfF0tdMP3gKCSC3Eotz30avZsfkz8xURvmBTdCtUmi9OYxvUXG9sG/lCj6J4lqrC0tTBHlYPguIJqzJajBVCIWzeSGfAJoq/71gXA5PMsc2tNPLSDuR2sss+ik6HGcCUq2wWkX8FQep9uVxP9r/KRAfuUHpePUfyY8dK8NVpjUDeEPYpLLsgZnTAi4pGZYuDj38zM+1Q+wJbWIjKpiAJfG5PUCGxrLcsSB9RxdLr3cBgnEGsa32tyRVkvkeNOzsV0SFM9XoFK3FoWxexJyPzBA4wdY++hQFVA8uPfL1VGfFfv5G4by5dtfYPlN6eInsfCtvmlkI552LHVFCk5PazJy6LtxT1JvxFIOWCghtQjlESoAs8cP1HMWW0VPesu3Cl4B9psBcu8TorydrSRkhPO2Bawx9a8H0XLagy/nnY7dda3ol385sMsJ/T7PLjR/aTCBUNk2/JcqUXo4R1G1l/JSF18t++C6rPWvOYkCLQ+bQ2SR6Iri4krJXKo3VwQxJzzv9EMNNotCw8pqB2R5KBW1PUxWiwPZbN27w0USKXLpff1n3YS8suMDzgAKgL2K/2H </div>]]></content>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+p8RLIj/s9/HQKhix4L7fIp1ZsE/LzApq/Y3jicl+CMvEMYarJaIORE3si359KzEDhh0Or07HVwWomwWF7VWnzXEUzKnt9/ReUVpTG1IiQ57yDagm7FAzkUj5UHpHExJqytat0KH6pW242V80EM2XtYycA01Usypg2EIoFRYXPd5G/0bXM7nwytr5RsFxT5YXV40GX7oXI0ggT1lOwa49fScE77fXZ6aNdskFeTF9cEKGapRZjinNkSmaVHecCVrzPp0Zppqpdk+nsSKIAtPwSweXc3lBjP3I9CpHxBMqdT9WlYeZmVBaGl382RDDrUzA3L4Qic1rftGF3oFbtCRDnpjmSamheaKCgXDRawOhqP/1c4Jyr2RgAzOVeJToWvfkxcFKh/o46PKRpEgPpUsc0z1gAdOw/z6oCiIhtmfjTzAqYYbqnxdwRVetjCyBjlRh35TR4GOB477Wc922k6gssf88j2BsWESC8cel3lYwWv73Pbo/PfyJ8B5lEyDzk7pA613VsX2bROHfKKyPe9Qe7R/aoyH/Sf4OzEPt2PnDaCoJkxf1bqRzZFs21lN3hhHErcO0/I2IaU7W71/fRzwgrxvy/v26f213kh0RJrKNoYpnx+NhxE6apl9NnigKm/2PuItarOzFr3diPPJcgKd6vshA9L2tJXsQWeGpfQK8VXOzWO3seqrRfVuLgMPy6V/qq9GwFMY5DRIfisDRcQNad6e5IqN1h9jztDJ8KGFpM6YBKpGV2oxXpJfo1eW3yv68cAeZVpM2Lkewi1ABJ3nsad3kuhSgt+eQM9KAM6vDu1xYqDPSe5tC9zdu6kl4Ef2fPU60rypOcS/3jADQJ/jYJSzUR7w292rjI5peipZJvi4MaMEFum0tRIT8F60u+dvVkO1HGofi/9Snnt4iuYOsmmYo1B1wDlBBrpT5YKkoh7cyL+O/z4awQG75lqmpFdW9TB90bBTkmg1Uxd459oeq20QjrJF+oxT2qwR+jUy/PR/T+Oej4I1Pz </div>]]></content>
       <categories>
         <category>随笔</category>
       </categories>
