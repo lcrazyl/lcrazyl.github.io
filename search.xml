@@ -25,9 +25,14 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS浮动</title>
-    <url>/2021/07/22/CSS%E6%B5%AE%E5%8A%A8/</url>
+    <title>CSS布局之文档流浮动与定位</title>
+    <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<p>-</p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
+<li>普通流（文档流）：自上而下，自左向右显示。</li>
+<li>定位</li>
+<li> 浮动</li>
+</ul>
 <h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
 <p>众所周知，块级元素在页面独占一行，即自上而下排列，如下图：</p>
 <span id="more"></span>
@@ -45,7 +50,22 @@
 <h6 id="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"><a href="#由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？" class="headerlink" title="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"></a>由此可知，浮动会导致重叠，那下方<code>div2</code>浮动后会不会在<code>div1</code>的位置呢？</h6><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/浮动3.png" alt="浮动3" style="zoom:50%;">
 答案是不会，`div3`会在`div2`的位置，而`div2`位置则不会变。
 
-<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2</code>不会浮动。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"></a><font color="red" size="5">浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。</font></h3><h2 id="为什么会产生高度塌陷？"><a href="#为什么会产生高度塌陷？" class="headerlink" title="为什么会产生高度塌陷？"></a>为什么会产生高度塌陷？</h2><p>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</p>
+<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2</code>不会浮动。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。"></a><font color="red" size="5">浮动不会覆盖同级元素，因此文字中和图片不会被覆盖。</font></h3><hr>
+<h2 id="CSS定位："><a href="#CSS定位：" class="headerlink" title="CSS定位："></a>CSS定位：</h2><p><code>position</code>属性：</p>
+<ul>
+<li><p><code>relative</code>:相对定位，相对于自身位置进行定位，且不脱离文档流且占位。</p>
+</li>
+<li><p><code>absolute</code>:绝对定位，相对于最近有定位的父元素进行定位（若父元素没有定位，则根据html定位）,脱离文档流且不占位。</p>
+</li>
+<li><p><code>fixed</code>：固定定位，相对于可视窗口定位，脱离文档流且不占位。</p>
+</li>
+<li><p><code>stick</code>：粘性定位，当页面未滚出父元素，表现和<code>relative</code>相同，反之和<code>fixd</code>相同。（sticky不能结合margin一起使用）</p>
+<h3 id="定位元素层次关系（必须给当前元素添加定位属性，才能使用z-index属性）"><a href="#定位元素层次关系（必须给当前元素添加定位属性，才能使用z-index属性）" class="headerlink" title="定位元素层次关系（必须给当前元素添加定位属性，才能使用z-index属性）"></a>定位元素层次关系（必须给当前元素添加定位属性，才能使用z-index属性）</h3><p><code>z-index</code> : <code>auto/number</code><br>无单位的整数值。可为负数，数值越大，层级越靠上。<br>同级别的元素同时添加position属性时，没有设置z-index时,结构在后面的元素，层级越靠上。</p>
+<hr>
+<h2 id="高度塌陷："><a href="#高度塌陷：" class="headerlink" title="高度塌陷："></a>高度塌陷：</h2><p>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</p>
+</li>
+</ul>
+<h2 id="为什么会产生高度塌陷？"><a href="#为什么会产生高度塌陷？" class="headerlink" title="为什么会产生高度塌陷？"></a>为什么会产生高度塌陷？</h2><p>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</p>
 <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/高度塌陷.gif" alt="高度塌陷" style="zoom:50%;">
 
 <h2 id="怎样解决高度塌陷？"><a href="#怎样解决高度塌陷？" class="headerlink" title="怎样解决高度塌陷？"></a>怎样解决高度塌陷？</h2><ul>
@@ -94,6 +114,14 @@
       <tags>
         <tag>CSS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1/O/fy0pt1vOBqMRKPoPSXP2rVJi4j2OFNS5Tce2U5mPRj/msbHBbH9eUQvdiFGz5o10PBZz/f892+Emlq6UnqqXwc1U0oU0I4/sA7x+ZDhn2M9P8lYxHIjH+KPzB7ig5AmII8VGO7jKwqzQ4gF5DSIfM6XxkDLTr4utte+PAU936VNH4majvAr/TjMqqwEc0CXJeZ1r77/VAQzcaY2cDGTr5SFKq+wzV1D6ykZVRKCR+tFyP0RTZG6eShpWihzSS4dTwurLfsEzJ/VfPwoHiaCqBEMhjN+62TbvLG16L3BGUIc6VEE0ruR4yPZqgdpXHRbKJDaRqtso3zeYh4H7k7BDteRdv1K7IMhdYLOQ+8YOlkaFAVOdj9EALnDcKcK1kVtDjRMTzZGMhcCBf+bDp19er2HXIfak/dCULlaie43O6Py+ZqnYLLOJm/Rw3D7asCHP2CBNTVa722zNuvzUOamYSRlpyuFIQTXPGu/xZEXt+/DnNVExqon7m69OiZRWZC++AqBLxJWHXmnuHCCJ1dWXCZeHWbRFuIcanJgB/FQVrN4gGyvnxlgDUTnERO0H0K1WGboXRTLStqKyvJ+egAxRBguWhrtUj5V59zmIFWwvISQtaHxs1s4o1RDSSI46d8bcIMfjld1Zj9nCsljbNo1bzhyQtvqcWVBFTqVDsYgN3DfXada9qruAclj4GokcRmM2PMVg2GxMu0HXsWrZcn/ryBxkHGksxFBy1XxoJKOUR0E7DoTjcLstlBQVzD5GlvC/38FqroR5q8p7JSEf3iJUv0/HmXvhs9ItQIoIdnR1TOfQaeYxJv0wzqOa4Z5MtjtL9B7+0X2d0ohQELAUvRt7f5LWJQEY+hEuDW+ABqdDwzTwKKDSD2p3+tzO1ioPdqkyxhIMOsm1ZFWlqKi3W/IjSeGA/SbDy5ZjQkr+jiLm7UQe7uGwxCsS/hV3rIogMzVk88tHmG3Jq6CT9bgQ+zMjDllM8aeG+PjwK9StNLfy0Xf/L+9wjyk </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
   </entry>
   <entry>
     <title>标签分类</title>
@@ -157,14 +185,6 @@
       <tags>
         <tag>HTML</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX186+wImoETLiJKmGdBJWdjXPBv/nEQzkuv+8mSn41i7knOhg3xXtcW0Uw2dgOYcbZELhJx/As4ZcG5dBfVtoPjSeNN+x7NaW+tjJ+BsQWjpClaclCrwA8cM8aWzZcfLhgYUQ+e6dOAP7blnFl1mgVbRb47ik4qd2UG4cLod+d82M2O0FEcaR8Wblvry6DkKkITva8W4Su8xBqJxOKpSDbZlcVjJqPqwe9OtPQ1weRiRqph27IcHDFUN61IRGaYB5suxAxno77pCedGGRvJfE35626GgOIWb8d74Q1o93R8J3RGbssD8uc3A1D9T14a1v6jORxYGk3RNF6l3YpUTS1Qv3v+IjoiaaKR//jX/QI5qaWj451gi2p3iF3RufZzOweV4IcLWWPqVBSnSbl0iL2HGGR9ABoEs8vVpdRG38+krhn8xOQZFqofUbOYXllkNrhlttWI/Bf7/kFia0lGPEemdUPbyb+iQIpmZLHanvroWcSzzuwKWHEvWdKP2FrcLbLjdgYFqsbqvyLoK5yB5o//otSdL+Mv527kQ7R1Cl5mFrRdcUXG76S2umcaWw4U/2hpXf8irY4hg3fo739ivUcy8i8dC6IlaFX71bHGdyltedspHd6RGKHmbR5idxu+GaBfjY3jS66RrwhkkK7lfYRgOZ7Boaq/mGfm2eG21CyJXkTPpfYm8ZjhLrU3lrv67aMd7ooOGEo4mdbC7oNzDEYqt3a6PcWJKJAnu5DZoJJB+uVs/nddpsyYsIDpjYlBkWgV/dcFciuoScyzkfN99DfGfWQvqeuWGrByp9lVi4+kFYBKLm+tzdBqWfd7vnAQGN0/alH0cG4wwjdZFggrkNsWnUUnE62lmt242dgqqEpaG6G/N7tPpfrBPpW1z9lMa7xsxvHPc57BRlHNAuwimCgkSfdtaITUiloJ3mhxqtN4Dmmb2TlE1aQEC5IRlxrxyv20QO1hmJwzSn0/ZZv1D3xqt813JwvaO96Gz/wDnPQfjCfSrC/5VHTjT </div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
   </entry>
   <entry>
     <title>安好</title>
