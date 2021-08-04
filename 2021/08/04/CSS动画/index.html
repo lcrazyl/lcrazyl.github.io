@@ -22,19 +22,20 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="- 媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。">
+  <meta name="description" content="过渡(transition)： CSS3允许属性在一定时间内平滑过渡，过渡需要添加触发条件。  相关属性值： transition-property：检索或设置对象参与过渡的属性值；  transition-duration：检索或设置对象过渡持续时间；  transition-delay:检索或设置对象延迟过渡时间；  transition-timing-function 1234567891">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安好">
-<meta property="og:url" content="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/index.html">
+<meta property="og:title" content="CSS3-过渡变形与动画">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/04/CSS%E5%8A%A8%E7%94%BB/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="- 媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。">
+<meta property="og:description" content="过渡(transition)： CSS3允许属性在一定时间内平滑过渡，过渡需要添加触发条件。  相关属性值： transition-property：检索或设置对象参与过渡的属性值；  transition-duration：检索或设置对象过渡持续时间；  transition-delay:检索或设置对象延迟过渡时间；  transition-timing-function 1234567891">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-12T02:00:52.972Z">
-<meta property="article:modified_time" content="2021-07-21T08:38:49.996Z">
+<meta property="article:published_time" content="2021-08-04T00:11:08.263Z">
+<meta property="article:modified_time" content="2021-08-04T00:53:47.406Z">
 <meta property="article:author" content="swiftslee">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/04/CSS%E5%8A%A8%E7%94%BB/">
 
 
 <script id="page-configurations">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>安好 | IFTS</title>
+  <title>CSS3-过渡变形与动画 | IFTS</title>
   
 
 
@@ -199,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/04/CSS%E5%8A%A8%E7%94%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
@@ -212,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          安好
+          CSS3-过渡变形与动画
         </h1>
 
         <div class="post-meta">
@@ -222,23 +223,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-07-12 10:00:52" itemprop="dateCreated datePublished" datetime="2021-07-12T10:00:52+08:00">2021-07-12</time>
+              <time title="创建时间：2021-08-04 08:11:08 / 修改时间：08:53:47" itemprop="dateCreated datePublished" datetime="2021-08-04T08:11:08+08:00">2021-08-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-21 16:38:49" itemprop="dateModified" datetime="2021-07-21T16:38:49+08:00">2021-07-21</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
                 </span>
             </span>
 
@@ -251,9 +246,9 @@
               <span id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 20字</span>|
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.3k字</span>|
 			<span title="post.min2read">阅读时长:
-    1 分钟
+    5 分钟
 </span>|
   
   <span class="post-meta-item">
@@ -263,8 +258,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/07/12/%E5%AE%89%E5%A5%BD/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/07/12/%E5%AE%89%E5%A5%BD/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/08/04/CSS%E5%8A%A8%E7%94%BB/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/04/CSS%E5%8A%A8%E7%94%BB/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -279,10 +274,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+        <hr>
+<h2 id="过渡-transition-："><a href="#过渡-transition-：" class="headerlink" title="过渡(transition)："></a>过渡(<code>transition</code>)：</h2><blockquote>
+<p>CSS3允许属性在一定时间内平滑过渡，过渡需要添加触发条件。</p>
+</blockquote>
+<h3 id="相关属性值："><a href="#相关属性值：" class="headerlink" title="相关属性值："></a>相关属性值：</h3><ul>
+<li><p><code>transition-property</code>：检索或设置对象参与过渡的属性值；</p>
+</li>
+<li><p><code>transition-duration</code>：检索或设置对象过渡持续时间；</p>
+</li>
+<li><p><code>transition-delay</code>:检索或设置对象延迟过渡时间；</p>
+</li>
+<li><pre><code>transition-timing-function
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  :检索或设置对象过渡动画类型；</span><br><span class="line"></span><br><span class="line">  - `linear`:匀速；</span><br><span class="line">  - `ease`：逐渐慢下来；</span><br><span class="line">  - `ease-in`：加速；</span><br><span class="line">  - `ease-out`：减速;</span><br><span class="line">  - `ease-in-out`：先加速后减速</span><br><span class="line"></span><br><span class="line">属性值顺序可以调换，但过渡时间和延迟时间有先后顺序，在前的为过渡时间。</span><br><span class="line"></span><br><span class="line">## 2D变形属性：`transform`</span><br><span class="line"></span><br><span class="line">### 相关属性：</span><br><span class="line"></span><br><span class="line">- `translate()`：位移</span><br><span class="line">- `scale()`:缩放</span><br><span class="line">- `rotate()`：旋转</span><br><span class="line">- `skew()`：倾斜</span><br><span class="line"></span><br><span class="line">### 变形原点：</span><br><span class="line"></span><br><span class="line">&gt; 通常默认变形原点为元素的中心点。</span><br><span class="line"></span><br><span class="line">`transform-origin`属性即可设置变形原点，只对`rotate`、`scale`、`skew`有效,可以用英文单词、百分数、具体像素设置。例如设置`transform-origin:left bottom`即变形原点为左下。</span><br><span class="line"></span><br><span class="line">### 属性详解：</span><br><span class="line"></span><br><span class="line">- #### 位移：</span><br><span class="line"></span><br><span class="line">&gt; 将元素向指定方向移动，类似于`position:relative`；</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line"></span><br><span class="line">1. `transform:translate(100px)`:不加X或y轴，则默认X轴移动;</span><br><span class="line"></span><br><span class="line">2. `transform:translateX(100px)`：x轴移动；</span><br><span class="line"></span><br><span class="line">3. `transform:translateY(200px)`：y轴移动；</span><br><span class="line"></span><br><span class="line">4. `transform:translate(100px,100px)`:对角移动</span><br><span class="line">&lt;font color=&quot;red&quot;&gt;设置一个值，表示向x轴移动&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">![位移](https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203711.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line"></span><br><span class="line">- #### 缩放：</span><br><span class="line"></span><br><span class="line">&gt; 元素根据中心原点对元素进行缩放。默认的值1</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line"></span><br><span class="line">1. `transform:scale(.5)`:不加X或y轴，默认代表X和y轴;</span><br><span class="line"></span><br><span class="line">2. `transform:scaleX(.5)`：x轴缩放；</span><br><span class="line"></span><br><span class="line">3. `transform:scaleY(.5)`：y轴缩放；</span><br><span class="line">&lt;font color=&quot;red&quot;&gt;设置一个值，表示x轴和y轴同时缩放&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">    ![缩放](https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203643.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line"></span><br><span class="line">- #### 旋转：  </span><br><span class="line"></span><br><span class="line">&gt; 通过指定的角度参数对元素根据对象原点指定一个2D旋转。</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line"></span><br><span class="line">1. `transform:rotate(30deg)`:不加X或y轴，默认以中心点旋转;</span><br><span class="line"></span><br><span class="line">2. `transform:rotateX(30deg)`：x轴旋转；</span><br><span class="line"></span><br><span class="line">3. `transform:rotateY(30deg)`：y轴旋转；</span><br><span class="line">&lt;font color=&quot;red&quot;&gt;注意：只能接受一个值，设置两个值语法报错设置一个值，表示以中心点旋转&lt;/font&gt;</span><br><span class="line">![旋转](https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line">- #### 倾斜：</span><br><span class="line"></span><br><span class="line">&gt; 将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line">1. `transform:skew(45deg)`:不加X或y轴，默认代表X轴;</span><br><span class="line"></span><br><span class="line">2. `transform:skew(45deg)`：x轴旋转；</span><br><span class="line"></span><br><span class="line">3. `transform:skew(45deg)`：y轴旋转；</span><br><span class="line"></span><br><span class="line">&lt;font color=&quot;red&quot;&gt;设置一个值，表示水平方向倾斜&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">![倾斜](https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E5%80%BE%E6%96%9C.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line"></span><br><span class="line">#### 2D变形必须结合`transition`属性使用，即必须有触发条件（鼠标点击、鼠标划入...）</span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">## 3D变换与3D动画：</span><br><span class="line"></span><br><span class="line">### 3D变换：</span><br><span class="line"></span><br><span class="line">&gt; 3D区别于2D的地方在于近大远小。</span><br><span class="line"></span><br><span class="line">#### 景深：（`perspective`）</span><br><span class="line"></span><br><span class="line">景深的作用即是设置元素与视线的距离感，即近大远小。 设置景深主要有两种方法：</span><br><span class="line"></span><br><span class="line">1. `perspective: 1200px;）`（在父元素中使用)</span><br><span class="line">2. `transform:perspective(1200px)` （在子元素中使用）</span><br><span class="line">   &lt;font color=&quot;red&quot;&gt;两个同时设置会发生冲突，通常数值在900-1200之间。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">#### 变换原点：</span><br><span class="line"></span><br><span class="line">同上方2D方法相同，不在赘述。</span><br><span class="line"></span><br><span class="line">#### 实现3D场景：</span><br><span class="line"></span><br><span class="line">需要在父元素添加`transform-style:preserve-3d`属性。</span><br><span class="line"></span><br><span class="line">##### `transform`有关3D属性：</span><br><span class="line"></span><br><span class="line">- ##### 3D位移:`translate3d(tx,ty,tz)/translateZ()`  </span><br><span class="line"></span><br><span class="line">&lt;font color=&quot;red&quot;&gt;`translate3d(tx,ty,tz)`必须添加三个值，且不能为百分比否则无效。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">- ##### 3D 旋转：`rotate3d()/rotateZ()`</span><br><span class="line"></span><br><span class="line">`rotate3d()`需要四个值，前三个值为矢量值，建议取1和0；1代表哪一个轴旋转，最后一个值指定角度。</span><br><span class="line"></span><br><span class="line">- ##### 3D 缩放：`scale3d()/scaleZ()`</span><br><span class="line"></span><br><span class="line">#### &lt;font color=&quot;red&quot;&gt;倾斜会改变元素形状，而旋转不会改变元素形状。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">### 3D动画：</span><br><span class="line"></span><br><span class="line">#### 关键帧：</span><br><span class="line"></span><br><span class="line">3D动画不同于过渡只能定义首尾状态，关键帧可以定义任意个状态，由此实现更复杂动画。创建方法如下：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+@keyframes move&#123;
+  0%&#123;初始时状态&#125;
+  /*中间可以添加任意关键帧*/
+  100%&#123;最终状态&#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<p>创建完动画后就要使要改变的元素引用该动画。</p>
+<h4 id="动画属性（animation）"><a href="#动画属性（animation）" class="headerlink" title="动画属性（animation）:"></a>动画属性（<code>animation</code>）:</h4><h5 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h5><ul>
+<li><code>animation-name</code>：检索或设置动画名称，与<code>@keyframes</code>配合使用；</li>
+<li><code>animation-duration</code>：同<code>transition</code>相同。</li>
+<li><code>animation-timing-function</code>：同<code>transition</code>相同，增加<code>step-start</code>：马上跳到动画每一帧结束状态；</li>
+<li><code>animation-delay</code>：同<code>transition</code>相同。</li>
+<li><code>animation-iteration-count</code>：设置或检索动画循环次数<ul>
+<li><code>infinite</code>：无限循环;</li>
+<li><code>number</code>：具体次数；</li>
+</ul>
+</li>
+<li><code>animation-direction</code>：检索或设置动画是否反向运动<ul>
+<li><code>reverse</code> ：反向运动</li>
+<li><code>alternate</code>：先正向运动再反向运动，并交替循环；</li>
+</ul>
+</li>
+<li><code>animation-play-state</code>：检索或设置对象状态<ul>
+<li><code>paused</code>暂停；</li>
+<li><code>running</code>：运动</li>
+<li><code>animation-play-state</code>：鼠标经过时停止，移开时继续。</li>
+</ul>
+</li>
+</ul>
+<p>由上可以看出<code>animation</code>和<code>transition</code>类似，那二者有什么异同点呢？</p>
+<h4 id="变换与动画比较："><a href="#变换与动画比较：" class="headerlink" title="变换与动画比较："></a>变换与动画比较：</h4><table>
+<thead>
+<tr>
+<th>相同点</th>
+<th>不同点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>随着时间改变元素的css属性值</td>
+<td><code>transition</code>需要触发一个事件，才会随时间改变css属性值</td>
+</tr>
+<tr>
+<td></td>
+<td><code>animation</code>不需要触发任何事件</td>
+</tr>
+</tbody></table>
 
-</center>
     </div>
 
     
@@ -327,7 +380,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/" title="安好">http://www.swiftslee.me/2021/07/12/安好/</a>
+    <a href="http://www.swiftslee.me/2021/08/04/CSS%E5%8A%A8%E7%94%BB/" title="CSS3-过渡变形与动画">http://www.swiftslee.me/2021/08/04/CSS动画/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -337,17 +390,21 @@
 
 
       <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i>CSS</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/07/12/%E5%8D%B3%E5%B0%86/" rel="next" title="即将">
-      即将 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/" rel="prev" title="img三像素">
+      <i class="fa fa-chevron-left"></i> img三像素
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -407,6 +464,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%B8%A1-transition-%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">过渡(transition)：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7%E5%80%BC%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">相关属性值：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%B1%9E%E6%80%A7%EF%BC%88animation%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">动画属性（animation）:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7%EF%BC%9A"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">相关属性：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E6%8D%A2%E4%B8%8E%E5%8A%A8%E7%94%BB%E6%AF%94%E8%BE%83%EF%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">变换与动画比较：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
