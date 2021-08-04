@@ -176,30 +176,6 @@
       </tags>
   </entry>
   <entry>
-    <title>img三像素</title>
-    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
-    <content><![CDATA[<p>-</p>
-<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此img图片下方会多出三像素，可采用以下解决方案：</p>
-<ul>
-<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
-</li>
-<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
-</li>
-<li><p>img标签增加<code>display:block</code>；</p>
-<span id="more"></span>
-
-<p>三像素示意图：</p>
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS布局之文档流浮动与定位</title>
     <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<hr>
@@ -232,17 +208,19 @@
 </ol>
 </li>
 <li><ol start="2">
-<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear:both;</span><br><span class="line">  /*防止空标签内有数据 */</span><br><span class="line">height:0;</span><br><span class="line">overflow:hidden;</span><br></pre></td></tr></table></figure></li>
+<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear:both;</span><br><span class="line">  /*防止空标签内有数据 */</span><br><span class="line">height:0;</span><br><span class="line">overflow:hidden;</span><br></pre></td></tr></table></figure>
+缺点：需要添加多余的空标签并添加属性。<br></li>
+</ol>
+</li>
+<li><ol start="3">
+<li>父元素添加浮动<br>缺点：产生新的浮动。<br></li>
+</ol>
+</li>
+<li><ol start="4">
+<li>最佳方法：添加<code>::after</code>；<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">      content:&quot;&quot;</span><br><span class="line">      display: block;</span><br><span class="line">      clear: both;</span><br><span class="line">      height: 0;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">/*visibility:hidden;为了去隐藏content中的内容 */</span><br><span class="line">      visibility: hidden;</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ul>
- <br>
- 缺点：需要添加多余的空标签并添加属性。<br>
-- 3. 父元素添加浮动
- 缺点：产生新的浮动。<br>
-- 4. 最佳方法：添加`::after`；
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">  content:&quot;&quot;</span><br><span class="line">  display: block;</span><br><span class="line">      clear: both;</span><br><span class="line">	height: 0;</span><br><span class="line">overflow: hidden;</span><br><span class="line">   /*visibility:hidden;为了去隐藏content中的内容 */</span><br><span class="line">visibility: hidden;</span><br></pre></td></tr></table></figure>
-
 <h2 id="什么是BFC？"><a href="#什么是BFC？" class="headerlink" title="什么是BFC？"></a>什么是BFC？</h2><blockquote>
 <p>Block Formatting Contexts（BFC），块级元素格式化上下文。它是一个独立的渲染区域，只有块元素参与，它规定了内部如何布局，并且与外界毫不相干。</p>
 </blockquote>
@@ -270,6 +248,49 @@
       <tags>
         <tag>CSS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>img三像素</title>
+    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
+    <content><![CDATA[<p>-</p>
+<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此img图片下方会多出三像素，可采用以下解决方案：</p>
+<ul>
+<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
+</li>
+<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
+</li>
+<li><p>img标签增加<code>display:block</code>；</p>
+<span id="more"></span>
+
+<p>三像素示意图：</p>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19PDQf4oeMw5JBQ0qjI9KjynLq6iArI9MmpuCEs/Ml6pJ8sMtd8YisaxvfPy5O45j0U4Zjtlncl7KfTqOIowUcHbZLJPJ5+uLjY3BxVeWvb+EGIogi6Olfci7zsR1zqyqRDs1aOapfZuNY10RXLtI0SZvkVJ20o/UvAdp4bCPOlTsqQ9qPSGalwFX14wzoWVCqZwDSWSg5diNg4xxXMTGMh4fX9b+kebNwXmi2H5nHc3xmziHBCu3N8D12EIzVtuhzn2FG9wuheX0wwUYMzTVJHdETlRupMqNjBuaQA/JfhEPkA9/ZRNvC2Y9L6JZHoZ5x9Ds9NAyIVRF0POdGFig2qcXLr9YhWWrloE2Oil5fxIVDaLjAS3vLMZ4TbBMCIauh5OYFAx2wzQ+G/0MROJ8OgAdzAufJiT1e0/zNBozq0OAGYesWBK+WHdVxHR7wJy1SPce8Tgwp5XHapQ0qeIkhBqZDTRjAZ66JIUf8bYy4WDS41Gk4ESOnnmTWr7bihauYwGJKQoN6Sq5FZBY/+ARHkNjUt70lxE7pNGexh3oGGKeKtysnmSWopnw/63yWcPQ/nhw3dERBUWWZ4Hvhs6j7j8rfOOgrJCal3nr5NujddGNTCTGBppjw+pvXBBCIp+CgWp/Lz79E+GdApzxtwastRcecXYZVExfpByVcE5ZG2uO7hThMt9XLuOW+PG66E7begA/kgjBaeZFpUXmvhQSKnKbNgZTD5L4aOPXEnPzfHsDt8aZYIiNrs2E5plGQhxLmvWpDfLEH5mAoi1r9tnVSzOB/kpU0SswaahGetsdmInpRTp7DhXIlLM8iPBXRVjlvIvWQdzVxHkDtnFSnPSiJgN8TbjRP7GwqGkqA8KUZU4Ipg6UJmHr2uI5sc6rkvfCNivH64N9jKziPRAnxJJcnVsK66AaX6phfypOjhbvXxf2e02ydL5l/ktlj89qV+xXGQUI7qna35RK1fnCSzH7Qiakhkh4/hXfHcqyP/P+5vSdExivEPuFLa </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>安好</title>
+    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
+    <content><![CDATA[<p>-</p>
+<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+
+</center>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
   </entry>
   <entry>
     <title>标签分类</title>
@@ -333,24 +354,5 @@
       <tags>
         <tag>HTML</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19lDkQzr6CO7zhqRptTyHeKXj95xR+m0w1bAX7kJU5h+honqe2r6W3/+WCuQJD1dpjC8vxEXMNWUCZ5lS1Co75qTuoKxC4b9QyzL4N38GmClbHA2gTg2BOgRuyhldQtsaI4hBYhh8oSMWYtvXRTyj/AI/jjio7f6Cp3wto7JJmXKoZpccADXragc1TPOlKVVazmohyXwqetyRVYSWysyfosXkrJH6JUKi98wjnlaVBehvl3BhNM8gXB5v9L8EEWBm8hDf7wet7P7J21FYb75p/G61L9dyyhjAOgiDp7X4Bqh5Vqtynj1yEWBcKxUHdNbh5RGj/Mg9BYVs2v2sWKJ2Y7AdzKf8YXqDl8Tg+Gns34Iwt3XTqJWegjA49qCSzsqiqQalANPjoHWpFq3fgT6xM7Hg5dB6vMx1wjim6+SjjYIxlluUBaFWt6SYkxsQbgE8yhtW9F01vp/yJvNi8ctynD31eKGaK5yY6SwW/OQ42PTNAiHFGPEjyawHF2IYqUl2V30ZZ7IWba4g7n79kf9WUzLCrbhEVLO4otYNWa3aIWSctJJ4iCQyScToBOwDRSZ4s1N86CpqD0IhHOpfAHWBptm0qlv3sHRCi8oo5f2qOnp0RQLZJRB79uYSvC45M77oQEx4T3PIyYWBTvXvJhrqASl38jysnNde8r08A86ZH1CJJe+iuJlPRXmGAomiXOYAp0cJ6guihNYfj6vQ334NZ4e7G5db2rpGm2r6LBPeS3Z07RMK7lGZUhqrWwHiLtQEHs016eZwd+9o6HLPcIVd1gxm+u455SQRRV/HtYIpsVDMZVRwhEwJ++FrH//7gjCVHVekwr9Jaz4PedLfBnLssWpdmWamDSZh0fRkHzl+zjIp0OxDTFT0GeFw8CmcF7q0RNTE+LQjkHGmMxGZmmi3mKQPa8vyIfFHmhzqyAuBJlGL17XMcNrB0Fy07rL6g2exEyTL4Ds+0nBnBFFqJGIX4MUFKS0ngYHo8NtFIDL8ElkkldJW/LWKtZ </div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>安好</title>
-    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
-    <content><![CDATA[<p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
-
-</center>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
   </entry>
 </search>
