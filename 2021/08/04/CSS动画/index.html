@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E5%80%BE%E6%96%9C.gif?ynotemdtimestamp=1628035839008">
 <meta property="article:published_time" content="2021-08-04T00:11:08.263Z">
-<meta property="article:modified_time" content="2021-08-04T02:46:11.207Z">
+<meta property="article:modified_time" content="2021-08-04T02:49:08.716Z">
 <meta property="article:author" content="swiftslee">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -230,7 +230,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-08-04 08:11:08 / 修改时间：10:46:11" itemprop="dateCreated datePublished" datetime="2021-08-04T08:11:08+08:00">2021-08-04</time>
+              <time title="创建时间：2021-08-04 08:11:08 / 修改时间：10:49:08" itemprop="dateCreated datePublished" datetime="2021-08-04T08:11:08+08:00">2021-08-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -326,10 +326,10 @@
 </li>
 <li><p><code>transform:translateY(200px)</code>：y轴移动；</p>
 </li>
-<li><p><code>transform:translate(100px,100px)</code>:对角移动<br><font color="red">设置一个值，表示向x轴移动</font></p>
+<li><p><code>transform:translate(100px,100px)</code>:对角移动</p>
 </li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203711.gif?ynotemdtimestamp=1628035839008" alt="位移"></p>
+<p><font color="red">设置一个值，表示向x轴移动</font><br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203711.gif?ynotemdtimestamp=1628035839008" alt="位移"></p>
 <ul>
 <li><h4 id="缩放："><a href="#缩放：" class="headerlink" title="缩放："></a>缩放：</h4></li>
 </ul>
@@ -359,9 +359,10 @@
 </li>
 <li><p><code>transform:rotateX(30deg)</code>：x轴旋转；</p>
 </li>
-<li><p><code>transform:rotateY(30deg)</code>：y轴旋转；<br><font color="red">注意：只能接受一个值，设置两个值语法报错设置一个值，表示以中心点旋转</font><br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008" alt="旋转"></p>
+<li><p><code>transform:rotateY(30deg)</code>：y轴旋转；</p>
 </li>
 </ol>
+<p><font color="red">注意：只能接受一个值，设置两个值语法报错设置一个值，表示以中心点旋转</font><br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008" alt="旋转"></p>
 <ul>
 <li><h4 id="倾斜："><a href="#倾斜：" class="headerlink" title="倾斜："></a>倾斜：</h4></li>
 </ul>
@@ -386,8 +387,9 @@
 <h4 id="景深：（perspective）"><a href="#景深：（perspective）" class="headerlink" title="景深：（perspective）"></a>景深：（<code>perspective</code>）</h4><p>景深的作用即是设置元素与视线的距离感，即近大远小。 设置景深主要有两种方法：</p>
 <ol>
 <li><code>perspective: 1200px;）</code>（在父元素中使用)</li>
-<li><code>transform:perspective(1200px)</code> （在子元素中使用）<br><font color="red">两个同时设置会发生冲突，通常数值在900-1200之间。</font></li>
+<li><code>transform:perspective(1200px)</code> （在子元素中使用）</li>
 </ol>
+<p><font color="red">两个同时设置会发生冲突，通常数值在900-1200之间。</font></p>
 <h4 id="变换原点："><a href="#变换原点：" class="headerlink" title="变换原点："></a>变换原点：</h4><p>同上方2D方法相同，不在赘述。</p>
 <h4 id="实现3D场景："><a href="#实现3D场景：" class="headerlink" title="实现3D场景："></a>实现3D场景：</h4><p>需要在父元素添加<code>transform-style:preserve-3d</code>属性。</p>
 <h5 id="transform有关3D属性："><a href="#transform有关3D属性：" class="headerlink" title="transform有关3D属性："></a><code>transform</code>有关3D属性：</h5><ul>

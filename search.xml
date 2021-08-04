@@ -1,87 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CSS布局之文档流浮动与定位</title>
-    <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<hr>
-<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
-<li>普通流（文档流）：自上而下，自左向右显示。</li>
-<li>定位</li>
-<li>浮动<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-众所周知，块级元素在页面独占一行，即自上而下排列，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A81.png" alt="浮动1"><br>这就是所谓的标准文档流，因此想脱离文档流，让块级元素在一行显示就必须使用浮动。<blockquote>
-<p>浮动就是脱离文档流，漂浮在文档流之上。</p>
-</blockquote>
-<h2 id="浮动折叠："><a href="#浮动折叠：" class="headerlink" title="浮动折叠："></a>浮动折叠：</h2>由于浮动元素会在其他元素上方，因此会造成遮挡问题，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A82.png" alt="浮动2"></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.div1&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: gold;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">.div2&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>div1</code>设置左浮动后，<code>div2</code>移到上方。原因是<code>div1</code>脱离文档流，因此位置变为空，<code>div2</code>就会移到上方。</p>
-<h6 id="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"><a href="#由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？" class="headerlink" title="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"></a>由此可知，浮动会导致重叠，那下方<code>div2</code>浮动后会不会在<code>div1</code>的位置呢？</h6><p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A83.png" alt="浮动3"><br>答案是不会，<code>div3</code>会在<code>div2</code>的位置，而<code>div2</code>位置则不会变。</p>
-<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2不会浮动</code>。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。"></a>浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。</h3><hr>
-<h2 id="CSS定位："><a href="#CSS定位：" class="headerlink" title="CSS定位："></a>CSS定位：</h2><p><code>position</code>属性：</p>
-<ul>
-<li> <code>relative</code>:相对定位，相对于自身位置进行定位，且不脱离文档流且占位。</li>
-<li> <code>absolute</code>:绝对定位，相对于最近有定位的父元素进行定位（若父元素没有定位，则根据html定位）,脱离文档流且不占位。</li>
-<li> <code>fixed</code>：固定定位，相对于可视窗口定位，脱离文档流且不占位。</li>
-<li> <code>stick</code>：粘性定位，当页面未滚出父元素，表现和<code>relative</code>相同，反之和<code>fixd</code>相同。<h2 id="高度塌陷："><a href="#高度塌陷：" class="headerlink" title="高度塌陷："></a>高度塌陷：</h2>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7.gif" alt="高度塌陷"></p>
-<h2 id="解决高度塌陷常用方法："><a href="#解决高度塌陷常用方法：" class="headerlink" title="解决高度塌陷常用方法："></a>解决高度塌陷常用方法：</h2><ul>
-<li><ol>
-<li>容器元素添加<code>overflow：hidden</code></li>
-</ol>
-</li>
-</ul>
-<p>缺点：IE6以下不兼容；不能和positio共存，超出的尺寸会被隐藏</p>
-<ul>
-<li><ol start="2">
-<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear:both;</span><br><span class="line">  /*防止空标签内有数据 */</span><br><span class="line">height:0;</span><br><span class="line">overflow:hidden;</span><br></pre></td></tr></table></figure>
-缺点：需要添加多余的空标签并添加属性。</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>父元素添加浮动</li>
-</ol>
-</li>
-</ul>
-<p> 缺点：产生新的浮动。</p>
-<ul>
-<li><ol start="4">
-<li>最佳方法：添加<code>::after</code>；<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">      content:&quot;&quot;</span><br><span class="line">      display: block;</span><br><span class="line">      clear: both;</span><br><span class="line">      height: 0;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">/*visibility:hidden;为了去隐藏content中的内容 */</span><br><span class="line">      visibility: hidden;</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-<p>缺点：IE7以下不兼容。</p>
-<h2 id="什么是BFC？"><a href="#什么是BFC？" class="headerlink" title="什么是BFC？"></a>什么是BFC？</h2><blockquote>
-<p>Block Formatting Contexts（BFC），块级元素格式化上下文。它是一个独立的渲染区域，只有块元素参与，它规定了内部如何布局，并且与外界毫不相干。</p>
-</blockquote>
-<h3 id="触发条件是什么？"><a href="#触发条件是什么？" class="headerlink" title="触发条件是什么？"></a>触发条件是什么？</h3><ol>
-<li><code>float</code>的值为<code>left/right</code>;<br></li>
-<li><code>overflow</code>的值为<code>auto/hidden/scroll</code>;<br></li>
-<li><code>position</code>的值为<code>absolute/fixed</code>;<br></li>
-<li><code>display</code>的值为<code>table-cell/table-caption/inline-block</code>;<br></li>
-<li>当前元素转换为根元素<code>display:flow-root</code>;(不推荐)<br><h3 id="触发方式是什么？"><a href="#触发方式是什么？" class="headerlink" title="触发方式是什么？"></a>触发方式是什么？</h3></li>
-</ol>
-<ul>
-<li>若元素为父子关系，触发条件则添加给父元素。</li>
-<li>若元素为兄弟关系，触发条件添加给第二个元素。<h3 id="BFC可以解决什么问题？"><a href="#BFC可以解决什么问题？" class="headerlink" title="BFC可以解决什么问题？"></a>BFC可以解决什么问题？</h3></li>
-</ul>
-<ol>
-<li>高度塌陷</li>
-<li>margin折叠</li>
-<li>浮动脱离文档流</li>
-<li>子元素传递给父元素的<code>margin-top</code></li>
-</ol>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS3-过渡变形与动画</title>
     <url>/2021/08/04/CSS%E5%8A%A8%E7%94%BB/</url>
     <content><![CDATA[<hr>
@@ -131,10 +50,10 @@
 </li>
 <li><p><code>transform:translateY(200px)</code>：y轴移动；</p>
 </li>
-<li><p><code>transform:translate(100px,100px)</code>:对角移动<br><font color="red">设置一个值，表示向x轴移动</font></p>
+<li><p><code>transform:translate(100px,100px)</code>:对角移动</p>
 </li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203711.gif?ynotemdtimestamp=1628035839008" alt="位移"></p>
+<p><font color="red">设置一个值，表示向x轴移动</font><br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203711.gif?ynotemdtimestamp=1628035839008" alt="位移"></p>
 <ul>
 <li><h4 id="缩放："><a href="#缩放：" class="headerlink" title="缩放："></a>缩放：</h4></li>
 </ul>
@@ -164,9 +83,10 @@
 </li>
 <li><p><code>transform:rotateX(30deg)</code>：x轴旋转；</p>
 </li>
-<li><p><code>transform:rotateY(30deg)</code>：y轴旋转；<br><font color="red">注意：只能接受一个值，设置两个值语法报错设置一个值，表示以中心点旋转</font><br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008" alt="旋转"></p>
+<li><p><code>transform:rotateY(30deg)</code>：y轴旋转；</p>
 </li>
 </ol>
+<p><font color="red">注意：只能接受一个值，设置两个值语法报错设置一个值，表示以中心点旋转</font><br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008" alt="旋转"></p>
 <ul>
 <li><h4 id="倾斜："><a href="#倾斜：" class="headerlink" title="倾斜："></a>倾斜：</h4></li>
 </ul>
@@ -191,8 +111,9 @@
 <h4 id="景深：（perspective）"><a href="#景深：（perspective）" class="headerlink" title="景深：（perspective）"></a>景深：（<code>perspective</code>）</h4><p>景深的作用即是设置元素与视线的距离感，即近大远小。 设置景深主要有两种方法：</p>
 <ol>
 <li><code>perspective: 1200px;）</code>（在父元素中使用)</li>
-<li><code>transform:perspective(1200px)</code> （在子元素中使用）<br><font color="red">两个同时设置会发生冲突，通常数值在900-1200之间。</font></li>
+<li><code>transform:perspective(1200px)</code> （在子元素中使用）</li>
 </ol>
+<p><font color="red">两个同时设置会发生冲突，通常数值在900-1200之间。</font></p>
 <h4 id="变换原点："><a href="#变换原点：" class="headerlink" title="变换原点："></a>变换原点：</h4><p>同上方2D方法相同，不在赘述。</p>
 <h4 id="实现3D场景："><a href="#实现3D场景：" class="headerlink" title="实现3D场景："></a>实现3D场景：</h4><p>需要在父元素添加<code>transform-style:preserve-3d</code>属性。</p>
 <h5 id="transform有关3D属性："><a href="#transform有关3D属性：" class="headerlink" title="transform有关3D属性："></a><code>transform</code>有关3D属性：</h5><ul>
@@ -282,23 +203,85 @@
       </tags>
   </entry>
   <entry>
-    <title>安好</title>
-    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
-    <content><![CDATA[<p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+    <title>CSS布局之文档流浮动与定位</title>
+    <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<hr>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
+<li>普通流（文档流）：自上而下，自左向右显示。</li>
+<li>定位</li>
+<li>浮动<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+众所周知，块级元素在页面独占一行，即自上而下排列，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A81.png" alt="浮动1"><br>这就是所谓的标准文档流，因此想脱离文档流，让块级元素在一行显示就必须使用浮动。<blockquote>
+<p>浮动就是脱离文档流，漂浮在文档流之上。</p>
+</blockquote>
+<h2 id="浮动折叠："><a href="#浮动折叠：" class="headerlink" title="浮动折叠："></a>浮动折叠：</h2>由于浮动元素会在其他元素上方，因此会造成遮挡问题，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A82.png" alt="浮动2"></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.div1&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: gold;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">.div2&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</center>]]></content>
+<p>在<code>div1</code>设置左浮动后，<code>div2</code>移到上方。原因是<code>div1</code>脱离文档流，因此位置变为空，<code>div2</code>就会移到上方。</p>
+<h6 id="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"><a href="#由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？" class="headerlink" title="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"></a>由此可知，浮动会导致重叠，那下方<code>div2</code>浮动后会不会在<code>div1</code>的位置呢？</h6><p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A83.png" alt="浮动3"><br>答案是不会，<code>div3</code>会在<code>div2</code>的位置，而<code>div2</code>位置则不会变。</p>
+<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2不会浮动</code>。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。"></a>浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。</h3><hr>
+<h2 id="CSS定位："><a href="#CSS定位：" class="headerlink" title="CSS定位："></a>CSS定位：</h2><p><code>position</code>属性：</p>
+<ul>
+<li> <code>relative</code>:相对定位，相对于自身位置进行定位，且不脱离文档流且占位。</li>
+<li> <code>absolute</code>:绝对定位，相对于最近有定位的父元素进行定位（若父元素没有定位，则根据html定位）,脱离文档流且不占位。</li>
+<li> <code>fixed</code>：固定定位，相对于可视窗口定位，脱离文档流且不占位。</li>
+<li> <code>stick</code>：粘性定位，当页面未滚出父元素，表现和<code>relative</code>相同，反之和<code>fixd</code>相同。<h2 id="高度塌陷："><a href="#高度塌陷：" class="headerlink" title="高度塌陷："></a>高度塌陷：</h2>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7.gif" alt="高度塌陷"></p>
+<h2 id="解决高度塌陷常用方法："><a href="#解决高度塌陷常用方法：" class="headerlink" title="解决高度塌陷常用方法："></a>解决高度塌陷常用方法：</h2><ul>
+<li><ol>
+<li>容器元素添加<code>overflow：hidden</code></li>
+</ol>
+</li>
+</ul>
+<p>缺点：IE6以下不兼容；不能和positio共存，超出的尺寸会被隐藏</p>
+<ul>
+<li><ol start="2">
+<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear:both;</span><br><span class="line">  /*防止空标签内有数据 */</span><br><span class="line">height:0;</span><br><span class="line">overflow:hidden;</span><br></pre></td></tr></table></figure>
+缺点：需要添加多余的空标签并添加属性。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>父元素添加浮动</li>
+</ol>
+</li>
+</ul>
+<p> 缺点：产生新的浮动。</p>
+<ul>
+<li><ol start="4">
+<li>最佳方法：添加<code>::after</code>；<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">      content:&quot;&quot;</span><br><span class="line">      display: block;</span><br><span class="line">      clear: both;</span><br><span class="line">      height: 0;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">/*visibility:hidden;为了去隐藏content中的内容 */</span><br><span class="line">      visibility: hidden;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<p>缺点：IE7以下不兼容。</p>
+<h2 id="什么是BFC？"><a href="#什么是BFC？" class="headerlink" title="什么是BFC？"></a>什么是BFC？</h2><blockquote>
+<p>Block Formatting Contexts（BFC），块级元素格式化上下文。它是一个独立的渲染区域，只有块元素参与，它规定了内部如何布局，并且与外界毫不相干。</p>
+</blockquote>
+<h3 id="触发条件是什么？"><a href="#触发条件是什么？" class="headerlink" title="触发条件是什么？"></a>触发条件是什么？</h3><ol>
+<li><code>float</code>的值为<code>left/right</code>;<br></li>
+<li><code>overflow</code>的值为<code>auto/hidden/scroll</code>;<br></li>
+<li><code>position</code>的值为<code>absolute/fixed</code>;<br></li>
+<li><code>display</code>的值为<code>table-cell/table-caption/inline-block</code>;<br></li>
+<li>当前元素转换为根元素<code>display:flow-root</code>;(不推荐)<br><h3 id="触发方式是什么？"><a href="#触发方式是什么？" class="headerlink" title="触发方式是什么？"></a>触发方式是什么？</h3></li>
+</ol>
+<ul>
+<li>若元素为父子关系，触发条件则添加给父元素。</li>
+<li>若元素为兄弟关系，触发条件添加给第二个元素。<h3 id="BFC可以解决什么问题？"><a href="#BFC可以解决什么问题？" class="headerlink" title="BFC可以解决什么问题？"></a>BFC可以解决什么问题？</h3></li>
+</ul>
+<ol>
+<li>高度塌陷</li>
+<li>margin折叠</li>
+<li>浮动脱离文档流</li>
+<li>子元素传递给父元素的<code>margin-top</code></li>
+</ol>
+]]></content>
       <categories>
-        <category>随笔</category>
+        <category>CSS</category>
       </categories>
-  </entry>
-  <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19O4nHbbhktM74sXkqWThbCucDHsbvaRiGlcHGAUgu/jbYs37a8/ZbTYszpxwt61OG1xnn6QwEe9N3JkO3WPuZwIP0RkkoBFZoEnjOj6n4UuHXcUAV3NFh5y6Ned/ZspKQujXIBjS6EjIPzvr1RAOifQdyEA+A9ptOW5zhPVUIvtEhZMhRtJb7edmoDf7JI636vlbjVelVPtNl5PJc84TQWHa3DTpYB6e3XIe/mGpWKi4G98+3o3+bENpPSzKO93yX+FULfzWIOSvzyImPTpci0gxmxcYjt5POo940hyH11SaHBtp+RsOguHD6yeAr8RRoSnBefexGJ1e1OO7Q2XU23ZzxmRgecogNyhzhkhLxtiGTK4PW0G8JnIV7iDLD4UE1+Qsyyon78JwCZxa1IjrxjMsbBuQ7WAnQQ/gy71CjAQtBL6wy3dINDdIyEbnsDms7AGeqSDoT5W3rBrOl/ujJ5UtT/iFOXUmDV5CMUX4hSDD12WI0lgAGzkt+H/4PLNDVBViXDUtNJQkUuRpBz7TeupJPI3DwcqKvxz/1cbI4VC1/FjWRwqMF/PlwYimjQSODCU20H2tzTtFRNVAt6+NXLWMqgj/NQHOCKS3WYC7QsJ6RVxpkD1dFtGiIvI/6Tk0VP/21JIVR1hT2pB0fcDepRgr4QFqrZEYbuasA7Ub6Jmw+9at8JwVWthdKPgeIy44+z1mUDg8YML6CECGKhxGCl2+hfKBKGo7r3BwZ+mAfdxf4H8hm4o1+Lxb8NatPHVNZSZFl+VuVjVP3wwjKvfrxXR6jrhJeeqdOFeL6WSanF6ubUUgbpI7UwXFpx+6vlHnqdH0/8/8ewHwCcnNFURNQbyh1Ow1oQhQ/Ja6hjqbdRhcVtb66bBcF2+gKR5U063bJDLeMMP71wEXa6I86GaOtFYIKxMkNKE0L0SW7EhGRy6lL+OHKFtRSKgiHUHUiK1mpaK13SyV42J0/lsgeCmM//NOMNqtcj4apEsZUlEe7qcgKZ191+zL2M </div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
   </entry>
   <entry>
     <title>标签分类</title>
@@ -361,5 +344,24 @@
       <tags>
         <tag>HTML</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19OiSJpkisLxbZXhIjdYRSwYGqk0B7CKxVh9bQ3BM49ScYvqmhp+eDuV49fkK/it0Bug/vLVp6MxhD2PNviMzLSbgTxjRhD2hdxR1nME0o9jPI2pYRn4JAlGLGTVSyeEALM2ZXl5Ete2/ja1iXFoA2RGo4ebEyHgHkZjSvsqlZJFVmzR/4KtTjpvr3//yekVqV1EmejOqmCIb+BqfYiivKLeELQSdKFZzkAY6R8ZXv4lyXylVLuGyW38BfCXWzPQ2n+APUpMNStQW6dH/IAo/OSz1CbR2L0NmK2hXPQ41odWNcOjwXI0V1giVyGYCjVFzhM2MV7+WQqik5QwtFP76w9Ta9NDqNOvV/nXJ5NXHk2dIiBtcOc42YA5bbEgrZK+8oAh1EfJPfa23KOIloZCW79q+JSN4ye5BI+xKzPDFXv2e68IKTxXZ2HqXzfvubAANHTt30umNaohqu0sCU0/nGuzF7CZDuIoa0Yv10to1Pvs3I0XWx1Ot1RPFZKSzjFMVTR4nvBqydcl3QwQoReYkPvye6qK2kkx4FvHkFf/q7gojBNnmockQ9jB7PlELf7jbhx01vieFWTdb1yCM8f4Vp4cMlZMKcI8psMztsHJVHdz7n/KS+gSvwv92Ur1HNCTCGhQ8lYfy8gSmI8v2wa7p1H8BiVuKZ5ZhIFfSZyy2P8xxZcOWLyo5UBYl1g2tO6bbsol2jSeN6ZMTTznsuSW7H6rzqxEs1chdKwTZURCi06ej1kdT5lKwEOwizheHvwsF3g5Ejc1WLkq2Rv6ca+b+gGlQ9gB6YrGlzD+DDbW2V+pwAKRHdDJXMga/QxPZCl754JgPIFI38m/pCKLU0zM8/ll08H/x+nKzK75imNODfLdS5+2DGxfEc7saAvfsUMLpofWM+fUh6N7opA2MY1YhqvjZpHbFMHUchtivazpjF9udw0glpu1A99xF14PhoX+4YC1UiSAiBtXKDPBkB7nwO9Ht9uOZ7bxdURZ94ri82fJG+oSg8TrVsH </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>安好</title>
+    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
+    <content><![CDATA[<p>-</p>
+<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+
+</center>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
   </entry>
 </search>
