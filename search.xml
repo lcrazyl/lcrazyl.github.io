@@ -14,18 +14,121 @@
 </li>
 <li><p><code>transition-delay</code>:检索或设置对象延迟过渡时间；</p>
 </li>
-<li><pre><code>transition-timing-function
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  :检索或设置对象过渡动画类型；</span><br><span class="line"></span><br><span class="line">  - `linear`:匀速；</span><br><span class="line">  - `ease`：逐渐慢下来；</span><br><span class="line">  - `ease-in`：加速；</span><br><span class="line">  - `ease-out`：减速;</span><br><span class="line">  - `ease-in-out`：先加速后减速</span><br><span class="line"></span><br><span class="line">属性值顺序可以调换，但过渡时间和延迟时间有先后顺序，在前的为过渡时间。</span><br><span class="line"></span><br><span class="line">## 2D变形属性：`transform`</span><br><span class="line"></span><br><span class="line">### 相关属性：</span><br><span class="line"></span><br><span class="line">- `translate()`：位移</span><br><span class="line">- `scale()`:缩放</span><br><span class="line">- `rotate()`：旋转</span><br><span class="line">- `skew()`：倾斜</span><br><span class="line"></span><br><span class="line">### 变形原点：</span><br><span class="line"></span><br><span class="line">&gt; 通常默认变形原点为元素的中心点。</span><br><span class="line"></span><br><span class="line">`transform-origin`属性即可设置变形原点，只对`rotate`、`scale`、`skew`有效,可以用英文单词、百分数、具体像素设置。例如设置`transform-origin:left bottom`即变形原点为左下。</span><br><span class="line"></span><br><span class="line">### 属性详解：</span><br><span class="line"></span><br><span class="line">- #### 位移：</span><br><span class="line"></span><br><span class="line">&gt; 将元素向指定方向移动，类似于`position:relative`；</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line"></span><br><span class="line">1. `transform:translate(100px)`:不加X或y轴，则默认X轴移动;</span><br><span class="line"></span><br><span class="line">2. `transform:translateX(100px)`：x轴移动；</span><br><span class="line"></span><br><span class="line">3. `transform:translateY(200px)`：y轴移动；</span><br><span class="line"></span><br><span class="line">4. `transform:translate(100px,100px)`:对角移动</span><br><span class="line">&lt;font color=&quot;red&quot;&gt;设置一个值，表示向x轴移动&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">![位移](https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203711.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line"></span><br><span class="line">- #### 缩放：</span><br><span class="line"></span><br><span class="line">&gt; 元素根据中心原点对元素进行缩放。默认的值1</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line"></span><br><span class="line">1. `transform:scale(.5)`:不加X或y轴，默认代表X和y轴;</span><br><span class="line"></span><br><span class="line">2. `transform:scaleX(.5)`：x轴缩放；</span><br><span class="line"></span><br><span class="line">3. `transform:scaleY(.5)`：y轴缩放；</span><br><span class="line">&lt;font color=&quot;red&quot;&gt;设置一个值，表示x轴和y轴同时缩放&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">    ![缩放](https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203643.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line"></span><br><span class="line">- #### 旋转：  </span><br><span class="line"></span><br><span class="line">&gt; 通过指定的角度参数对元素根据对象原点指定一个2D旋转。</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line"></span><br><span class="line">1. `transform:rotate(30deg)`:不加X或y轴，默认以中心点旋转;</span><br><span class="line"></span><br><span class="line">2. `transform:rotateX(30deg)`：x轴旋转；</span><br><span class="line"></span><br><span class="line">3. `transform:rotateY(30deg)`：y轴旋转；</span><br><span class="line">&lt;font color=&quot;red&quot;&gt;注意：只能接受一个值，设置两个值语法报错设置一个值，表示以中心点旋转&lt;/font&gt;</span><br><span class="line">![旋转](https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line">- #### 倾斜：</span><br><span class="line"></span><br><span class="line">&gt; 将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。</span><br><span class="line"></span><br><span class="line">赋值方式：</span><br><span class="line">1. `transform:skew(45deg)`:不加X或y轴，默认代表X轴;</span><br><span class="line"></span><br><span class="line">2. `transform:skew(45deg)`：x轴旋转；</span><br><span class="line"></span><br><span class="line">3. `transform:skew(45deg)`：y轴旋转；</span><br><span class="line"></span><br><span class="line">&lt;font color=&quot;red&quot;&gt;设置一个值，表示水平方向倾斜&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">![倾斜](https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E5%80%BE%E6%96%9C.gif?ynotemdtimestamp=1628035839008)</span><br><span class="line"></span><br><span class="line">#### 2D变形必须结合`transition`属性使用，即必须有触发条件（鼠标点击、鼠标划入...）</span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">## 3D变换与3D动画：</span><br><span class="line"></span><br><span class="line">### 3D变换：</span><br><span class="line"></span><br><span class="line">&gt; 3D区别于2D的地方在于近大远小。</span><br><span class="line"></span><br><span class="line">#### 景深：（`perspective`）</span><br><span class="line"></span><br><span class="line">景深的作用即是设置元素与视线的距离感，即近大远小。 设置景深主要有两种方法：</span><br><span class="line"></span><br><span class="line">1. `perspective: 1200px;）`（在父元素中使用)</span><br><span class="line">2. `transform:perspective(1200px)` （在子元素中使用）</span><br><span class="line">   &lt;font color=&quot;red&quot;&gt;两个同时设置会发生冲突，通常数值在900-1200之间。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">#### 变换原点：</span><br><span class="line"></span><br><span class="line">同上方2D方法相同，不在赘述。</span><br><span class="line"></span><br><span class="line">#### 实现3D场景：</span><br><span class="line"></span><br><span class="line">需要在父元素添加`transform-style:preserve-3d`属性。</span><br><span class="line"></span><br><span class="line">##### `transform`有关3D属性：</span><br><span class="line"></span><br><span class="line">- ##### 3D位移:`translate3d(tx,ty,tz)/translateZ()`  </span><br><span class="line"></span><br><span class="line">&lt;font color=&quot;red&quot;&gt;`translate3d(tx,ty,tz)`必须添加三个值，且不能为百分比否则无效。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">- ##### 3D 旋转：`rotate3d()/rotateZ()`</span><br><span class="line"></span><br><span class="line">`rotate3d()`需要四个值，前三个值为矢量值，建议取1和0；1代表哪一个轴旋转，最后一个值指定角度。</span><br><span class="line"></span><br><span class="line">- ##### 3D 缩放：`scale3d()/scaleZ()`</span><br><span class="line"></span><br><span class="line">#### &lt;font color=&quot;red&quot;&gt;倾斜会改变元素形状，而旋转不会改变元素形状。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">### 3D动画：</span><br><span class="line"></span><br><span class="line">#### 关键帧：</span><br><span class="line"></span><br><span class="line">3D动画不同于过渡只能定义首尾状态，关键帧可以定义任意个状态，由此实现更复杂动画。创建方法如下：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-@keyframes move&#123;
-  0%&#123;初始时状态&#125;
-  /*中间可以添加任意关键帧*/
-  100%&#123;最终状态&#125;
-&#125;
-</code></pre>
+<li><p><code>transition-timing-function</code>:检索或设置对象过渡动画类型；</p>
+<span id="more"></span>
+<ul>
+<li><code>linear</code>:匀速；</li>
+<li><code>ease</code>：逐渐慢下来；</li>
+<li><code>ease-in</code>：加速；</li>
+<li><code>ease-out</code>：减速;</li>
+<li><code>ease-in-out</code>：先加速后减速</li>
+</ul>
 </li>
 </ul>
+<p>属性值顺序可以调换，但过渡时间和延迟时间有先后顺序，在前的为过渡时间。</p>
+<h2 id="2D变形属性：transform"><a href="#2D变形属性：transform" class="headerlink" title="2D变形属性：transform"></a>2D变形属性：<code>transform</code></h2><h3 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h3><ul>
+<li><code>translate()</code>：位移</li>
+<li><code>scale()</code>:缩放</li>
+<li><code>rotate()</code>：旋转</li>
+<li><code>skew()</code>：倾斜</li>
+</ul>
+<h3 id="变形原点："><a href="#变形原点：" class="headerlink" title="变形原点："></a>变形原点：</h3><blockquote>
+<p>通常默认变形原点为元素的中心点。</p>
+</blockquote>
+<p><code>transform-origin</code>属性即可设置变形原点，只对<code>rotate</code>、<code>scale</code>、<code>skew</code>有效,可以用英文单词、百分数、具体像素设置。例如设置<code>transform-origin:left bottom</code>即变形原点为左下。</p>
+<h3 id="属性详解："><a href="#属性详解：" class="headerlink" title="属性详解："></a>属性详解：</h3><ul>
+<li><h4 id="位移："><a href="#位移：" class="headerlink" title="位移："></a>位移：</h4></li>
+</ul>
+<blockquote>
+<p>将元素向指定方向移动，类似于<code>position:relative</code>；</p>
+</blockquote>
+<p>赋值方式：</p>
+<ol>
+<li><p><code>transform:translate(100px)</code>:不加X或y轴，则默认X轴移动;</p>
+</li>
+<li><p><code>transform:translateX(100px)</code>：x轴移动；</p>
+</li>
+<li><p><code>transform:translateY(200px)</code>：y轴移动；</p>
+</li>
+<li><p><code>transform:translate(100px,100px)</code>:对角移动<br><font color="red">设置一个值，表示向x轴移动</font></p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203711.gif?ynotemdtimestamp=1628035839008" alt="位移"></p>
+<ul>
+<li><h4 id="缩放："><a href="#缩放：" class="headerlink" title="缩放："></a>缩放：</h4></li>
+</ul>
+<blockquote>
+<p>元素根据中心原点对元素进行缩放。默认的值1</p>
+</blockquote>
+<p>赋值方式：</p>
+<ol>
+<li><p><code>transform:scale(.5)</code>:不加X或y轴，默认代表X和y轴;</p>
+</li>
+<li><p><code>transform:scaleX(.5)</code>：x轴缩放；</p>
+</li>
+<li><p><code>transform:scaleY(.5)</code>：y轴缩放；<br><font color="red">设置一个值，表示x轴和y轴同时缩放</font></p>
+<p> <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210803203643.gif?ynotemdtimestamp=1628035839008" alt="缩放"></p>
+</li>
+</ol>
+<ul>
+<li><h4 id="旋转："><a href="#旋转：" class="headerlink" title="旋转："></a>旋转：</h4></li>
+</ul>
+<blockquote>
+<p>通过指定的角度参数对元素根据对象原点指定一个2D旋转。</p>
+</blockquote>
+<p>赋值方式：</p>
+<ol>
+<li><p><code>transform:rotate(30deg)</code>:不加X或y轴，默认以中心点旋转;</p>
+</li>
+<li><p><code>transform:rotateX(30deg)</code>：x轴旋转；</p>
+</li>
+<li><p><code>transform:rotateY(30deg)</code>：y轴旋转；<br><font color="red">注意：只能接受一个值，设置两个值语法报错设置一个值，表示以中心点旋转</font><br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E6%97%8B%E8%BD%AC.gif?ynotemdtimestamp=1628035839008" alt="旋转"></p>
+</li>
+</ol>
+<ul>
+<li><h4 id="倾斜："><a href="#倾斜：" class="headerlink" title="倾斜："></a>倾斜：</h4></li>
+</ul>
+<blockquote>
+<p>将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。</p>
+</blockquote>
+<p>赋值方式：</p>
+<ol>
+<li><p><code>transform:skew(45deg)</code>:不加X或y轴，默认代表X轴;</p>
+</li>
+<li><p><code>transform:skew(45deg)</code>：x轴旋转；</p>
+</li>
+<li><p><code>transform:skew(45deg)</code>：y轴旋转；</p>
+</li>
+</ol>
+<p><font color="red">设置一个值，表示水平方向倾斜</font></p>
+<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/2D%E5%80%BE%E6%96%9C.gif?ynotemdtimestamp=1628035839008" alt="倾斜"></p>
+<h4 id="2D变形必须结合transition属性使用，即必须有触发条件（鼠标点击、鼠标划入…）"><a href="#2D变形必须结合transition属性使用，即必须有触发条件（鼠标点击、鼠标划入…）" class="headerlink" title="2D变形必须结合transition属性使用，即必须有触发条件（鼠标点击、鼠标划入…）"></a>2D变形必须结合<code>transition</code>属性使用，即必须有触发条件（鼠标点击、鼠标划入…）</h4><hr>
+<h2 id="3D变换与3D动画："><a href="#3D变换与3D动画：" class="headerlink" title="3D变换与3D动画："></a>3D变换与3D动画：</h2><h3 id="3D变换："><a href="#3D变换：" class="headerlink" title="3D变换："></a>3D变换：</h3><blockquote>
+<p>3D区别于2D的地方在于近大远小。</p>
+</blockquote>
+<h4 id="景深：（perspective）"><a href="#景深：（perspective）" class="headerlink" title="景深：（perspective）"></a>景深：（<code>perspective</code>）</h4><p>景深的作用即是设置元素与视线的距离感，即近大远小。 设置景深主要有两种方法：</p>
+<ol>
+<li><code>perspective: 1200px;）</code>（在父元素中使用)</li>
+<li><code>transform:perspective(1200px)</code> （在子元素中使用）<br><font color="red">两个同时设置会发生冲突，通常数值在900-1200之间。</font></li>
+</ol>
+<h4 id="变换原点："><a href="#变换原点：" class="headerlink" title="变换原点："></a>变换原点：</h4><p>同上方2D方法相同，不在赘述。</p>
+<h4 id="实现3D场景："><a href="#实现3D场景：" class="headerlink" title="实现3D场景："></a>实现3D场景：</h4><p>需要在父元素添加<code>transform-style:preserve-3d</code>属性。</p>
+<h5 id="transform有关3D属性："><a href="#transform有关3D属性：" class="headerlink" title="transform有关3D属性："></a><code>transform</code>有关3D属性：</h5><ul>
+<li><h5 id="3D位移-translate3d-tx-ty-tz-translateZ"><a href="#3D位移-translate3d-tx-ty-tz-translateZ" class="headerlink" title="3D位移:translate3d(tx,ty,tz)/translateZ()"></a>3D位移:<code>translate3d(tx,ty,tz)/translateZ()</code></h5></li>
+</ul>
+<p><font color="red"><code>translate3d(tx,ty,tz)</code>必须添加三个值，且不能为百分比否则无效。</font></p>
+<ul>
+<li><h5 id="3D-旋转：rotate3d-rotateZ"><a href="#3D-旋转：rotate3d-rotateZ" class="headerlink" title="3D 旋转：rotate3d()/rotateZ()"></a>3D 旋转：<code>rotate3d()/rotateZ()</code></h5></li>
+</ul>
+<p><code>rotate3d()</code>需要四个值，前三个值为矢量值，建议取1和0；1代表哪一个轴旋转，最后一个值指定角度。</p>
+<ul>
+<li><h5 id="3D-缩放：scale3d-scaleZ"><a href="#3D-缩放：scale3d-scaleZ" class="headerlink" title="3D 缩放：scale3d()/scaleZ()"></a>3D 缩放：<code>scale3d()/scaleZ()</code></h5></li>
+</ul>
+<h4 id="倾斜会改变元素形状，而旋转不会改变元素形状。"><a href="#倾斜会改变元素形状，而旋转不会改变元素形状。" class="headerlink" title="倾斜会改变元素形状，而旋转不会改变元素形状。"></a><font color="red">倾斜会改变元素形状，而旋转不会改变元素形状。</font></h4><h3 id="3D动画："><a href="#3D动画：" class="headerlink" title="3D动画："></a>3D动画：</h3><h4 id="关键帧："><a href="#关键帧：" class="headerlink" title="关键帧："></a>关键帧：</h4><p>3D动画不同于过渡只能定义首尾状态，关键帧可以定义任意个状态，由此实现更复杂动画。创建方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@keyframes move&#123;</span><br><span class="line">    0%&#123;初始时状态&#125;</span><br><span class="line">    /*中间可以添加任意关键帧*/</span><br><span class="line">    100%&#123;最终状态&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>创建完动画后就要使要改变的元素引用该动画。</p>
-<h4 id="动画属性（animation）"><a href="#动画属性（animation）" class="headerlink" title="动画属性（animation）:"></a>动画属性（<code>animation</code>）:</h4><h5 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h5><ul>
+<h4 id="动画属性（animation）"><a href="#动画属性（animation）" class="headerlink" title="动画属性（animation）:"></a>动画属性（<code>animation</code>）:</h4><h5 id="相关属性：-1"><a href="#相关属性：-1" class="headerlink" title="相关属性："></a>相关属性：</h5><ul>
 <li><code>animation-name</code>：检索或设置动画名称，与<code>@keyframes</code>配合使用；</li>
 <li><code>animation-duration</code>：同<code>transition</code>相同。</li>
 <li><code>animation-timing-function</code>：同<code>transition</code>相同，增加<code>step-start</code>：马上跳到动画每一帧结束状态；</li>
@@ -97,17 +200,14 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>CSS布局之文档流浮动与定位</title>
     <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<hr>
-<p>title: CSS布局之文档流浮动与定位</p>
-<p>tags: CSS</p>
-<p>categories: CSS</p>
-<hr>
 <h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
 <li>普通流（文档流）：自上而下，自左向右显示。</li>
 <li>定位</li>
-<li>浮动<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动w</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
+<li>浮动<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 众所周知，块级元素在页面独占一行，即自上而下排列，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A81.png" alt="浮动1"><br>这就是所谓的标准文档流，因此想脱离文档流，让块级元素在一行显示就必须使用浮动。<blockquote>
 <p>浮动就是脱离文档流，漂浮在文档流之上。</p>
 </blockquote>
@@ -164,6 +264,12 @@
 <li>子元素传递给父元素的<code>margin-top</code></li>
 </ol>
 ]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
   </entry>
   <entry>
     <title>标签分类</title>
@@ -231,7 +337,7 @@
   <entry>
     <title>即将</title>
     <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19PsmuWyLlk5kIZq3Q7jeYkocteVTcFNtkgCyKjSST7iJYeVogxvB/xvTAPnfbueQrVrLHeA37VI40xMQ9LcQ7NuSHzC2uSCWw/mxQMj5k51BQAhpNntuzO1NTI2ZPrv9o8TXQkIkY3ycqmUgBa2cedpIp0rkd4BeGSprbg11fg87HIhfKzrazlfsjn66PzVIffnuxpsbjzKFJNInUv2+NMX2bvFI2x+ykGrXhPHLwFqBPYHHmyY5NkctwQy2tCorFUW2Ne+5QQCuK9HA5yGWStS8j0gRi7T1A8ltq1ElOJDhVNzLr5RWdqQYwUxWECOn8t2er7cb6Q3Nt1qZ48YKX2MBYd8z4bHUB7EvrqCTotF12BhsmKPPWyI8HXUOMJBvu1X7sjR4hLg60wOxCcm7IvxfOcWoaG1xVbhkPqx4B9Lh5kxTYWG3dD/5K4mHQQfTdBA5md1iKzCRqkmVbrS0aZWw2jAECuOxsWub5JrJuM5ZefM64I6+kqXwLtbHMyjxSZMfxnoaPEGWOU4e54qMW+zzNPIJ54ZyJDv1INIVixdWtgCBoFEQ+Nl+XF27WQRS6gF93X2rbHNTYrLWcC23brhK6u8oZBfZesBQj6q1i/96tgzAok0xPC5ea3SgPW85M7VLRE54hEbag4t3sm7cNXHIc+rr5hL/yEinqxUWVTycpkzJVh+t6IeyCVfBhTSC5KL0SLXDOJ1LHJrGYNEIUpHAaftn90fqLWRaL/lsN0JOxnoZVKvCl98LCAJuea2+IN7085iS/n2t97JNiXNo+7hSMooKUpSLZq9K+yDGmoEfLVJ89oJ6o2Pjnl2vHo7cG2+k6lSeBjquE8yvIWpfvEXXYSlb1I80faDdyfMIYG3dGZW9P95yM4oqq6QglXXLVZIwL2eMLChsFUnZMFnRYznBaTwCsJMGJSdMqFBNUff1HpywuunuLgHSomu5gbY92QUyLbjEQpDx5ugjUcAH2vvQA4mB8c3o3SUTDugPWoqUCqeWivDRGR </div>]]></content>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19lDkQzr6CO7zhqRptTyHeKXj95xR+m0w1bAX7kJU5h+honqe2r6W3/+WCuQJD1dpjC8vxEXMNWUCZ5lS1Co75qTuoKxC4b9QyzL4N38GmClbHA2gTg2BOgRuyhldQtsaI4hBYhh8oSMWYtvXRTyj/AI/jjio7f6Cp3wto7JJmXKoZpccADXragc1TPOlKVVazmohyXwqetyRVYSWysyfosXkrJH6JUKi98wjnlaVBehvl3BhNM8gXB5v9L8EEWBm8hDf7wet7P7J21FYb75p/G61L9dyyhjAOgiDp7X4Bqh5Vqtynj1yEWBcKxUHdNbh5RGj/Mg9BYVs2v2sWKJ2Y7AdzKf8YXqDl8Tg+Gns34Iwt3XTqJWegjA49qCSzsqiqQalANPjoHWpFq3fgT6xM7Hg5dB6vMx1wjim6+SjjYIxlluUBaFWt6SYkxsQbgE8yhtW9F01vp/yJvNi8ctynD31eKGaK5yY6SwW/OQ42PTNAiHFGPEjyawHF2IYqUl2V30ZZ7IWba4g7n79kf9WUzLCrbhEVLO4otYNWa3aIWSctJJ4iCQyScToBOwDRSZ4s1N86CpqD0IhHOpfAHWBptm0qlv3sHRCi8oo5f2qOnp0RQLZJRB79uYSvC45M77oQEx4T3PIyYWBTvXvJhrqASl38jysnNde8r08A86ZH1CJJe+iuJlPRXmGAomiXOYAp0cJ6guihNYfj6vQ334NZ4e7G5db2rpGm2r6LBPeS3Z07RMK7lGZUhqrWwHiLtQEHs016eZwd+9o6HLPcIVd1gxm+u455SQRRV/HtYIpsVDMZVRwhEwJ++FrH//7gjCVHVekwr9Jaz4PedLfBnLssWpdmWamDSZh0fRkHzl+zjIp0OxDTFT0GeFw8CmcF7q0RNTE+LQjkHGmMxGZmmi3mKQPa8vyIfFHmhzqyAuBJlGL17XMcNrB0Fy07rL6g2exEyTL4Ds+0nBnBFFqJGIX4MUFKS0ngYHo8NtFIDL8ElkkldJW/LWKtZ </div>]]></content>
       <categories>
         <category>随笔</category>
       </categories>
