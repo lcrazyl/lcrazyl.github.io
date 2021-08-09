@@ -179,6 +179,30 @@
       </tags>
   </entry>
   <entry>
+    <title>img三像素</title>
+    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
+    <content><![CDATA[<p>-</p>
+<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此img图片下方会多出三像素，可采用以下解决方案：</p>
+<ul>
+<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
+</li>
+<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
+</li>
+<li><p>img标签增加<code>display:block</code>；</p>
+<span id="more"></span>
+
+<p>三像素示意图：</p>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS布局之文档流浮动与定位</title>
     <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<hr>
@@ -263,49 +287,6 @@
       </tags>
   </entry>
   <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1/Qv+ekzGm0VldLdTrbz2/kWiqlrMlT9EKDiIqTXRjmLN/zMdrZnJD/zd7ek6IlQW208f/B6S7XZ90bB9kSLWW5ZtZjW+iPfXNCAz5CwvfM25pA36JRIMutDReCnHz06XPJR2vv2A4/hGjO7k7LM3hBUClZ27Y/rbjAyyktn+XvO9B9Oclo80bOgyQ9OzvJyhrPyN9zf+DoqCM8C1chPB59dT2JgOyRl2ThKQ5De5AxqBeYfhvJ6WUAso+ZTDHuKcb5cWfY9ii4+p6qxjXpaKqxjnf+kxXYTGDegwrvqhcMpfGug7Inrs4jrrEiMPmSYUjBTgzo/ndAyCqOpDby3GAHzYMHwTC2nFSlloV+sjs81Kej5G4va9n5lm8bdWVH4gJ47DE4RpbWOUYFspuXWHXJ6ADGw9q+Pu95rsGR/9xFWMM5IvcmZ4mvVvA2CF44nhQRN/gn0oHWe0W2aYuLNEqq7U1lUATwGuZAQf1c7RpwQylxRWiaLX22+VERgbohJqwG9qt0BkwZhQftyc4mZZprSvIH/nx9Aar/8ZK0XVa2V507f5eHz6/D9yQbds+MBvE75AmiE5Olx43eex+U+lZmPe0PvBi8OGWMXFetFm2PiNGmCUl/PZh2O+RxiTWVd2fg3ybDUVOKoX368HNzVK3Ob2oNQyV8nBYDTWRDiM6qn4XyIbrBHIo9c1yGsfU0F/tvTCEcpInNDPCaUlSmsTF4EFTWsxjbgqJ+xquFa6NX7zV5J0mt2e6xlGGCqVNqA53PAM6Lrf2LEY5Un2ftIg3HC+LvDq3G8WwkBtlU54/5dYqUp935WA6QX1W3po5ZEAUZjy9za08GqOgS6cfUgWYVMzmCcLoXKb8jv/1xzyA6t6dIVeuOYOz8FbUQCDremW0BTSzGEzfceccSVhm17kkp2dxI00hguF8mtxVeU8mfWKrSE7sFPNc/da60i4tw7Mv0dytQ0OcF/LvkCjvLffX4RZlv2X6WVvd+mAifC3DixgHSrJPsusJb </div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>img三像素</title>
-    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
-    <content><![CDATA[<p>-</p>
-<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此img图片下方会多出三像素，可采用以下解决方案：</p>
-<ul>
-<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
-</li>
-<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
-</li>
-<li><p>img标签增加<code>display:block</code>；</p>
-<span id="more"></span>
-
-<p>三像素示意图：</p>
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安好</title>
-    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
-    <content><![CDATA[<p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
-
-</center>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
     <title>标签分类</title>
     <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<p>-</p>
@@ -367,5 +348,24 @@
       <tags>
         <tag>HTML</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19K5KqSYDnQ4lFMTU8sjsb9rO7o9KqzlLr43pi869MmjiV0zJV/C9xKrIkyH9teV6f15Vrw8Fmb3uzCt+TwUI0TxcJoMbA8ABP12Okf7T0MXgHoS3hWcxBfmtm/ijeMNBYrGx0OQI8S2SnZeNQbGQFyucyLY9nlGelXFPdI+gWHQR42fwAaCaLYnkfD99Ixspe3JjubtA5464NVAhXRmaH5iB6418kEy55w1tqvl51QkAmYou0nP1Ss0TUIK2QncLcjXqqBcEfr/yfSVQvBscrjuPDGfzsf4prLUmEAbUCXj9RrqmvU3cv0IpW8nhhVEUTpl2kBQbfZ0N2YXydH9qq3nZioZZvpalVotTHaVkrMOVVKGn31xNblsoKydLUcas+ZTKIoKg6i7F8JSCVgIzgEXtSvO5MUEehJFPCuLNqQ5OXtdIGOO6dU0cl4UgugKyYAE6VfXFRhU7oUe2QaMLJrVK6UH4JIpE3jJNUQVwtIvW6Ro2yfQZFXMQWiFJ5YxPnOLadSJTOi0ZkaZpmpc4ni1g3iz0c3lAhs37XeJ/r7HFYK8G5KuItihU/Ksb73N9/56Ep4iV+p2AcpbKlkYDSDFOY0PL850MEhZsCTRIAodJKBqoJXiuOcitnuz3huqrwTALyUUBQ5n1AO+Ot36gkfOlQpR6cTZP0EQGPedrjzSMR3M4qYXE8Z/SbJtSo/hZmYvhEns3jmK/GwqLaW1MZ/3bqQ4X5s3jAg37YlwzObDRGZVa+ybVTyQf9mJf8gGLDIkksV0gCP85++oVqxlG3u7ORDsc0ljutYKBMYIHit/ZHEWxVRlwojuRPuuhEl0D9dx5/frZmVY9p7B/eI9iWtlce5gQZlX3HI2ReaC7F0L21QYkYSwHcnzsEI1K8Qd9Cequ1LHyTpn5+aoNLYgAY7txPyA2aahq0tdY4Z1V5ckDm4jGQnKRueE5dk6TMUW2IbCcOvctoC0Klg6ZP0NWXJQg19wlhz9EBNhRnER6dZ6qOoD4jPZCEI </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>安好</title>
+    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
+    <content><![CDATA[<p>-</p>
+<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+
+</center>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
   </entry>
 </search>
