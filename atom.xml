@@ -6,7 +6,7 @@
   <link href="http://www.swiftslee.me/atom.xml" rel="self"/>
   
   <link href="http://www.swiftslee.me/"/>
-  <updated>2021-08-11T11:28:58.364Z</updated>
+  <updated>2021-08-11T12:40:08.295Z</updated>
   <id>http://www.swiftslee.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>弹性盒详解</title>
+    <link href="http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/"/>
+    <id>http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/</id>
+    <published>2021-08-11T12:35:34.474Z</published>
+    <updated>2021-08-11T12:40:08.295Z</updated>
+    
+    <content type="html"><![CDATA[<p>-</p><h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行布局。</p><h1 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h1><p>因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。</p><h4 id="添加给父元素："><a href="#添加给父元素：" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4><ul><li><code>flex-direction</code>:决定主轴方向（排列方式）<ul><li><code>row</code>：横向排列（x轴）</li><li><code>column</code>：竖向配列（y轴）<span id="more"></span><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png" alt="主轴竖向"></li><li><code>row-reverse</code>：横向倒序<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png" alt="主轴横向倒序"></li><li><code>column-reverse</code>：竖向倒序<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202211.png" alt="主轴竖向倒序"></li></ul></li><li><code>flex-wrap</code>:子元素是否换行<ul><li><code>nowrap</code>:不换行</li><li><code>wrap</code>:换行<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202526.png" alt="换行"></li><li><code>wrap-reverse</code>:倒序换行<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202550.png" alt="倒序换行"></li></ul></li><li><code>justify-content</code>:子元素在主轴对齐方式<ul><li><code>flex-start</code>:开头对齐</li><li><code>center</code>:居中对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202955.png" alt="主轴居中对齐"></li><li><code>flex-end</code>:结尾对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203001.png" alt="主轴结尾对齐"></li><li><code>space-between</code>:两端对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203031.png" alt="两端对齐"></li><li><code>space-aronud</code>:平分对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203054.png" alt="平分对齐"></li><li><code>space-evenly</code>:均分对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png" alt="均分对齐"></li></ul></li><li><code>align-items</code>：子元素在交叉轴对齐方式<ul><li><code>flex-start</code>:开头对齐</li><li><code>center</code>:居中对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png" alt="侧轴居中对齐"></li><li><code>flex-end</code>:结尾对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png" alt="侧轴结尾对齐"></li><li><code>baseline</code>:基线对齐</li><li><code>stretch</code>:拉伸（默认值）<h4 id="添加给父元素：-1"><a href="#添加给父元素：-1" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4></li></ul></li><li><code>align-self</code>:单一子元素在交叉轴对齐方式<ul><li><code>auto</code>：继承父元素<code>align-items</code>（默认值）</li><li><code>stretch</code>:拉伸</li><li><code>flex-start</code>：开头对齐</li><li><code>center</code>：居中对齐</li><li><code>flex-end</code>：结尾对齐</li></ul></li><li><code>flex</code>:子元素如何分配空间(复合属性：<code>flex-grow</code>/<code>flex-shrink</code>/<code>flex-basis</code>)<ul><li> <code>flex:1</code>:1 1 0%</li></ul></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;-&lt;/p&gt;
+&lt;h1 id=&quot;什么是弹性盒？&quot;&gt;&lt;a href=&quot;#什么是弹性盒？&quot; class=&quot;headerlink&quot; title=&quot;什么是弹性盒？&quot;&gt;&lt;/a&gt;什么是弹性盒？&lt;/h1&gt;&lt;p&gt;之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（&lt;code&gt;display:flex&lt;/code&gt;）后进行布局。&lt;/p&gt;
+&lt;h1 id=&quot;相关属性：&quot;&gt;&lt;a href=&quot;#相关属性：&quot; class=&quot;headerlink&quot; title=&quot;相关属性：&quot;&gt;&lt;/a&gt;相关属性：&lt;/h1&gt;&lt;p&gt;因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。&lt;/p&gt;
+&lt;h4 id=&quot;添加给父元素：&quot;&gt;&lt;a href=&quot;#添加给父元素：&quot; class=&quot;headerlink&quot; title=&quot;添加给父元素：&quot;&gt;&lt;/a&gt;添加给父元素：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex-direction&lt;/code&gt;:决定主轴方向（排列方式）&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;row&lt;/code&gt;：横向排列（x轴）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;column&lt;/code&gt;：竖向配列（y轴）&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="CSS" scheme="http://www.swiftslee.me/categories/CSS/"/>
+    
+    
+    <category term="CSS" scheme="http://www.swiftslee.me/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>元素水平垂直居中方法总结</title>
@@ -160,7 +187,7 @@
     <published>2021-07-12T02:19:07.785Z</published>
     <updated>2021-07-21T08:41:57.939Z</updated>
     
-    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX18w/jNaQwiENk5wu+zkpDJihqNs3e3w2YMLLmz4DD7XEG5Bl73v03j6UXff8CcUHG3t/VTwFh1N1QxksmOeQ5ZDvx7+OzK8Wdto5ZKWW18gqsiRBUuI8zz4Hp91oz7DJLmr2Dh7SjQxCh/tH8J5Ja9Rm0cJ2soj29fKRQi25xWZk52Q8RkEJOfXfIcPCl2zAw4YgoWQFckFdhGaz3+OhNnerhTU7Eojzq6DKgqB7+dSiSF31pYqIdcwHlAAbrN1LCoG3n+93AOJhTCWLbtcFawbZQKZP8zF/bWBhDf3HW1ZnTQqNCLVsIpTsSpaL7bSJJFHcCGSf7UT2ZP1PQSoaHzY0ANihQjLLuF++t4yUFEzr+NqIsnOFeuyxqPtS9l+BsGerIUSwGQgAEsDJ/3JS5hZrHDFx41EmRUYCQ6FAqrBDnJ0ezovlKEvq7Ti94o0MPLBmiAzfzIzwihmWqqk8/55Wd8i6pkIeM+hgtNRc5heAuC/3KdWbBEgXl0ygDYWTWI22XB3lXyhB21479mu1TG2Mtf8r0IEFVRngsFNTPykA5cm7EfuRpIzRGidubnOiNIzZOcWslzgNkCAiTC0hNLg4CVydERZuctD3Z3sl4ZI/ggWD3ti5FzwVZWecCB+q1dFgBGTnTUHXv23FyV+tOkz+2cIrXOVEV/WEb9bB401DPBDs4ev2SHauUm2l45Jyyv47x/yPLb0eoGj6n+iYz+jdeUNhJjBm9n5YH+XGYnfAy5OrQO/EB1W3jCI5p2T6XtRaZIU9dJU+uWhUzpXon+q2tA5WaTUSYTAAL6UDTp5g/NpFTSGQQ6VZ4MKggp54tFB0270R5+swJBRgXd7I/MUIOw1x9Zw9Vww6vAdm1Xe6TvJ09opiqwY/+rDldqoSJbUHo1dhXk4v6B6E0cpf8k81Be+njHcBpua5roZPW6djVRCAPlH3BamerScjdcsdt10Q1thnX0+aJOKF5QiWMJSl84yy9MxrY6hIiIw+/3/AwQaRpt7hG7V </div>]]></content>
+    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+eaBz9uU2ZAb3JEqlzFl0CFgInQ3Gh7AyjB3+Wv4weW4HfRoOPcPTRvpJ3aUiQLoGy9b0CBgHtCFyjBDv68MRvmgEU14T1AuBpNgb0RE7/z80VuhU9LT8R4m6rTnoNRKw9fmq/dE/hn23Rfy78SpQk+e+4fnAUPCr9KDaH3GBiZYA88eeZzS22CygVPwInlQKwcxkvetPmLjkmaq23ScgO+eHAgY6wFMZVnkBlpW8LdQ3gBuKn8wycHENByOJAokdxTDOHOY5ITJiOLFgO6gkRoHAQqtyPKwL8bIJ3MTF5NFd+mCnfYHlpiwVYPbJ4DcD/gNTeEA20g+U6BzFXjIgVOqc8IxCiTwVJuR7822WmsG24yLMFoIZ9lHvEYRD1Z2y98SxamqRwW4syhYV1b1EfPBOAE/BIJP0MIO1MyNaaDL+5BnTKtc8cEU7aE3XhbNerJa8LEjW+EJJ0SJuCK96Tf/fKLnCv8ag6EwBcdbAe/4GzywCFhLlQkRCXaFLQ4NVcMR57KvabvzPelYdFpkN6lRdppR3JcgmPefDIHLxCE/mwzEayeM0EhiTyfBkYKsL9lR9Tc9meB/yAoza7+UIhMBDZZdRVqbqY9B2tSyYsm/XrjR09uYSjfI3VXwEF5c7eXZaUOF3Whub5sHfEv7wEeaNSWN81GHljeOJOacpODBRQaATN9PB8Ub0ziWJC/IVuc3qU5C9HaBE5unj7nk1HHQ0Z4FZKrqtRi6p1wmJqAXO/EEMKVMuY/LKxq/rjZZKB+xDG4Jx/JgU1vJRIhDyXx5PnmmhTV+FhOt5wzkEYYDeOX/v9tZll8WXRHbgVaqGTKtt+JZFnNtI9cv0SbtTVRdQyTvNIsrjRqzUfiK1XNaTvNwndWHG8b54LBuNOOkyrE69hTumZ2eBACUN2GeQPT4+GfNojjKzclASVcl9GpvO256eCTr8IVwGsBVfVGVqkRCPegirMN9XzTOaUVogBIymNLiIzW697/kyWdWg+yDbaNUO2Jve4 </div>]]></content>
     
     
     <summary type="html">The article has been encrypted, please enter your password to view.&lt;br&gt;</summary>

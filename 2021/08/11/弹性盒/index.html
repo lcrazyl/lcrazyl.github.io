@@ -22,19 +22,33 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="- 仅用于学习的小白，无商业价值。 小白是一名可能即将踏入IT的小朋友，此前喜欢游走于各位前辈的博客，因此利用Github Pages+Hexo做了一个自己的乐园，能够把有价值的东西留下来温故而知新是一件多么令人幸福的事情。 文笔有限，只是想把学到的知识和生活琐碎随笔记录，回忆起来不至于干涩乏味。希望将来有意瞄准，无意击发。所见所感所想皆是收获，因此可能杂乱无章，无思路可言，见谅。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于小白">
-<meta property="og:url" content="http://www.swiftslee.me/about/index.html">
+  <meta name="description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴） column：竖向配列（y轴）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="弹性盒详解">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="- 仅用于学习的小白，无商业价值。 小白是一名可能即将踏入IT的小朋友，此前喜欢游走于各位前辈的博客，因此利用Github Pages+Hexo做了一个自己的乐园，能够把有价值的东西留下来温故而知新是一件多么令人幸福的事情。 文笔有限，只是想把学到的知识和生活琐碎随笔记录，回忆起来不至于干涩乏味。希望将来有意瞄准，无意击发。所见所感所想皆是收获，因此可能杂乱无章，无思路可言，见谅。">
+<meta property="og:description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴） column：竖向配列（y轴）">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-14T07:35:39.332Z">
-<meta property="article:modified_time" content="2021-07-14T07:35:39.332Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202211.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202526.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202550.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202955.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203001.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203031.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203054.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png">
+<meta property="article:published_time" content="2021-08-11T12:35:34.474Z">
+<meta property="article:modified_time" content="2021-08-11T12:40:08.295Z">
 <meta property="article:author" content="swiftslee">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png">
 
-<link rel="canonical" href="http://www.swiftslee.me/about/">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/">
 
 
 <script id="page-configurations">
@@ -42,13 +56,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>关于小白 | IFTS
-</title>
+  <title>弹性盒详解 | IFTS</title>
   
 
 
@@ -192,47 +205,214 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
+      <meta itemprop="name" content="swiftslee">
+      <meta itemprop="description" content="分享生活，复盘总结">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IFTS">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          弹性盒详解
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">关于小白
-</h1>
+        <div class="post-meta">
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2021-08-11 20:35:34 / 修改时间：20:40:08" itemprop="dateCreated datePublished" datetime="2021-08-11T20:35:34+08:00">2021-08-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+			<span class="post-meta-divider">|</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 309字</span>|
+			<span title="post.min2read">阅读时长:
+    1 分钟
+</span>|
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
   
 
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>-</p>
+<h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行布局。</p>
+<h1 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h1><p>因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。</p>
+<h4 id="添加给父元素："><a href="#添加给父元素：" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4><ul>
+<li><code>flex-direction</code>:决定主轴方向（排列方式）<ul>
+<li><code>row</code>：横向排列（x轴）</li>
+<li><code>column</code>：竖向配列（y轴）<span id="more"></span>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png" alt="主轴竖向"></li>
+<li><code>row-reverse</code>：横向倒序<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png" alt="主轴横向倒序"></li>
+<li><code>column-reverse</code>：竖向倒序<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202211.png" alt="主轴竖向倒序"></li>
+</ul>
+</li>
+<li><code>flex-wrap</code>:子元素是否换行<ul>
+<li><code>nowrap</code>:不换行</li>
+<li><code>wrap</code>:换行<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202526.png" alt="换行"></li>
+<li><code>wrap-reverse</code>:倒序换行<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202550.png" alt="倒序换行"></li>
+</ul>
+</li>
+<li><code>justify-content</code>:子元素在主轴对齐方式<ul>
+<li><code>flex-start</code>:开头对齐</li>
+<li><code>center</code>:居中对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202955.png" alt="主轴居中对齐"></li>
+<li><code>flex-end</code>:结尾对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203001.png" alt="主轴结尾对齐"></li>
+<li><code>space-between</code>:两端对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203031.png" alt="两端对齐"></li>
+<li><code>space-aronud</code>:平分对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203054.png" alt="平分对齐"></li>
+<li><code>space-evenly</code>:均分对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png" alt="均分对齐"></li>
+</ul>
+</li>
+<li><code>align-items</code>：子元素在交叉轴对齐方式<ul>
+<li><code>flex-start</code>:开头对齐</li>
+<li><code>center</code>:居中对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png" alt="侧轴居中对齐"></li>
+<li><code>flex-end</code>:结尾对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png" alt="侧轴结尾对齐"></li>
+<li><code>baseline</code>:基线对齐</li>
+<li><code>stretch</code>:拉伸（默认值）<h4 id="添加给父元素：-1"><a href="#添加给父元素：-1" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4></li>
+</ul>
+</li>
+<li><code>align-self</code>:单一子元素在交叉轴对齐方式<ul>
+<li><code>auto</code>：继承父元素<code>align-items</code>（默认值）</li>
+<li><code>stretch</code>:拉伸</li>
+<li><code>flex-start</code>：开头对齐</li>
+<li><code>center</code>：居中对齐</li>
+<li><code>flex-end</code>：结尾对齐</li>
+</ul>
+</li>
+<li><code>flex</code>:子元素如何分配空间(复合属性：<code>flex-grow</code>/<code>flex-shrink</code>/<code>flex-basis</code>)<ul>
+<li> <code>flex:1</code>:1 1 0%</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+ 
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
 </div>
-
-</header>
-
+   </div>
+ 
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-      
-      
-      <div class="post-body">
-          <p>-</p>
-<p>仅用于学习的小白，无商业价值。</p>
-<p>小白是一名可能即将踏入IT的小朋友，此前喜欢游走于各位前辈的博客，因此利用Github Pages+Hexo做了一个自己的乐园，能够把有价值的东西留下来温故而知新是一件多么令人幸福的事情。</p>
-<p>文笔有限，只是想把学到的知识和生活琐碎随笔记录，回忆起来不至于干涩乏味。希望将来有意瞄准，无意击发。所见所感所想皆是收获，因此可能杂乱无章，无思路可言，见谅。</p>
-
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/wechet.png" alt="swiftslee 微信支付">
+        <p>微信支付</p>
       </div>
       
-      
-      
-    </div>
-    
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/alipay.png" alt="swiftslee 支付宝">
+        <p>支付宝</p>
+      </div>
 
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>swiftslee
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/" title="弹性盒详解">http://www.swiftslee.me/2021/08/11/弹性盒/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i>CSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/" rel="prev" title="元素水平垂直居中方法总结">
+      <i class="fa fa-chevron-left"></i> 元素水平垂直居中方法总结
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -284,6 +464,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%B9%E6%80%A7%E7%9B%92%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是弹性盒？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">相关属性：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%99%E7%88%B6%E5%85%83%E7%B4%A0%EF%BC%9A"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">添加给父元素：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%99%E7%88%B6%E5%85%83%E7%B4%A0%EF%BC%9A-1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">添加给父元素：</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
