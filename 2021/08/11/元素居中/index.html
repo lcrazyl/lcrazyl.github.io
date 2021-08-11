@@ -22,19 +22,20 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="JavaScript 3D library for NexT  Installation  If you want to use the CDN instead of clone this repo, please jump to the Step 3.  Step 1 &amp;rarr; Go to NexT dir  Change dir to NexT directory. There must">
-<meta property="og:type" content="website">
-<meta property="og:title" content="IFTS">
-<meta property="og:url" content="http://www.swiftslee.me/lib/three/README.html">
+  <meta name="description" content="-  定位+margin:auto:  1234567891011121314&lt;!--父元素位--&gt;.box&amp;#123;    &lt;!--任意定位--&gt;    position: relative;&amp;#125;&lt;!--子元素--&gt;.connect&amp;#123;    position: absolute;    top: 0;    left: 0;    bott">
+<meta property="og:type" content="article">
+<meta property="og:title" content="元素水平垂直居中方法总结">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="JavaScript 3D library for NexT  Installation  If you want to use the CDN instead of clone this repo, please jump to the Step 3.  Step 1 &amp;rarr; Go to NexT dir  Change dir to NexT directory. There must">
+<meta property="og:description" content="-  定位+margin:auto:  1234567891011121314&lt;!--父元素位--&gt;.box&amp;#123;    &lt;!--任意定位--&gt;    position: relative;&amp;#125;&lt;!--子元素--&gt;.connect&amp;#123;    position: absolute;    top: 0;    left: 0;    bott">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-12T01:00:31.048Z">
-<meta property="article:modified_time" content="2021-07-12T01:00:31.048Z">
+<meta property="article:published_time" content="2021-08-11T11:24:16.167Z">
+<meta property="article:modified_time" content="2021-08-11T11:28:58.364Z">
 <meta property="article:author" content="swiftslee">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.swiftslee.me/lib/three/README">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/">
 
 
 <script id="page-configurations">
@@ -42,13 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title> | IFTS
-</title>
+  <title>元素水平垂直居中方法总结 | IFTS</title>
   
 
 
@@ -192,84 +192,205 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">
-</h1>
-
-<div class="post-meta">
   
-  <ul class="breadcrumb">
-          
-            <li><a href="/lib/">LIB</a></li>
-            <li><a href="/lib/three/">THREE</a></li>
-            <li>README</li>
-          
-  </ul>
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
+      <meta itemprop="name" content="swiftslee">
+      <meta itemprop="description" content="分享生活，复盘总结">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IFTS">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          元素水平垂直居中方法总结
+        </h1>
+
+        <div class="post-meta">
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-11 19:24:16 / 修改时间：19:28:58" itemprop="dateCreated datePublished" datetime="2021-08-11T19:24:16+08:00">2021-08-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+			<span class="post-meta-divider">|</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 260字</span>|
+			<span title="post.min2read">阅读时长:
+    1 分钟
+</span>|
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>-</p>
+<ol>
+<li>定位+<code>margin:auto</code>:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--父元素位--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    &lt;!--任意定位--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<ol start="2">
+<li>定位+<code>margin:-number</code></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    &lt;!--</span><br><span class="line">    margin-left:-50px;</span><br><span class="line">    margin-top:-50px;</span><br><span class="line">    --&gt;</span><br><span class="line">    margin: -50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>定位+<code>transform</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    &lt;!--position: relative/absolute--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    transform: translate(-50px,-50px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>4.弹性盒（父元素）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>5.弹性盒（子元素）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;  </span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">     align-self: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>6.<code>vertical-align: middle</code>:</p>
+<pre><code>&lt;!--父元素--&gt;
+.box&#123;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+&#125;
+&lt;!--当前元素--&gt;
+.connect&#123;
+    &lt;!--转行内块--&gt;
+    display: inline-block;
+    vertical-align: middle;
+&#125;
+&lt;!--当前元素兄弟元素且结构同行--&gt;
+.connect-bro&#123;
+    &lt;!--与父同高且转为行内块--&gt;
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+&#125;
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+ 
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
 </div>
-
-</header>
-
+   </div>
+ 
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-      
-      
-      <div class="post-body">
-          <h1 align="center"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21yZG9vYi90aHJlZS5qcw==">JavaScript 3D library<i class="fa fa-external-link-alt"></i></span> for <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ=">NexT<i class="fa fa-external-link-alt"></i></span></h1>
-
-<h1 align="center">Installation</h1>
-
-<h2>If you want to use the CDN instead of clone this repo, please jump to the Step 3.</h2>
-
-<h2 align="center">Step 1 &rarr; Go to NexT dir</h2>
-
-<p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ ls</span><br><span class="line">_config.yml  crowdin.yml  docs  gulpfile.js  languages  layout  LICENSE.md  package.json  README.md  scripts  <span class="built_in">source</span></span><br></pre></td></tr></table></figure>
-
-<h2 align="center">Step 2 &rarr; Get module</h2>
-
-<p>Install module to <code>source/lib</code> directory:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-three <span class="built_in">source</span>/lib/three</span><br></pre></td></tr></table></figure>
-
-<h2 align="center">Step 3 &rarr; Set it up</h2>
-
-<p>Enable module in <strong>NexT</strong> <code>_config.yml</code> file:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">three_waves:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">OR</span></span><br><span class="line"><span class="attr">canvas_lines:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">OR</span></span><br><span class="line"><span class="attr">canvas_sphere:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>And, if you wants to use the CDN, then need to set:</strong></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">three:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js</span></span><br><span class="line">  <span class="attr">three_waves:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/three-waves.min.js</span></span><br><span class="line">  <span class="attr">canvas_lines:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/canvas_lines.min.js</span></span><br><span class="line">  <span class="attr">canvas_sphere:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/canvas_sphere.min.js</span></span><br></pre></td></tr></table></figure>
-
-<h1 align="center">Update</h1>
-
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/three</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
-
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/wechet.png" alt="swiftslee 微信支付">
+        <p>微信支付</p>
       </div>
       
-      
-      
-    </div>
-    
-  <ul class="breadcrumb">
-          
-            <li><a href="/lib/">LIB</a></li>
-            <li><a href="/lib/three/">THREE</a></li>
-            <li>README</li>
-          
-  </ul>
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/alipay.png" alt="swiftslee 支付宝">
+        <p>支付宝</p>
+      </div>
 
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>swiftslee
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.swiftslee.me/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/" title="元素水平垂直居中方法总结">http://www.swiftslee.me/2021/08/11/元素居中/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i>CSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/04/CSS%E5%8A%A8%E7%94%BB/" rel="prev" title="CSS3-过渡变形与动画">
+      <i class="fa fa-chevron-left"></i> CSS3-过渡变形与动画
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -321,7 +442,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 3D library for NexT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">If you want to use the CDN instead of clone this repo, please jump to the Step 3.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">Step 1 → Go to NexT dir</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">Step 2 → Get module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">Step 3 → Set it up</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">Update</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>元素水平垂直居中方法总结</title>
+    <url>/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/</url>
+    <content><![CDATA[<p>-</p>
+<ol>
+<li>定位+<code>margin:auto</code>:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素位--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    &lt;!--任意定位--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<ol start="2">
+<li>定位+<code>margin:-number</code></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    &lt;!--</span><br><span class="line">    margin-left:-50px;</span><br><span class="line">    margin-top:-50px;</span><br><span class="line">    --&gt;</span><br><span class="line">    margin: -50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>定位+<code>transform</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    &lt;!--position: relative/absolute--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    transform: translate(-50px,-50px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>4.弹性盒（父元素）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>5.弹性盒（子元素）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;  </span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">     align-self: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>6.<code>vertical-align: middle</code>:</p>
+<pre><code>&lt;!--父元素--&gt;
+.box&#123;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+&#125;
+&lt;!--当前元素--&gt;
+.connect&#123;
+    &lt;!--转行内块--&gt;
+    display: inline-block;
+    vertical-align: middle;
+&#125;
+&lt;!--当前元素兄弟元素且结构同行--&gt;
+.connect-bro&#123;
+    &lt;!--与父同高且转为行内块--&gt;
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+&#125;
+</code></pre>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS3-过渡变形与动画</title>
     <url>/2021/08/04/CSS%E5%8A%A8%E7%94%BB/</url>
     <content><![CDATA[<hr>
@@ -179,14 +229,6 @@
       </tags>
   </entry>
   <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX183vGi9s0fGXspYANnlTqPONfV6hrgbnzkTJ0A0fWCkuzOaIcEXL7oZa+lmqsnRi6vLQTIl5ZzN2Fl5m1xoeD4miwPeTqaN9Iqro0JZkVpLd9CUKxjbFaK+QciWRQp0jlLfcKx/SqV/pG/uphJU7324mWoNCr6Hwm1cehcol3k4oIDmi8f8oSWn05kugPvui1dNVrpeXC+G1R4r+wNG2/J1CBmAkG90zJOEabc5bAoh+V6tbGtuAj8kzMcy1oxMmdBqC/0MnMOiUlXeiXAvE2LAW0j4PUBNBEPBM+QSInzb7E0LXnSIc/uXVoEf1vXcnkU95tgLxMZvn0yXbmXDYFDvYC8xoIa65aP7v5MlZU1HvbO1Q0lRzMt/NorBSLmWouWNgYr4FqO4VZxhEN9Khgu//NfbkcP+qv4fFUmvZWwQM3AGWgwBBHCbXKhbgRqiNhGLUPz7sWm2+r8ZbcJ1xedTHVJ28WZzcaKAfiZ/vnRajSi1WZJ6hrSUL0wLvEtDyOjA2EzRz9KOHRqZFnzTsSjWwVt+iDp7Gi2O+XJnfplxqORgw21sWNPOCGOGKwUK6O1paZZimF3/A6nkYY6QYTvAsM9vJeHkz1FHDEeme17OP7VtaIGWzTCHNGvWkGAwfaZw/s+pbcYoS40xsbK3aU9/kxAnMWTtCEgnwxpI7gf2FbXXsP0srPdnUh+xpswQLkf6nLudOpdLfq1V/RpEvCsz0pnRN/EeLzZDZDD4SF2KtUBhpO/wxJUbysNUjl3ekTj7UIZ4lUEgaVXF8EYBwCesktY492mTyc/9KMYMziGdadhNWy0+hwFqvPy++ASmDz3dddWHetXLa/0YdZAFAWro3NBo1g3WvIGa7UsbP7iAzcRpFKDv3GFX1Kc9qYpvFZoRv9RYeLezgUUhZGOjP2xAN+lPL9NCvKZ/Lso7IBUvgxK7o/BlzjNEo5ECJOtep+HBNVrsevKMYT3oF7IERqJV5qVcvuDI4stC/ihwlgarDapTuTyxOkSr </div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
     <title>img三像素</title>
     <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
     <content><![CDATA[<p>-</p>
@@ -356,6 +398,14 @@
       <tags>
         <tag>HTML</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX18w/jNaQwiENk5wu+zkpDJihqNs3e3w2YMLLmz4DD7XEG5Bl73v03j6UXff8CcUHG3t/VTwFh1N1QxksmOeQ5ZDvx7+OzK8Wdto5ZKWW18gqsiRBUuI8zz4Hp91oz7DJLmr2Dh7SjQxCh/tH8J5Ja9Rm0cJ2soj29fKRQi25xWZk52Q8RkEJOfXfIcPCl2zAw4YgoWQFckFdhGaz3+OhNnerhTU7Eojzq6DKgqB7+dSiSF31pYqIdcwHlAAbrN1LCoG3n+93AOJhTCWLbtcFawbZQKZP8zF/bWBhDf3HW1ZnTQqNCLVsIpTsSpaL7bSJJFHcCGSf7UT2ZP1PQSoaHzY0ANihQjLLuF++t4yUFEzr+NqIsnOFeuyxqPtS9l+BsGerIUSwGQgAEsDJ/3JS5hZrHDFx41EmRUYCQ6FAqrBDnJ0ezovlKEvq7Ti94o0MPLBmiAzfzIzwihmWqqk8/55Wd8i6pkIeM+hgtNRc5heAuC/3KdWbBEgXl0ygDYWTWI22XB3lXyhB21479mu1TG2Mtf8r0IEFVRngsFNTPykA5cm7EfuRpIzRGidubnOiNIzZOcWslzgNkCAiTC0hNLg4CVydERZuctD3Z3sl4ZI/ggWD3ti5FzwVZWecCB+q1dFgBGTnTUHXv23FyV+tOkz+2cIrXOVEV/WEb9bB401DPBDs4ev2SHauUm2l45Jyyv47x/yPLb0eoGj6n+iYz+jdeUNhJjBm9n5YH+XGYnfAy5OrQO/EB1W3jCI5p2T6XtRaZIU9dJU+uWhUzpXon+q2tA5WaTUSYTAAL6UDTp5g/NpFTSGQQ6VZ4MKggp54tFB0270R5+swJBRgXd7I/MUIOw1x9Zw9Vww6vAdm1Xe6TvJ09opiqwY/+rDldqoSJbUHo1dhXk4v6B6E0cpf8k81Be+njHcBpua5roZPW6djVRCAPlH3BamerScjdcsdt10Q1thnX0+aJOKF5QiWMJSl84yy9MxrY6hIiIw+/3/AwQaRpt7hG7V </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
   </entry>
   <entry>
     <title>安好</title>
