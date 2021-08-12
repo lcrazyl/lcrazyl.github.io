@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="分享生活，复盘总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://www.swiftslee.me/categories/index.html">
+  <meta name="description" content="1. 图片边框问题描述：当a标签嵌套图片时出现边框解决方案：图片加boder:0&#x2F;none; 2. 图片间隙问题描述：block元素牵嵌套图片在不加高度情况下，图片下方出现三像素解决方案：图片添加vertical-aligin:center&#x2F;display:block&#x2F;父元素添加font-size:0 3.双倍浮动问题描述：解析浮动元素时，错误的把margin双倍显示。（IE6以下）解决方案：浮">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS兼容问题总结">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="分享生活，复盘总结">
+<meta property="og:description" content="1. 图片边框问题描述：当a标签嵌套图片时出现边框解决方案：图片加boder:0&#x2F;none; 2. 图片间隙问题描述：block元素牵嵌套图片在不加高度情况下，图片下方出现三像素解决方案：图片添加vertical-aligin:center&#x2F;display:block&#x2F;父元素添加font-size:0 3.双倍浮动问题描述：解析浮动元素时，错误的把margin双倍显示。（IE6以下）解决方案：浮">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-13T02:26:04.685Z">
-<meta property="article:modified_time" content="2021-07-13T02:26:04.685Z">
+<meta property="article:published_time" content="2021-08-12T11:53:27.163Z">
+<meta property="article:modified_time" content="2021-08-12T11:53:59.194Z">
 <meta property="article:author" content="swiftslee">
-<meta property="article:tag" content="categories">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.swiftslee.me/categories/">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
 
 
 <script id="page-configurations">
@@ -43,13 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>文章分类 | IFTS
-</title>
+  <title>CSS兼容问题总结 | IFTS</title>
   
 
 
@@ -193,51 +192,177 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
+      <meta itemprop="name" content="swiftslee">
+      <meta itemprop="description" content="分享生活，复盘总结">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IFTS">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSS兼容问题总结
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">文章分类
-</h1>
+        <div class="post-meta">
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2021-08-12 19:53:27 / 修改时间：19:53:59" itemprop="dateCreated datePublished" datetime="2021-08-12T19:53:27+08:00">2021-08-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+			<span class="post-meta-divider">|</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 456字</span>|
+			<span title="post.min2read">阅读时长:
+    1 分钟
+</span>|
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
   
 
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <hr>
+<h2 id="1-图片边框"><a href="#1-图片边框" class="headerlink" title="1. 图片边框"></a>1. 图片边框</h2><p>问题描述：当a标签嵌套图片时出现边框<br><br>解决方案：图片加<code>boder:0/none</code>;</p>
+<h2 id="2-图片间隙"><a href="#2-图片间隙" class="headerlink" title="2. 图片间隙"></a>2. 图片间隙</h2><p>问题描述：<code>block</code>元素牵嵌套图片在不加高度情况下，图片下方出现三像素<br><br>解决方案：图片添加<code>vertical-aligin:center/display:block</code>/父元素添加<code>font-size:0</code></p>
+<h2 id="3-双倍浮动"><a href="#3-双倍浮动" class="headerlink" title="3.双倍浮动"></a>3.双倍浮动</h2><p>问题描述：解析浮动元素时，错误的把<code>margin</code>双倍显示。（IE6以下）<br><br>解决方案：浮动元素添加<code>display:inline;</code></p>
+<h2 id="4-默认高度"><a href="#4-默认高度" class="headerlink" title="4.默认高度"></a>4.默认高度</h2><p>问题描述：部分块元素拥有默认高度（20像素左右）（IE6以下）<br><br>解决方案：元素添加<code>font-size:0</code>/<code>overflow:hidden;height:0(如果有高度，不要设置）</code>(IE6/7)</p>
+<h2 id="5-表单元素对齐不一致"><a href="#5-表单元素对齐不一致" class="headerlink" title="5. 表单元素对齐不一致"></a>5. 表单元素对齐不一致</h2><p>问题描述：表单元素顶部对齐不一致<br><br>解决方案：表单元素添加<code>float:left</code></p>
+<h2 id="6-按钮元素默认大小不一致"><a href="#6-按钮元素默认大小不一致" class="headerlink" title="6.按钮元素默认大小不一致"></a>6.按钮元素默认大小不一致</h2><p>问题描述：各浏览器按钮元素大小不一致。<br><br>解决方案：用<code>a</code>标签；按钮转为标准盒模型；<code>input</code>外嵌套标签,写按钮样式且去掉<code>input</code>边框。</p>
+<h2 id="7-透明属性"><a href="#7-透明属性" class="headerlink" title="7.透明属性"></a>7.透明属性</h2><p>问题描述：透明共有三种写法：<code>opacity:0-1</code>/<code>rgba(r,g.b,a)</code>/<code>filter:alpha(opacity=1-100)</code><br><br>解决方案：<code>filter</code>属性是IE特有的透明属性,其他两种方案只有IE9以上识别。</p>
+<h2 id="8-表单边框清除"><a href="#8-表单边框清除" class="headerlink" title="8.表单边框清除"></a>8.表单边框清除</h2><p>问题描述：清除边框bug（IE6以下）<br><br>解决方案：使用<code>border:0</code></p>
+<h2 id="9-表单value值不居中"><a href="#9-表单value值不居中" class="headerlink" title="9. 表单value值不居中"></a>9. 表单<code>value</code>值不居中</h2><p>问题描述；当表单添加高度属性，且有<code>value</code>属性时，会<code>value</code>值垂直布局中问题（IE6以下）<br><br>解决方案：<code>input</code>添加`_line-height</p>
+<h2 id="10-多张图片间隙"><a href="#10-多张图片间隙" class="headerlink" title="10. 多张图片间隙"></a>10. 多张图片间隙</h2><p>问题描述：<code>inline/inline-block</code>元素都会有此问题<br><br>解决方案：图片添加<code>float</code>属性/父元素添加<code>font-size:0</code></p>
+
+    </div>
+
+    
+    
+    
+
+ 
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
 </div>
-
-</header>
-
+   </div>
+ 
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              目前共计 3 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
-        
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/wechet.png" alt="swiftslee 微信支付">
+        <p>微信支付</p>
       </div>
       
-      
-      
-    </div>
-    
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/alipay.png" alt="swiftslee 支付宝">
+        <p>支付宝</p>
+      </div>
 
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>swiftslee
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.swiftslee.me/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" title="CSS兼容问题总结">http://www.swiftslee.me/2021/08/12/CSS兼容问题总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i>CSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/" rel="prev" title="弹性盒详解">
+      <i class="fa fa-chevron-left"></i> 弹性盒详解
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -289,6 +414,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9B%BE%E7%89%87%E8%BE%B9%E6%A1%86"><span class="nav-number">1.</span> <span class="nav-text">1. 图片边框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%9B%BE%E7%89%87%E9%97%B4%E9%9A%99"><span class="nav-number">2.</span> <span class="nav-text">2. 图片间隙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%8F%8C%E5%80%8D%E6%B5%AE%E5%8A%A8"><span class="nav-number">3.</span> <span class="nav-text">3.双倍浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%BB%98%E8%AE%A4%E9%AB%98%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">4.默认高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E5%AF%B9%E9%BD%90%E4%B8%8D%E4%B8%80%E8%87%B4"><span class="nav-number">5.</span> <span class="nav-text">5. 表单元素对齐不一致</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%8C%89%E9%92%AE%E5%85%83%E7%B4%A0%E9%BB%98%E8%AE%A4%E5%A4%A7%E5%B0%8F%E4%B8%8D%E4%B8%80%E8%87%B4"><span class="nav-number">6.</span> <span class="nav-text">6.按钮元素默认大小不一致</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E9%80%8F%E6%98%8E%E5%B1%9E%E6%80%A7"><span class="nav-number">7.</span> <span class="nav-text">7.透明属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E8%A1%A8%E5%8D%95%E8%BE%B9%E6%A1%86%E6%B8%85%E9%99%A4"><span class="nav-number">8.</span> <span class="nav-text">8.表单边框清除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E8%A1%A8%E5%8D%95value%E5%80%BC%E4%B8%8D%E5%B1%85%E4%B8%AD"><span class="nav-number">9.</span> <span class="nav-text">9. 表单value值不居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E5%A4%9A%E5%BC%A0%E5%9B%BE%E7%89%87%E9%97%B4%E9%9A%99"><span class="nav-number">10.</span> <span class="nav-text">10. 多张图片间隙</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

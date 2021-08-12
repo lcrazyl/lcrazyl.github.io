@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴） column：竖向配列（y轴）">
+  <meta name="description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴,默认值） column：竖向配列（y轴）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="弹性盒详解">
 <meta property="og:url" content="http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴） column：竖向配列（y轴）">
+<meta property="og:description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴,默认值） column：竖向配列（y轴）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png">
@@ -41,8 +41,10 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205138.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205206.png">
 <meta property="article:published_time" content="2021-08-11T12:35:34.474Z">
-<meta property="article:modified_time" content="2021-08-11T12:40:08.295Z">
+<meta property="article:modified_time" content="2021-08-11T13:08:30.123Z">
 <meta property="article:author" content="swiftslee">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -152,7 +154,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-commonweal">
@@ -238,7 +240,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-08-11 20:35:34 / 修改时间：20:40:08" itemprop="dateCreated datePublished" datetime="2021-08-11T20:35:34+08:00">2021-08-11</time>
+              <time title="创建时间：2021-08-11 20:35:34 / 修改时间：21:08:30" itemprop="dateCreated datePublished" datetime="2021-08-11T20:35:34+08:00">2021-08-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,7 +261,7 @@
               <span id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 309字</span>|
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 329字</span>|
 			<span title="post.min2read">阅读时长:
     1 分钟
 </span>|
@@ -292,48 +294,51 @@
 <h1 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h1><p>因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。</p>
 <h4 id="添加给父元素："><a href="#添加给父元素：" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4><ul>
 <li><code>flex-direction</code>:决定主轴方向（排列方式）<ul>
-<li><code>row</code>：横向排列（x轴）</li>
+<li><code>row</code>：横向排列（x轴,默认值）</li>
 <li><code>column</code>：竖向配列（y轴）<span id="more"></span>
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png" alt="主轴竖向"></li>
-<li><code>row-reverse</code>：横向倒序<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png" alt="主轴横向倒序"></li>
-<li><code>column-reverse</code>：竖向倒序<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202211.png" alt="主轴竖向倒序"></li>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png" alt="主轴竖向" style="zoom: 80%;"></li>
+<li><code>row-reverse</code>：横向倒序<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png" alt="主轴横向倒序" style="zoom:80%;"></li>
+<li><code>column-reverse</code>：竖向倒序<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202211.png" alt="主轴竖向倒序" style="zoom:80%;"></li>
 </ul>
 </li>
 <li><code>flex-wrap</code>:子元素是否换行<ul>
-<li><code>nowrap</code>:不换行</li>
-<li><code>wrap</code>:换行<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202526.png" alt="换行"></li>
-<li><code>wrap-reverse</code>:倒序换行<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202550.png" alt="倒序换行"></li>
+<li><code>nowrap</code>:不换行（默认值）</li>
+<li><code>wrap</code>:换行<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202526.png" alt="换行" style="zoom:80%;"></li>
+<li><code>wrap-reverse</code>:倒序换行<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202550.png" alt="倒序换行" style="zoom:80%;"></li>
 </ul>
 </li>
 <li><code>justify-content</code>:子元素在主轴对齐方式<ul>
-<li><code>flex-start</code>:开头对齐</li>
-<li><code>center</code>:居中对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202955.png" alt="主轴居中对齐"></li>
-<li><code>flex-end</code>:结尾对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203001.png" alt="主轴结尾对齐"></li>
-<li><code>space-between</code>:两端对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203031.png" alt="两端对齐"></li>
-<li><code>space-aronud</code>:平分对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203054.png" alt="平分对齐"></li>
-<li><code>space-evenly</code>:均分对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png" alt="均分对齐"></li>
+<li><code>flex-start</code>:开头对齐（默认值）</li>
+<li><code>center</code>:居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202955.png" alt="主轴居中对齐" style="zoom:80%;"></li>
+<li><code>flex-end</code>:结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203001.png" alt="主轴结尾对齐" style="zoom:80%;"></li>
+<li><code>space-between</code>:两端对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203031.png" alt="两端对齐" style="zoom:80%;"></li>
+<li><code>space-aronud</code>:平分对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203054.png" alt="平分对齐" style="zoom:80%;"></li>
+<li><code>space-evenly</code>:均分对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png" alt="均分对齐" style="zoom:80%;"></li>
 </ul>
 </li>
 <li><code>align-items</code>：子元素在交叉轴对齐方式<ul>
-<li><code>flex-start</code>:开头对齐</li>
-<li><code>center</code>:居中对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png" alt="侧轴居中对齐"></li>
-<li><code>flex-end</code>:结尾对齐<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png" alt="侧轴结尾对齐"></li>
+<li><code>flex-start</code>:开头对齐（默认值）</li>
+<li><code>center</code>:居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png" alt="侧轴居中对齐" style="zoom:80%;"></li>
+<li><code>flex-end</code>:结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png" alt="侧轴结尾对齐" style="zoom:80%;"></li>
 <li><code>baseline</code>:基线对齐</li>
-<li><code>stretch</code>:拉伸（默认值）<h4 id="添加给父元素：-1"><a href="#添加给父元素：-1" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4></li>
+<li><code>stretch</code>:拉伸（默认值）</li>
 </ul>
 </li>
+</ul>
+<h4 id="添加给子元素："><a href="#添加给子元素：" class="headerlink" title="添加给子元素："></a>添加给子元素：</h4><ul>
 <li><code>align-self</code>:单一子元素在交叉轴对齐方式<ul>
 <li><code>auto</code>：继承父元素<code>align-items</code>（默认值）</li>
 <li><code>stretch</code>:拉伸</li>
 <li><code>flex-start</code>：开头对齐</li>
-<li><code>center</code>：居中对齐</li>
-<li><code>flex-end</code>：结尾对齐</li>
+<li><code>center</code>：居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205138.png" alt="居中对齐" style="zoom:80%;"></li>
+<li><code>flex-end</code>：结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205206.png" alt="结尾对齐" style="zoom:80%;"></li>
 </ul>
 </li>
 <li><code>flex</code>:子元素如何分配空间(复合属性：<code>flex-grow</code>/<code>flex-shrink</code>/<code>flex-basis</code>)<ul>
 <li> <code>flex:1</code>:1 1 0%</li>
 </ul>
-</li>
+<hr>
+<h2 id="flex-1到底代表什么？"><a href="#flex-1到底代表什么？" class="headerlink" title="flex:1到底代表什么？"></a><code>flex:1</code>到底代表什么？</h2></li>
 </ul>
 
     </div>
@@ -404,7 +409,10 @@
     <a href="/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/" rel="prev" title="元素水平垂直居中方法总结">
       <i class="fa fa-chevron-left"></i> 元素水平垂直居中方法总结
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" rel="next" title="CSS兼容问题总结">
+      CSS兼容问题总结 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -464,7 +472,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%B9%E6%80%A7%E7%9B%92%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是弹性盒？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">相关属性：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%99%E7%88%B6%E5%85%83%E7%B4%A0%EF%BC%9A"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">添加给父元素：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%99%E7%88%B6%E5%85%83%E7%B4%A0%EF%BC%9A-1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">添加给父元素：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%B9%E6%80%A7%E7%9B%92%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是弹性盒？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">相关属性：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%99%E7%88%B6%E5%85%83%E7%B4%A0%EF%BC%9A"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">添加给父元素：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%99%E5%AD%90%E5%85%83%E7%B4%A0%EF%BC%9A"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">添加给子元素：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-1%E5%88%B0%E5%BA%95%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">flex:1到底代表什么？</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -480,7 +488,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -520,7 +528,7 @@
 <div class="widget-wrap">
     <div id="myCanvasContainer" class="widget tagcloud">
     <canvas width="220" height="250" id="resCanvas" style="width=100%">
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">1</span></li></ul>
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">1</span></li></ul>
     </canvas>
     </div>
 </div>
