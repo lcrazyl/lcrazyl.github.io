@@ -25,21 +25,106 @@
       </tags>
   </entry>
   <entry>
-    <title>img三像素</title>
-    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
+    <title>弹性盒详解</title>
+    <url>/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/</url>
     <content><![CDATA[<p>-</p>
-<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此若img标签有父元素嵌套（block），图片下方会多出三像素，可采用以下解决方案：</p>
-<ul>
-<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
-</li>
-<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
-</li>
-<li><p>img标签增加<code>display:block</code>；</p>
-<span id="more"></span>
-
-<p>三像素示意图：</p>
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
+<h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行布局。</p>
+<h1 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h1><p>因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。</p>
+<h4 id="添加给父元素："><a href="#添加给父元素：" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4><ul>
+<li><code>flex-direction</code>:决定主轴方向（排列方式）<ul>
+<li><code>row</code>：横向排列（x轴,默认值）</li>
+<li><code>column</code>：竖向配列（y轴）<span id="more"></span>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png" alt="主轴竖向" style="zoom: 80%;"></li>
+<li><code>row-reverse</code>：横向倒序<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png" alt="主轴横向倒序" style="zoom:80%;"></li>
+<li><code>column-reverse</code>：竖向倒序<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202211.png" alt="主轴竖向倒序" style="zoom:80%;"></li>
 </ul>
+</li>
+<li><code>flex-wrap</code>:子元素是否换行<ul>
+<li><code>nowrap</code>:不换行（默认值）</li>
+<li><code>wrap</code>:换行<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202526.png" alt="换行" style="zoom:80%;"></li>
+<li><code>wrap-reverse</code>:倒序换行<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202550.png" alt="倒序换行" style="zoom:80%;"></li>
+</ul>
+</li>
+<li><code>justify-content</code>:子元素在主轴对齐方式<ul>
+<li><code>flex-start</code>:开头对齐（默认值）</li>
+<li><code>center</code>:居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202955.png" alt="主轴居中对齐" style="zoom:80%;"></li>
+<li><code>flex-end</code>:结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203001.png" alt="主轴结尾对齐" style="zoom:80%;"></li>
+<li><code>space-between</code>:两端对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203031.png" alt="两端对齐" style="zoom:80%;"></li>
+<li><code>space-aronud</code>:平分对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203054.png" alt="平分对齐" style="zoom:80%;"></li>
+<li><code>space-evenly</code>:均分对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png" alt="均分对齐" style="zoom:80%;"></li>
+</ul>
+</li>
+<li><code>align-items</code>：子元素在交叉轴对齐方式<ul>
+<li><code>flex-start</code>:开头对齐（默认值）</li>
+<li><code>center</code>:居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png" alt="侧轴居中对齐" style="zoom:80%;"></li>
+<li><code>flex-end</code>:结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png" alt="侧轴结尾对齐" style="zoom:80%;"></li>
+<li><code>baseline</code>:基线对齐</li>
+<li><code>stretch</code>:拉伸（默认值）</li>
+</ul>
+</li>
+</ul>
+<h4 id="添加给子元素："><a href="#添加给子元素：" class="headerlink" title="添加给子元素："></a>添加给子元素：</h4><ul>
+<li><code>align-self</code>:单一子元素在交叉轴对齐方式<ul>
+<li><code>auto</code>：继承父元素<code>align-items</code>（默认值）</li>
+<li><code>stretch</code>:拉伸</li>
+<li><code>flex-start</code>：开头对齐</li>
+<li><code>center</code>：居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205138.png" alt="居中对齐" style="zoom:80%;"></li>
+<li><code>flex-end</code>：结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205206.png" alt="结尾对齐" style="zoom:80%;"></li>
+</ul>
+</li>
+<li><code>flex</code>:子元素如何分配空间(复合属性：<code>flex-grow</code>/<code>flex-shrink</code>/<code>flex-basis</code>)<ul>
+<li> <code>flex:1</code>:1 1 0%</li>
+</ul>
+<hr>
+<h2 id="flex-1到底代表什么？"><a href="#flex-1到底代表什么？" class="headerlink" title="flex:1到底代表什么？"></a><code>flex:1</code>到底代表什么？</h2></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>元素水平垂直居中方法总结</title>
+    <url>/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/</url>
+    <content><![CDATA[<p>-</p>
+<ol>
+<li>定位+<code>margin:auto</code>:<br><font background="red">11</font><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素位--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    &lt;!--任意定位--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span></li>
+<li>定位+<code>margin:-number</code></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    &lt;!--</span><br><span class="line">    margin-left:-50px;</span><br><span class="line">    margin-top:-50px;</span><br><span class="line">    --&gt;</span><br><span class="line">    margin: -50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>定位+<code>transform</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    &lt;!--position: relative/absolute--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    transform: translate(-50px,-50px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>4.弹性盒（父元素）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>5.弹性盒（子元素）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;  </span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">     align-self: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>6.<code>vertical-align: middle</code>:</p>
+<pre><code>&lt;!--父元素--&gt;
+.box&#123;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+&#125;
+&lt;!--当前元素--&gt;
+.connect&#123;
+    &lt;!--转行内块--&gt;
+    display: inline-block;
+    vertical-align: middle;
+&#125;
+&lt;!--当前元素兄弟元素且结构同行--&gt;
+.connect-bro&#123;
+    &lt;!--与父同高且转为行内块--&gt;
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+&#125;
+</code></pre>
 ]]></content>
       <categories>
         <category>CSS</category>
@@ -227,12 +312,28 @@
       </tags>
   </entry>
   <entry>
-    <title>即将</title>
-    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+Vo24RqBC60jV0M14hNOZEZjhi3U35dpTmbEqIHcYhMNw2RxDTxuJaqUhuuP/fF6CCrRgD74JsZlfkT8QH1jCVozQ4xGW15PXpmailiwUDNOrH+wrF+Leege7fhq72WDT0F9ZaUwwwYjVJZZxRl5pe4KYO6FZpE3DOj08ZwhyocrAN8UVwcGniZR0VSz0k7MvgGPccEe+nbyoP4TmEbAiu+LCkqKhr0PM9saVkceacbxA1QT1ASreVlQ0VqBooilNAP9/8sWP8s9QtJ6kh/c9VALUCKLvXyr2jXnqkIstRPjspAoBsTwztyI1j8sQ8ihs4RXb6totV5xCBeljInvjSNzyVV3k5SZD6F6zil0JGztVCM3MjslGA6sD9llbjrDtNMUQC+/LOyCi44add8J68hD5N4uBtNGQW/osVzTugCDN9M9ENcUd6xB6p4xHqVmq3olyDfMT2BECliFUrGjwXXPo4Hdd79SU7Vsy/7P+QkMxo+CIC5mqI/rFEEpwk6z/syMMewMIgEjrDm6RBP18U/h2uQA54ww3haN7SE/8Trlp321h42ldIilrUZZV8ArnRWBtYZuAO6T3i/tc4E3NaKGI1NdhcKxFJFs8dm4UJFV5KDgJ+Sh+HFjQT/EcnM7qM8p6oJ+KEXMCs+h3j7iA9vyEatk+jul56u8CyQwDCS1j6ydUrzHh7MdB2HHQ6qZqjhJMuRQlhFxpOETrpB0jQxiAHKEOz4IVVHi/RJ7d8vXnh1CIkZitwha3F9B4p1dNdeNgjRP+bGn8wjrMFysdy3ESqfBfxxFyR7XGC0RDcog0OyyLm/eh8SYOmcmvdaRzoNd2d9mz1dDwDqvzpsf9y07CTjXp53+lENpz1kBym6Vmp26aanBe0E0DhIu/KJviBZCk4o6H99slXSpljYFUuT2KCK0uHrL7svVRgL9BABiiUySeofuGCoQk5cx0eqwMJLIK/bqJT6gkF2H4hYAwF5tjqGmlWL6+WWvoHk6oJd5waeZcapIsP </div>]]></content>
+    <title>img三像素</title>
+    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
+    <content><![CDATA[<p>-</p>
+<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此若img标签有父元素嵌套（block），图片下方会多出三像素，可采用以下解决方案：</p>
+<ul>
+<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
+</li>
+<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
+</li>
+<li><p>img标签增加<code>display:block</code>；</p>
+<span id="more"></span>
+
+<p>三像素示意图：</p>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
+</ul>
+]]></content>
       <categories>
-        <category>随笔</category>
+        <category>CSS</category>
       </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
   </entry>
   <entry>
     <title>CSS布局之文档流浮动与定位</title>
@@ -319,126 +420,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安好</title>
-    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
-    <content><![CDATA[<p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
-
-</center>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>弹性盒详解</title>
-    <url>/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/</url>
-    <content><![CDATA[<p>-</p>
-<h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行布局。</p>
-<h1 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h1><p>因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。</p>
-<h4 id="添加给父元素："><a href="#添加给父元素：" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4><ul>
-<li><code>flex-direction</code>:决定主轴方向（排列方式）<ul>
-<li><code>row</code>：横向排列（x轴,默认值）</li>
-<li><code>column</code>：竖向配列（y轴）<span id="more"></span>
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png" alt="主轴竖向" style="zoom: 80%;"></li>
-<li><code>row-reverse</code>：横向倒序<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png" alt="主轴横向倒序" style="zoom:80%;"></li>
-<li><code>column-reverse</code>：竖向倒序<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202211.png" alt="主轴竖向倒序" style="zoom:80%;"></li>
-</ul>
-</li>
-<li><code>flex-wrap</code>:子元素是否换行<ul>
-<li><code>nowrap</code>:不换行（默认值）</li>
-<li><code>wrap</code>:换行<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202526.png" alt="换行" style="zoom:80%;"></li>
-<li><code>wrap-reverse</code>:倒序换行<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202550.png" alt="倒序换行" style="zoom:80%;"></li>
-</ul>
-</li>
-<li><code>justify-content</code>:子元素在主轴对齐方式<ul>
-<li><code>flex-start</code>:开头对齐（默认值）</li>
-<li><code>center</code>:居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202955.png" alt="主轴居中对齐" style="zoom:80%;"></li>
-<li><code>flex-end</code>:结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203001.png" alt="主轴结尾对齐" style="zoom:80%;"></li>
-<li><code>space-between</code>:两端对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203031.png" alt="两端对齐" style="zoom:80%;"></li>
-<li><code>space-aronud</code>:平分对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203054.png" alt="平分对齐" style="zoom:80%;"></li>
-<li><code>space-evenly</code>:均分对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203105.png" alt="均分对齐" style="zoom:80%;"></li>
-</ul>
-</li>
-<li><code>align-items</code>：子元素在交叉轴对齐方式<ul>
-<li><code>flex-start</code>:开头对齐（默认值）</li>
-<li><code>center</code>:居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203321.png" alt="侧轴居中对齐" style="zoom:80%;"></li>
-<li><code>flex-end</code>:结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811203346.png" alt="侧轴结尾对齐" style="zoom:80%;"></li>
-<li><code>baseline</code>:基线对齐</li>
-<li><code>stretch</code>:拉伸（默认值）</li>
-</ul>
-</li>
-</ul>
-<h4 id="添加给子元素："><a href="#添加给子元素：" class="headerlink" title="添加给子元素："></a>添加给子元素：</h4><ul>
-<li><code>align-self</code>:单一子元素在交叉轴对齐方式<ul>
-<li><code>auto</code>：继承父元素<code>align-items</code>（默认值）</li>
-<li><code>stretch</code>:拉伸</li>
-<li><code>flex-start</code>：开头对齐</li>
-<li><code>center</code>：居中对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205138.png" alt="居中对齐" style="zoom:80%;"></li>
-<li><code>flex-end</code>：结尾对齐<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205206.png" alt="结尾对齐" style="zoom:80%;"></li>
-</ul>
-</li>
-<li><code>flex</code>:子元素如何分配空间(复合属性：<code>flex-grow</code>/<code>flex-shrink</code>/<code>flex-basis</code>)<ul>
-<li> <code>flex:1</code>:1 1 0%</li>
-</ul>
-<hr>
-<h2 id="flex-1到底代表什么？"><a href="#flex-1到底代表什么？" class="headerlink" title="flex:1到底代表什么？"></a><code>flex:1</code>到底代表什么？</h2></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>元素水平垂直居中方法总结</title>
-    <url>/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/</url>
-    <content><![CDATA[<p>-</p>
-<ol>
-<li>定位+<code>margin:auto</code>:<br><font background="red">11</font><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素位--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    &lt;!--任意定位--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<span id="more"></span></li>
-<li>定位+<code>margin:-number</code></li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    &lt;!--</span><br><span class="line">    margin-left:-50px;</span><br><span class="line">    margin-top:-50px;</span><br><span class="line">    --&gt;</span><br><span class="line">    margin: -50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>定位+<code>transform</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    &lt;!--position: relative/absolute--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    transform: translate(-50px,-50px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>4.弹性盒（父元素）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>5.弹性盒（子元素）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">    justify-content: center;  </span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">     align-self: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>6.<code>vertical-align: middle</code>:</p>
-<pre><code>&lt;!--父元素--&gt;
-.box&#123;
-    width: 300px;
-    height: 300px;
-    text-align: center;
-&#125;
-&lt;!--当前元素--&gt;
-.connect&#123;
-    &lt;!--转行内块--&gt;
-    display: inline-block;
-    vertical-align: middle;
-&#125;
-&lt;!--当前元素兄弟元素且结构同行--&gt;
-.connect-bro&#123;
-    &lt;!--与父同高且转为行内块--&gt;
-    height: 300px;
-    display: inline-block;
-    vertical-align: middle;
-&#125;
-</code></pre>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>标签分类</title>
     <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<p>-</p>
@@ -500,5 +481,24 @@
       <tags>
         <tag>HTML</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>即将</title>
+    <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+X8mEyNAJRE2HkK2/2QhTsWsEfc5bD+jd8jus6jnN0xc8lEnXbJFV7h1zeGJ2xShOrq/DwCyk7rOjZGwSpx5gQXAMtj1NI7AmYKPCUa2msS2j2sZbYJLPTndsUDY7f81JcDNlWhZ3dkwJ2s/rDIYSd6HtMGOzcF9SmbtgZCvN3bx0AFyv2L49U3Ouvd5ikdActT3OMGZ2sZTDdqZaiehSVASa0D7w1kYnoKYoZ+g9aa7YtCTo5MMCdGDiI92LEX3CKLWu6Y+c0DrNuZwg98JnwrcLZWW7IlaoXa07CQREzTAOA80Dh9rRwAbLUxIc8paYDe91l+Y04Q9TsEr0MVCOQv9rLrOZMosEd0VtOkwvBWwTMZk8M8YsMvIDI0nLJahhKq7zqojSITTA1RDBzfG/BZeWPzzaKZOsxMqZ+WQW8k9sl14BiNDUmB2++Zwl0k5HYTbTeqKZSGo0cxZcUKDSvGVDtrp5KfzjfuqaPBki/9WnNAkbjiiLNP9jwETMWJKWw+HslWeUSLn6XQ9ynEUIhBFhdQljxmzxGhmOWZrM0/p/c0BA/Mtbr/IfhSgrppUXAaF1Cc883RAPaleBN37kMXcFejLjaYKnTHcQuw+GuTc9mi7DzHXePlkZHrcvWRPV+fY1f5EVQHxjrXVHrXK9eztupIHnDpXN5fZMf+amzmQpRWw5XrVDo/d34jfsFqwUImMsHR+VPYseJ9bn3mHQb06TzzhLNmMpoiKoH8cVPO9AR5ZStIcgcDkfG/6GalHwrwCz3DXJ1QWHcgO4KOKQjzh7vyWPXgxloa2aOCyB7l00G6lfwcoZ514U+E3apQ1grnr74eS3dDpi9X2qdBVDR8QnHazmUwpDQBlNktUvV7vUE5FUr6ouZ1t1S+fmMYFyru9M53qChIH6/xD1mOGee0/pN4Knjflz675/EaQViKfAvIVrLoBSnSs2JlMVAYQC3TFyzWv5NqIum5uebhVos8WuVDZPbXMImFwUmwqJE/2poZMrWYZzS </div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>安好</title>
+    <url>/2021/07/12/%E5%AE%89%E5%A5%BD/</url>
+    <content><![CDATA[<p>-</p>
+<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
+
+</center>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
   </entry>
 </search>
