@@ -28,7 +28,7 @@
     <title>弹性盒详解</title>
     <url>/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/</url>
     <content><![CDATA[<p>-</p>
-<h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行布局。</p>
+<h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行排列。</p>
 <h1 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h1><p>因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。</p>
 <h4 id="添加给父元素："><a href="#添加给父元素：" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4><ul>
 <li><code>flex-direction</code>:决定主轴方向（排列方式）<ul>
@@ -73,11 +73,19 @@
 </ul>
 </li>
 <li><code>flex</code>:子元素如何分配空间(复合属性：<code>flex-grow</code>/<code>flex-shrink</code>/<code>flex-basis</code>)<ul>
-<li> <code>flex:1</code>:1 1 0%</li>
+<li> <code>flex:1</code>==1 1 0%</li>
+<li><code>flex:auto</code>==1 1 auto</li>
+<li><code>flex:0 auto</code>==0 1 auto(默认值)</li>
 </ul>
 <hr>
-<h2 id="flex-1到底代表什么？"><a href="#flex-1到底代表什么？" class="headerlink" title="flex:1到底代表什么？"></a><code>flex:1</code>到底代表什么？</h2></li>
+<h2 id="flex-1到底代表什么？"><a href="#flex-1到底代表什么？" class="headerlink" title="flex:1到底代表什么？"></a><code>flex:1</code>到底代表什么？</h2>上文只是简单说明了<code>flex</code>代表三个值，那这三个值分别代表什么呢？</li>
 </ul>
+<ol>
+<li>第一个值为放大属性<code>flex-grow</code>:默认值为0，父元素有剩余空间且值大于0时进行放大，即把剩余空间按照所给定的值均分。</li>
+<li>第二个值为缩小属性<code>flex-shrink</code>:默认值为1，父元素空间不足且值大于1时进行缩小。</li>
+<li>第三个值为元素宽度<code>flex-basis</code></li>
+</ol>
+<p>既然已经了解三个值代表什么，那<code>flex: 1 1 0%</code>即<code>flex:1</code>是不是代表1 1 auto?<br>答案是否定的，<code>auto</code>代表元素本身大小，如果设置为<code>auto</code>则会根据自身进行缩放。<br>因此，<font color="red"><code>flex:1</code>代表<code>flex:1 1 </code>任意数字+任意单位</font></p>
 ]]></content>
       <categories>
         <category>CSS</category>
@@ -91,7 +99,7 @@
     <url>/2021/08/11/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/</url>
     <content><![CDATA[<p>-</p>
 <ol>
-<li>定位+<code>margin:auto</code>:<br><font background="red">11</font><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素位--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    &lt;!--任意定位--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>定位+<code>margin:auto</code>:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--父元素位--&gt;</span><br><span class="line">.box&#123;</span><br><span class="line">    &lt;!--任意定位--&gt;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">&lt;!--子元素--&gt;</span><br><span class="line">.connect&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <span id="more"></span></li>
 <li>定位+<code>margin:-number</code></li>
 </ol>
@@ -485,7 +493,7 @@
   <entry>
     <title>即将</title>
     <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+X8mEyNAJRE2HkK2/2QhTsWsEfc5bD+jd8jus6jnN0xc8lEnXbJFV7h1zeGJ2xShOrq/DwCyk7rOjZGwSpx5gQXAMtj1NI7AmYKPCUa2msS2j2sZbYJLPTndsUDY7f81JcDNlWhZ3dkwJ2s/rDIYSd6HtMGOzcF9SmbtgZCvN3bx0AFyv2L49U3Ouvd5ikdActT3OMGZ2sZTDdqZaiehSVASa0D7w1kYnoKYoZ+g9aa7YtCTo5MMCdGDiI92LEX3CKLWu6Y+c0DrNuZwg98JnwrcLZWW7IlaoXa07CQREzTAOA80Dh9rRwAbLUxIc8paYDe91l+Y04Q9TsEr0MVCOQv9rLrOZMosEd0VtOkwvBWwTMZk8M8YsMvIDI0nLJahhKq7zqojSITTA1RDBzfG/BZeWPzzaKZOsxMqZ+WQW8k9sl14BiNDUmB2++Zwl0k5HYTbTeqKZSGo0cxZcUKDSvGVDtrp5KfzjfuqaPBki/9WnNAkbjiiLNP9jwETMWJKWw+HslWeUSLn6XQ9ynEUIhBFhdQljxmzxGhmOWZrM0/p/c0BA/Mtbr/IfhSgrppUXAaF1Cc883RAPaleBN37kMXcFejLjaYKnTHcQuw+GuTc9mi7DzHXePlkZHrcvWRPV+fY1f5EVQHxjrXVHrXK9eztupIHnDpXN5fZMf+amzmQpRWw5XrVDo/d34jfsFqwUImMsHR+VPYseJ9bn3mHQb06TzzhLNmMpoiKoH8cVPO9AR5ZStIcgcDkfG/6GalHwrwCz3DXJ1QWHcgO4KOKQjzh7vyWPXgxloa2aOCyB7l00G6lfwcoZ514U+E3apQ1grnr74eS3dDpi9X2qdBVDR8QnHazmUwpDQBlNktUvV7vUE5FUr6ouZ1t1S+fmMYFyru9M53qChIH6/xD1mOGee0/pN4Knjflz675/EaQViKfAvIVrLoBSnSs2JlMVAYQC3TFyzWv5NqIum5uebhVos8WuVDZPbXMImFwUmwqJE/2poZMrWYZzS </div>]]></content>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1/RONdaPtyzOBrzGTPaAK+zAgKxnAgpBJ3NZOi9JnWpOQeh0FFmgT1aIboe/c7hvsUFa3DoZof3P774LVigpRcRLilLrfsAtucxtyYv8rhkQYacrQeEpV6dD40KIC0xXgxeNPk67qrYWkkAbyl3zTXw7LkcUPb5LRPFRokFVwL5yCOHF3C1P0ZAU9tZRafe/rsmwvDSA+LvVsL0SxjNT6fRWoCiBH/w9kFLmI8AjSQzXTuW0YYF3ta8Ocpa+l31+7OTuH8HUtEvgEHTJc65/9dhuETlYjkFDevKHkTpbHJhVm7q4LsnCzvtilXhNyUKI4gf0wmJdnMhc/Upssa+PB13BMF0cCer0Fv04pbJSeYQ6JdRtMRGSyU2X/t6MIiiZ59W5oKZLKh9gDHrQILAO081S3CaFjamoQH2/hDR8AX1kupKc09jwJA3jTnmftYfZDNcoVpKBvCVnbTva8kpMczVBJrhEIW5lJA1b78S3CVHY6UHTbiL8qs3WujM5MgGvQuh/1+pqc/PZPHH6EQiT1O/JZwkbbj0ipx3ERIk2uiw2+8hAYhnhOQAiD15n/Y41yeV2TzMiH17vhV61Q4i+DXbfsr5mMs3idG/zsinxMBmyoEAqYIQ0bQEoMseTm8buByKZeXqcHUjI3Sygi9wqdgAAm4iZZfAp35YqvNrY7u6C7E/8/INMi8mOn+9cBGo1eUm9HusgOntALEfRdYLbXRorhxU1Z1TnxYKeLfEHtZpJGNA2cuRYCz3w4Z4YFQH/Db+8wAytmT3MS02ieGkJplBakws4RL1GnyKOtLHHY8DTCcMwuUCuCM14nfi79yxZZ1HQuMk9DGcpWdwP0pWyH4d6Y2+CRPYi2qgogKYhymgbro5MdiCGRoTR9ti46g5N2Nm4Fw2xFSMkT+euUCnV/vkdLQqoAalxBbEeipZ6ES7ISQMw2/2EKOjqakzOdvpO/00yn1tk2/EcRjUMlRqXW8GmEmWbsdC5akgwKjpMH7Kv1j/Ltwrs3I6 </div>]]></content>
       <categories>
         <category>随笔</category>
       </categories>

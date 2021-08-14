@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴,默认值） column：竖向配列（y轴）">
+  <meta name="description" content="- 什么是弹性盒？弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行排列。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴,默认值） column：竖向配列（y轴）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="弹性盒详解">
 <meta property="og:url" content="http://www.swiftslee.me/2021/08/11/%E5%BC%B9%E6%80%A7%E7%9B%92/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="- 什么是弹性盒？之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行布局。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴,默认值） column：竖向配列（y轴）">
+<meta property="og:description" content="- 什么是弹性盒？弹性盒即弹性布局，将盒子转为弹性布局（display:flex）后进行排列。 相关属性：因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。 添加给父元素： flex-direction:决定主轴方向（排列方式） row：横向排列（x轴,默认值） column：竖向配列（y轴）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202126.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811202156.png">
@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205138.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/20210811205206.png">
 <meta property="article:published_time" content="2021-08-11T12:35:34.474Z">
-<meta property="article:modified_time" content="2021-08-11T13:08:30.123Z">
+<meta property="article:modified_time" content="2021-08-12T12:13:34.962Z">
 <meta property="article:author" content="swiftslee">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -238,10 +238,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-08-11 20:35:34 / 修改时间：21:08:30" itemprop="dateCreated datePublished" datetime="2021-08-11T20:35:34+08:00">2021-08-11</time>
+              <time title="创建时间：2021-08-11 20:35:34" itemprop="dateCreated datePublished" datetime="2021-08-11T20:35:34+08:00">2021-08-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-12 20:13:34" itemprop="dateModified" datetime="2021-08-12T20:13:34+08:00">2021-08-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -261,9 +267,9 @@
               <span id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 329字</span>|
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 521字</span>|
 			<span title="post.min2read">阅读时长:
-    1 分钟
+    2 分钟
 </span>|
   
   <span class="post-meta-item">
@@ -290,7 +296,7 @@
 
       
         <p>-</p>
-<h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>之前已经说过盒模型，在此就不多做赘述。弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行布局。</p>
+<h1 id="什么是弹性盒？"><a href="#什么是弹性盒？" class="headerlink" title="什么是弹性盒？"></a>什么是弹性盒？</h1><p>弹性盒即弹性布局，将盒子转为弹性布局（<code>display:flex</code>）后进行排列。</p>
 <h1 id="相关属性："><a href="#相关属性：" class="headerlink" title="相关属性："></a>相关属性：</h1><p>因为属性太多，个别属性很少用到，因此本文将只介绍常用属性值。</p>
 <h4 id="添加给父元素："><a href="#添加给父元素：" class="headerlink" title="添加给父元素："></a>添加给父元素：</h4><ul>
 <li><code>flex-direction</code>:决定主轴方向（排列方式）<ul>
@@ -335,11 +341,19 @@
 </ul>
 </li>
 <li><code>flex</code>:子元素如何分配空间(复合属性：<code>flex-grow</code>/<code>flex-shrink</code>/<code>flex-basis</code>)<ul>
-<li> <code>flex:1</code>:1 1 0%</li>
+<li> <code>flex:1</code>==1 1 0%</li>
+<li><code>flex:auto</code>==1 1 auto</li>
+<li><code>flex:0 auto</code>==0 1 auto(默认值)</li>
 </ul>
 <hr>
-<h2 id="flex-1到底代表什么？"><a href="#flex-1到底代表什么？" class="headerlink" title="flex:1到底代表什么？"></a><code>flex:1</code>到底代表什么？</h2></li>
+<h2 id="flex-1到底代表什么？"><a href="#flex-1到底代表什么？" class="headerlink" title="flex:1到底代表什么？"></a><code>flex:1</code>到底代表什么？</h2>上文只是简单说明了<code>flex</code>代表三个值，那这三个值分别代表什么呢？</li>
 </ul>
+<ol>
+<li>第一个值为放大属性<code>flex-grow</code>:默认值为0，父元素有剩余空间且值大于0时进行放大，即把剩余空间按照所给定的值均分。</li>
+<li>第二个值为缩小属性<code>flex-shrink</code>:默认值为1，父元素空间不足且值大于1时进行缩小。</li>
+<li>第三个值为元素宽度<code>flex-basis</code></li>
+</ol>
+<p>既然已经了解三个值代表什么，那<code>flex: 1 1 0%</code>即<code>flex:1</code>是不是代表1 1 auto?<br>答案是否定的，<code>auto</code>代表元素本身大小，如果设置为<code>auto</code>则会根据自身进行缩放。<br>因此，<font color="red"><code>flex:1</code>代表<code>flex:1 1 </code>任意数字+任意单位</font></p>
 
     </div>
 
