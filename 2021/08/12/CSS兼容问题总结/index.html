@@ -9,13 +9,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/lcrazyl/image/master/image/s-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/lcrazyl/image/master/image/s-16.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/images/manifest.json">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/lcrazyl/lcrazyl.github.io@master/css/main.css">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome@5.6.3/index.min.js">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="[object Object]">
-  <script src="/lib/pace/pace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pace@0.0.4/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -460,6 +461,16 @@
   </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.swiftslee.me/" title="http:&#x2F;&#x2F;www.swiftslee.me">Title</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
         <div class="back-to-top motion-element">
@@ -500,8 +511,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">swiftslee</span>
 </div>
-  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> 强力驱动
-  </div>
 
 
 
@@ -635,7 +644,7 @@ $(document).ready(function() {
 
 <script>
 if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/mermaid@8.11.4/dist/mermaid.core.min.js', () => {
     mermaid.initialize({
       theme    : 'forest',
       logLevel : 3,
