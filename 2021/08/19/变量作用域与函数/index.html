@@ -23,20 +23,20 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="- 媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。">
+  <meta name="description" content="- 作用域：众所周知，js作用域分为两类：全局作用域和局部（函数）作用域。  全局作用域：即在script定义的变量。 局部作用域：在函数内部定义的变量。  js规定了函数内部可以访问全局变量，而外部无法访问局部变量。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安好">
-<meta property="og:url" content="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/index.html">
+<meta property="og:title" content="作用域与函数">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="- 媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。">
+<meta property="og:description" content="- 作用域：众所周知，js作用域分为两类：全局作用域和局部（函数）作用域。  全局作用域：即在script定义的变量。 局部作用域：在函数内部定义的变量。  js规定了函数内部可以访问全局变量，而外部无法访问局部变量。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-12T02:00:52.972Z">
-<meta property="article:modified_time" content="2021-08-14T07:57:02.717Z">
+<meta property="article:published_time" content="2021-08-19T12:34:30.904Z">
+<meta property="article:modified_time" content="2021-08-19T12:49:03.918Z">
 <meta property="article:author" content="swiftslee">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="JavaScript 函数">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>安好 | IFTS</title>
+  <title>作用域与函数 | IFTS</title>
   
 
 
@@ -201,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
@@ -214,7 +214,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          安好
+          作用域与函数
         </h1>
 
         <div class="post-meta">
@@ -224,23 +224,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-07-12 10:00:52" itemprop="dateCreated datePublished" datetime="2021-07-12T10:00:52+08:00">2021-07-12</time>
+              <time title="创建时间：2021-08-19 20:34:30 / 修改时间：20:49:03" itemprop="dateCreated datePublished" datetime="2021-08-19T20:34:30+08:00">2021-08-19</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-14 15:57:02" itemprop="dateModified" datetime="2021-08-14T15:57:02+08:00">2021-08-14</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
                 </span>
             </span>
 
@@ -253,9 +247,9 @@
               <span id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 20字</span>|
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1k字</span>|
 			<span title="post.min2read">阅读时长:
-    1 分钟
+    4 分钟
 </span>|
   
   <span class="post-meta-item">
@@ -265,8 +259,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/07/12/%E5%AE%89%E5%A5%BD/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/07/12/%E5%AE%89%E5%A5%BD/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -282,8 +276,67 @@
 
       
         <p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
-</center>
+<h2 id="作用域："><a href="#作用域：" class="headerlink" title="作用域："></a>作用域：</h2><p>众所周知，js作用域分为两类：全局作用域和局部（函数）作用域。</p>
+<ul>
+<li>全局作用域：即在<code>script</code>定义的变量。</li>
+<li>局部作用域：在函数内部定义的变量。</li>
+</ul>
+<p>js规定了函数内部可以访问全局变量，而外部无法访问局部变量。</p>
+<span id="more"></span>
+<h2 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h2><ul>
+<li><code>var</code>：由<code>var</code>声明的变量属于全局变量，在函数内声明则是局部变量。并且<code>var</code>会有变量提升。</li>
+<li><code>let</code>，由<code>let</code>声明的变量属于块级变量，即大括号。所以大括号之外的区域不可访问，且不会被提升。</li>
+<li><code>const</code>：由<code>const</code>声明的变量也属于块级变量，且由它声明的变量会锁定，不可以进行重新赋值，但可以被更改。</li>
+</ul>
+<h2 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h2><blockquote>
+<p>函数实际上是对象，每个函数都是Function实例，而函数名就是指向函数对象的指针。</p>
+</blockquote>
+<h2 id="函数定义："><a href="#函数定义：" class="headerlink" title="函数定义："></a>函数定义：</h2><ul>
+<li>函数声明：(最后没有分号)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function sayHello()&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>函数表达式：（最后有分号）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let sayHello = function()&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>构造函数：（不推荐）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let sayHello = new Function()&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;</span><br><span class="line">//箭头函数</span><br><span class="line">let sayHello = ()=&gt;&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;</span><br><span class="line">//箭头函数则是上方的构造函数</span><br></pre></td></tr></table></figure>
+<p>构造函数声明不推荐是因为会被解释两次：第一次是当作常规代码执行，第二次是解释传给构造函数。</p>
+<h2 id="箭头函数缺点：-以下都不能使用"><a href="#箭头函数缺点：-以下都不能使用" class="headerlink" title="箭头函数缺点：(以下都不能使用)"></a>箭头函数缺点：(以下都不能使用)</h2><ul>
+<li>arguments</li>
+<li>super</li>
+<li>prototype</li>
+</ul>
+<h2 id="函数名："><a href="#函数名：" class="headerlink" title="函数名："></a>函数名：</h2><p>函数名就是指向函数的指针，因此一个函数可以有多个名称。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function sum(num1,num2)&#123;</span><br><span class="line">    return num1+num2;</span><br><span class="line">&#125;</span><br><span class="line">let sum1 = sum();</span><br></pre></td></tr></table></figure>
+<p>但下面的赋值代表着什么呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let sum2= sum;</span><br></pre></td></tr></table></figure>
+<p>是给将该函数赋值给了sum2吗？显然不是。上文已经提到，函数就是对象。<br><br><font color="red">使用不带括号的函数名会访问函数指针，指向相同的函数，且不会执行该函数。</font></p>
+<h2 id="函数参数："><a href="#函数参数：" class="headerlink" title="函数参数："></a>函数参数：</h2><p>JavaScript参数有所不同，它不关心参数的多少、类型，<font color="red"> 因为在函数内部，参数表现为一个数组</font>。因此有了<code>arguments</code><br><code>arguments</code>可以访问到传递给函数的所有参数，它是一个伪数组，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function a(num) &#123;</span><br><span class="line">  for (let i = 0; i &lt; arguments.length; i++) &#123;</span><br><span class="line">    console.log(arguments[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">a(1, 2, 3, 4);</span><br></pre></td></tr></table></figure>
+<h2 id="闭包："><a href="#闭包：" class="headerlink" title="闭包："></a>闭包：</h2><blockquote>
+<p>闭包就是间接访问变量或者隐藏变量。</p>
+</blockquote>
+<h3 id="闭包作用："><a href="#闭包作用：" class="headerlink" title="闭包作用："></a>闭包作用：</h3><ul>
+<li>访问函数局部变量</li>
+<li>让变量保存在内存中<h2 id="闭包实例："><a href="#闭包实例：" class="headerlink" title="闭包实例："></a>闭包实例：</h2></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">（</span><br><span class="line">var a = 10;</span><br><span class="line">function num()&#123;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">)</span><br><span class="line"> console.log(num()); //10</span><br></pre></td></tr></table></figure>
+<p>函数访问到了a变量，因此函数和能够访问到的变量就是闭包。外部是一个立即执行函数访问到了a变量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">  var local = 1;</span><br><span class="line">  foo1 = function () &#123;</span><br><span class="line">    local++;</span><br><span class="line">    return local;</span><br><span class="line">  &#125;;</span><br><span class="line">  return foo1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var func = foo();  //2 第一次执行foo1</span><br><span class="line">console.log(func());</span><br><span class="line">foo1();  //4 第二次执行foo2</span><br><span class="line">console.log(func());</span><br></pre></td></tr></table></figure>
+<p>上方代码也是闭包，也是经常看到的函数嵌套函数。由此可见，foo访问到了foo1的local变量，这就是闭包。并且，在foo执行完后，local变量没有消失，而是保存在了内存里。<br><br>因为foo1依赖于foo，并且foo1是全局变量。所以foo1始终存在，因此foo也始终存在。</p>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><h3 id="this在标准函数中："><a href="#this在标准函数中：" class="headerlink" title="this在标准函数中："></a>this在标准函数中：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Window.color=&quot;red&quot;;</span><br><span class="line">let o = &#123;</span><br><span class="line">    color:&#x27;blue&#x27;;  </span><br><span class="line">&#125;;</span><br><span class="line">function sayColor()&#123;</span><br><span class="line">    console.log(this.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor();//red</span><br><span class="line">o.sayColor = sayColor;</span><br><span class="line">o.sayColor();//blue</span><br></pre></td></tr></table></figure>
+<p>上面代码中函数<code>sayColor</code>运用了<code>this</code>。<font color="red"><code>this</code>到底引用哪个对象，要到函数被调用时才能确定。</font><br></p>
+<ul>
+<li><code>sayColor()</code>之所以是red，因为此时这个方法的调用是在全局上下文中，因此指向<code>Window</code>。</li>
+<li><code>o.sayColor()</code>之所以是blue，是因为把函数<code>sayColor</code>赋给了o，因此this指向o。<h3 id="this在箭头函数中："><a href="#this在箭头函数中：" class="headerlink" title="this在箭头函数中："></a>this在箭头函数中：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Window.color=&quot;red&quot;;</span><br><span class="line">let o = &#123;</span><br><span class="line">    color:&#x27;blue&#x27;;  </span><br><span class="line">&#125;;</span><br><span class="line">function sayColor=&gt;()&#123;</span><br><span class="line">    console.log(this.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor();//red</span><br><span class="line">o.sayColor = sayColor;</span><br><span class="line">o.sayColor();//red</span><br></pre></td></tr></table></figure>
+此时，两次都指向<code>Window</code>，因为<font color="red">箭头函数是在全局上下文定义的</font>。<br>箭头函数中，this的指向会保留定义函数的上下文。</li>
+</ul>
+
     </div>
 
     
@@ -328,7 +381,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/" title="安好">http://www.swiftslee.me/2021/07/12/安好/</a>
+    <a href="http://www.swiftslee.me/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/" title="作用域与函数">http://www.swiftslee.me/2021/08/19/变量作用域与函数/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -340,7 +393,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"><i class="fa fa-tag"></i>随笔</a>
+              <a href="/tags/JavaScript-%E5%87%BD%E6%95%B0/" rel="tag"><i class="fa fa-tag"></i>JavaScript 函数</a>
           </div>
 
         
@@ -348,10 +401,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/07/12/%E5%8D%B3%E5%B0%86/" rel="next" title="即将">
-      即将 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/08/12/CSS%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" rel="prev" title="CSS兼容问题总结">
+      <i class="fa fa-chevron-left"></i> CSS兼容问题总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/" rel="next" title="线性递归">
+      线性递归 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -412,6 +468,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">作用域：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">声明变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">函数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">函数定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%BC%BA%E7%82%B9%EF%BC%9A-%E4%BB%A5%E4%B8%8B%E9%83%BD%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8"><span class="nav-number">5.</span> <span class="nav-text">箭头函数缺点：(以下都不能使用)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%90%8D%EF%BC%9A"><span class="nav-number">6.</span> <span class="nav-text">函数名：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="nav-number">7.</span> <span class="nav-text">函数参数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%EF%BC%9A"><span class="nav-number">8.</span> <span class="nav-text">闭包：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="nav-number">8.1.</span> <span class="nav-text">闭包作用：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E5%AE%9E%E4%BE%8B%EF%BC%9A"><span class="nav-number">9.</span> <span class="nav-text">闭包实例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this"><span class="nav-number">10.</span> <span class="nav-text">this</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#this%E5%9C%A8%E6%A0%87%E5%87%86%E5%87%BD%E6%95%B0%E4%B8%AD%EF%BC%9A"><span class="nav-number">10.1.</span> <span class="nav-text">this在标准函数中：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this%E5%9C%A8%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%AD%EF%BC%9A"><span class="nav-number">10.2.</span> <span class="nav-text">this在箭头函数中：</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

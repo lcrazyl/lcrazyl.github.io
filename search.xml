@@ -25,90 +25,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS布局之文档流浮动与定位</title>
-    <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<hr>
-<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
-<li>普通流（文档流）：自上而下，自左向右显示。</li>
-<li>定位</li>
-<li>浮动<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-众所周知，块级元素在页面独占一行，即自上而下排列，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A81.png" alt="浮动1"><br>这就是所谓的标准文档流，因此想脱离文档流，让块级元素在一行显示就必须使用浮动。<blockquote>
-<p>浮动就是脱离文档流，漂浮在文档流之上。</p>
-</blockquote>
-<h2 id="浮动折叠："><a href="#浮动折叠：" class="headerlink" title="浮动折叠："></a>浮动折叠：</h2>由于浮动元素会在其他元素上方，因此会造成遮挡问题，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A82.png" alt="浮动2"></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.div1&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: gold;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">.div2&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>div1</code>设置左浮动后，<code>div2</code>移到上方。原因是<code>div1</code>脱离文档流，因此位置变为空，<code>div2</code>就会移到上方。</p>
-<h6 id="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"><a href="#由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？" class="headerlink" title="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"></a>由此可知，浮动会导致重叠，那下方<code>div2</code>浮动后会不会在<code>div1</code>的位置呢？</h6><p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A83.png" alt="浮动3"><br>答案是不会，<code>div3</code>会在<code>div2</code>的位置，而<code>div2</code>位置则不会变。</p>
-<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2不会浮动</code>。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。"></a><font color="red">浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。</font></h3><hr>
-<h2 id="CSS定位："><a href="#CSS定位：" class="headerlink" title="CSS定位："></a>CSS定位：</h2><p><code>position</code>属性：</p>
-<ul>
-<li> <code>relative</code>:相对定位，相对于自身位置进行定位，且不脱离文档流且占位。</li>
-<li> <code>absolute</code>:绝对定位，相对于最近有定位的父元素进行定位（若父元素没有定位，则根据html定位）,脱离文档流且不占位。</li>
-<li> <code>fixed</code>：固定定位，相对于可视窗口定位，脱离文档流且不占位。</li>
-<li> <code>stick</code>：粘性定位，当页面未滚出父元素，表现和<code>relative</code>相同，反之和<code>fixd</code>相同。</li>
-</ul>
-<h2 id="高度塌陷："><a href="#高度塌陷：" class="headerlink" title="高度塌陷："></a>高度塌陷：</h2><p>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</p>
-<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7.gif" alt="高度塌陷"></p>
-<h2 id="解决高度塌陷常用方法："><a href="#解决高度塌陷常用方法：" class="headerlink" title="解决高度塌陷常用方法："></a>解决高度塌陷常用方法：</h2><ul>
-<li><ol>
-<li>容器元素添加<code>overflow：hidden</code></li>
-</ol>
-</li>
-</ul>
-<p>缺点：IE6以下不兼容；不能和<code>position</code>属性共存，超出的尺寸会被隐藏。</p>
-<ul>
-<li><ol start="2">
-<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear:both;</span><br><span class="line">  /*防止空标签内有数据 */</span><br><span class="line">height:0;</span><br><span class="line">overflow:hidden;</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-<p> 缺点：需要添加多余的空标签并添加属性。</p>
-<ul>
-<li><ol start="3">
-<li>父元素添加浮动。</li>
-</ol>
-</li>
-</ul>
-<p> 缺点：产生新的浮动。</p>
-<ul>
-<li><ol start="4">
-<li>最佳方法：添加<code>::after</code>；<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.clearfn::after&#123;</span><br><span class="line">  content:&quot;&quot;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">  height: 0;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&lt;!-- visibility:hidden;为了去隐藏content中的内容  --&gt;</span><br><span class="line">  visibility: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">        &lt;!-- 兼容IE7添加zoom--&gt;</span><br><span class="line">.clearfn&#123;</span><br><span class="line">    zoom:1;</span><br><span class="line">        &#125;      </span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-<p>缺点：IE7以下不兼容；代码过多。</p>
-<h2 id="什么是BFC？"><a href="#什么是BFC？" class="headerlink" title="什么是BFC？"></a>什么是BFC？</h2><blockquote>
-<p> Block Formatting Contexts（BFC），块级元素格式化上下文。它是一个独立的渲染区域，只有块元素参与，它规定了内部块元素如何布局，并且与外界毫不相干。</p>
-</blockquote>
-<h3 id="触发条件是什么？"><a href="#触发条件是什么？" class="headerlink" title="触发条件是什么？"></a>触发条件是什么？</h3><ol>
-<li><code>float</code>的值为<code>left/right</code>;<br></li>
-<li><code>overflow</code>的值为<code>auto/hidden/scroll</code>;<br></li>
-<li><code>position</code>的值为<code>absolute/fixed</code>;<br></li>
-<li><code>display</code>的值为<code>table-cell/table-caption/inline-block</code>;<br></li>
-<li>当前元素转换为根元素<code>display:flow-root</code>;(不推荐)<br></li>
-</ol>
-<h3 id="触发方式是什么？"><a href="#触发方式是什么？" class="headerlink" title="触发方式是什么？"></a>触发方式是什么？</h3><ul>
-<li>若元素为父子关系，触发条件则添加给父元素。</li>
-<li>若元素为兄弟关系，触发条件添加给第二个元素。</li>
-</ul>
-<h3 id="BFC可以解决什么问题？"><a href="#BFC可以解决什么问题？" class="headerlink" title="BFC可以解决什么问题？"></a>BFC可以解决什么问题？</h3><ol>
-<li>高度塌陷；</li>
-<li>margin折叠；</li>
-<li>浮动脱离文档流；</li>
-<li>子元素传递给父元素的<code>margin-top</code>。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS3-过渡变形与动画</title>
     <url>/2021/08/04/CSS%E5%8A%A8%E7%94%BB/</url>
     <content><![CDATA[<hr>
@@ -287,21 +203,81 @@
       </tags>
   </entry>
   <entry>
-    <title>img三像素</title>
-    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
-    <content><![CDATA[<p>-</p>
-<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此若img标签有父元素嵌套（block），图片下方会多出三像素，可采用以下解决方案：</p>
-<ul>
-<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
-</li>
-<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
-</li>
-<li><p>img标签增加<code>display:block</code>；</p>
+    <title>CSS布局之文档流浮动与定位</title>
+    <url>/2021/07/22/CSS%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<hr>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
+<li>普通流（文档流）：自上而下，自左向右显示。</li>
+<li>定位</li>
+<li>浮动<h2 id="CSS浮动介绍："><a href="#CSS浮动介绍：" class="headerlink" title="CSS浮动介绍："></a>CSS浮动介绍：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">float:left;左浮动</span><br><span class="line">float:right;右浮动</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-
-<p>三像素示意图：</p>
-<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
+众所周知，块级元素在页面独占一行，即自上而下排列，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A81.png" alt="浮动1"><br>这就是所谓的标准文档流，因此想脱离文档流，让块级元素在一行显示就必须使用浮动。<blockquote>
+<p>浮动就是脱离文档流，漂浮在文档流之上。</p>
+</blockquote>
+<h2 id="浮动折叠："><a href="#浮动折叠：" class="headerlink" title="浮动折叠："></a>浮动折叠：</h2>由于浮动元素会在其他元素上方，因此会造成遮挡问题，如下图：<br><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A82.png" alt="浮动2"></li>
 </ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.div1&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: gold;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">.div2&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>div1</code>设置左浮动后，<code>div2</code>移到上方。原因是<code>div1</code>脱离文档流，因此位置变为空，<code>div2</code>就会移到上方。</p>
+<h6 id="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"><a href="#由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？" class="headerlink" title="由此可知，浮动会导致重叠，那下方div2浮动后会不会在div1的位置呢？"></a>由此可知，浮动会导致重叠，那下方<code>div2</code>浮动后会不会在<code>div1</code>的位置呢？</h6><p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E6%B5%AE%E5%8A%A83.png" alt="浮动3"><br>答案是不会，<code>div3</code>会在<code>div2</code>的位置，而<code>div2</code>位置则不会变。</p>
+<h3 id="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"><a href="#因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。" class="headerlink" title="因为div2浮动不会造成文字浮动，此时文字第div1和div2在同一层级，因此div2不会浮动。"></a>因为<code>div2</code>浮动不会造成文字浮动，此时文字第div1和<code>div2</code>在同一层级，因此<code>div2不会浮动</code>。</h3><h3 id="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。"><a href="#浮动不会覆盖同级元素，因此文字中和图片不会被覆盖-。" class="headerlink" title="浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。"></a><font color="red">浮动不会覆盖同级元素，因此文字中和图片不会被覆盖 。</font></h3><hr>
+<h2 id="CSS定位："><a href="#CSS定位：" class="headerlink" title="CSS定位："></a>CSS定位：</h2><p><code>position</code>属性：</p>
+<ul>
+<li> <code>relative</code>:相对定位，相对于自身位置进行定位，且不脱离文档流且占位。</li>
+<li> <code>absolute</code>:绝对定位，相对于最近有定位的父元素进行定位（若父元素没有定位，则根据html定位）,脱离文档流且不占位。</li>
+<li> <code>fixed</code>：固定定位，相对于可视窗口定位，脱离文档流且不占位。</li>
+<li> <code>stick</code>：粘性定位，当页面未滚出父元素，表现和<code>relative</code>相同，反之和<code>fixd</code>相同。</li>
+</ul>
+<h2 id="高度塌陷："><a href="#高度塌陷：" class="headerlink" title="高度塌陷："></a>高度塌陷：</h2><p>高度塌陷指容器内子元素添加浮动属性，而容器本身不浮动。容器相当于浮动元素不存在的现象。</p>
+<p><img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7.gif" alt="高度塌陷"></p>
+<h2 id="解决高度塌陷常用方法："><a href="#解决高度塌陷常用方法：" class="headerlink" title="解决高度塌陷常用方法："></a>解决高度塌陷常用方法：</h2><ul>
+<li><ol>
+<li>容器元素添加<code>overflow：hidden</code></li>
+</ol>
+</li>
+</ul>
+<p>缺点：IE6以下不兼容；不能和<code>position</code>属性共存，超出的尺寸会被隐藏。</p>
+<ul>
+<li><ol start="2">
+<li>在浮动元素下方添加一个空<code>div</code>,并声明<code>clear:both</code>。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear:both;</span><br><span class="line">  /*防止空标签内有数据 */</span><br><span class="line">height:0;</span><br><span class="line">overflow:hidden;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<p> 缺点：需要添加多余的空标签并添加属性。</p>
+<ul>
+<li><ol start="3">
+<li>父元素添加浮动。</li>
+</ol>
+</li>
+</ul>
+<p> 缺点：产生新的浮动。</p>
+<ul>
+<li><ol start="4">
+<li>最佳方法：添加<code>::after</code>；<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.clearfn::after&#123;</span><br><span class="line">  content:&quot;&quot;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">  height: 0;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&lt;!-- visibility:hidden;为了去隐藏content中的内容  --&gt;</span><br><span class="line">  visibility: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">        &lt;!-- 兼容IE7添加zoom--&gt;</span><br><span class="line">.clearfn&#123;</span><br><span class="line">    zoom:1;</span><br><span class="line">        &#125;      </span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<p>缺点：IE7以下不兼容；代码过多。</p>
+<h2 id="什么是BFC？"><a href="#什么是BFC？" class="headerlink" title="什么是BFC？"></a>什么是BFC？</h2><blockquote>
+<p> Block Formatting Contexts（BFC），块级元素格式化上下文。它是一个独立的渲染区域，只有块元素参与，它规定了内部块元素如何布局，并且与外界毫不相干。</p>
+</blockquote>
+<h3 id="触发条件是什么？"><a href="#触发条件是什么？" class="headerlink" title="触发条件是什么？"></a>触发条件是什么？</h3><ol>
+<li><code>float</code>的值为<code>left/right</code>;<br></li>
+<li><code>overflow</code>的值为<code>auto/hidden/scroll</code>;<br></li>
+<li><code>position</code>的值为<code>absolute/fixed</code>;<br></li>
+<li><code>display</code>的值为<code>table-cell/table-caption/inline-block</code>;<br></li>
+<li>当前元素转换为根元素<code>display:flow-root</code>;(不推荐)<br></li>
+</ol>
+<h3 id="触发方式是什么？"><a href="#触发方式是什么？" class="headerlink" title="触发方式是什么？"></a>触发方式是什么？</h3><ul>
+<li>若元素为父子关系，触发条件则添加给父元素。</li>
+<li>若元素为兄弟关系，触发条件添加给第二个元素。</li>
+</ul>
+<h3 id="BFC可以解决什么问题？"><a href="#BFC可以解决什么问题？" class="headerlink" title="BFC可以解决什么问题？"></a>BFC可以解决什么问题？</h3><ol>
+<li>高度塌陷；</li>
+<li>margin折叠；</li>
+<li>浮动脱离文档流；</li>
+<li>子元素传递给父元素的<code>margin-top</code>。</li>
+</ol>
 ]]></content>
       <categories>
         <category>CSS</category>
@@ -358,14 +334,110 @@
       </tags>
   </entry>
   <entry>
+    <title>img三像素</title>
+    <url>/2021/07/29/img%E4%B8%89%E5%83%8F%E7%B4%A0/</url>
+    <content><![CDATA[<p>-</p>
+<h1 id="怎样解决img标签在严格模式下渲染会有三像素空白问题？"><a href="#怎样解决img标签在严格模式下渲染会有三像素空白问题？" class="headerlink" title="怎样解决img标签在严格模式下渲染会有三像素空白问题？"></a>怎样解决<code>img</code>标签在严格模式下渲染会有三像素空白问题？</h1><p>由于基线对齐，因此若img标签有父元素嵌套（block），图片下方会多出三像素，可采用以下解决方案：</p>
+<ul>
+<li><p>img标签增加<code>vertical-align:top/middle/bottom</code>；</p>
+</li>
+<li><p>img标签的父标签增加<code>font-size:0</code>；</p>
+</li>
+<li><p>img标签增加<code>display:block</code>；</p>
+<span id="more"></span>
+
+<p>三像素示意图：</p>
+<img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/img%E5%83%8F%E7%B4%A0.png" style="zoom: 33%;"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>即将</title>
     <url>/2021/07/12/%E5%8D%B3%E5%B0%86/</url>
-    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX19U1UvVqfl5K3MnzkgCt8PQv1J5t3Gzkn00vvLG+3kzE6Z0Mb04ixv7YiU1IZ/KmD84xXvm0XHDzPBZm9HQjIqP3UlQlVwTG5nRE142QeiBLuCZ+BoeAy0ECZ3K9PIFdsgu+6v3BN9dkfV11tVTJ37v1Tn2+nTl9elJrTv/GVmG1KVMTXKXVIlueslpugerfcR8fdG/miy+m2UbUTBkniP77TE+IqLj/S2gNytkfThMNmLi9omD6ReULQzajeSm17lFxqxoElNsNW9rIV7Jzi/yOvVRX4C2Keoe+eopt2U8Xh4hwT/2EuS9dzF0M7pOGXzjaRNu6sBCJ+dA2yF5FsqQmw5V86wxJxz/g6VpxRfUHoAXX/TIQnIaD1fBMegqMvsoEVxJxKSiwzRvHzlmaJuID5qKtqMmppZoPigAw5jvNM19uQZhLcUB2juIoj6YM1k2Q2Xbj4M1c6aB6/qTSw4K4gKPzgKpkJdQpTkngGwyv2kBKV4AUv/EH1ZDpwFZKKNiDF2y2yvf0Iga4FuvjUJ7Z9wb60zES5pWAd4Wvvpavti2QOuTGswZ8PvjAa+jBi68UsAd5JLJEhUS5fMCbd+YVjpSp4e8ZO2rDXAJxePFY00rvdBUkX3dkftLfUwQT3jv9o3RH3q1X5mBjwC+pYQB9XnH0kBFcHrO57BYTlFyZT01yUyRGbTMlVpsu+zZIY6vjmBbMPwamqLQk273Op5TeLz9zXoojzhVWASdgySHXCYxOfeSbzOL+Pa5g7gPgn93ZLxs4HMCTF7Ha2bNeO5X1c4FbFiDgUbLHEcg4gr94VaT7vnufx/yaVWhdV/3WRRK5xoZlM09pF4LEzwhJjxlnKEZ338zuKsAGEfbX1O7Ihx+NDKDziU7Obj8V1qY9Q9009k6Uoup9DZXPdY44DElU7OepJ6WjggLlUS4RGHMzblJAuaNxyrJVSFoBU9uh9Tnh9phV3lAgExgYT45MxegDicPQsLlopc= </div>]]></content>
+    <content><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+RVcRkrpT80633GPi45FDJIhp5mrlxy3h7pGTv7gqH7XnlpNVF+iwzSZjaH7hE39lBWhW/89KOeXsUz3od6nh0b1fktGHjnIgXJtSUuDwZuOqhpo/OEYoqdYW+4mvvoQkB5shedQksJye86Irplg4WqC4gwKrMMFFsZRaf4ytSzFY//T/puh5F98Ulu88IrX/7MBx7U/l3NZjf7FOQYJHV1/XegeNzMLjaZydyXNpQiSN3K0RpanDRhfk7Wn6bqVR7Bxnu1wJ35Tn8bkZ5yfb2Y9USY3k2F5GNaXhaQvVIgBrNnZNJ9Z+Xk55na5V0iX1wQ/jZQbC9wGwyMhBr2ZGl0NReqhKB1/jvbyyx1nNvgjFWVf5V5iQl6MVgeuX9pvdGBlEgMzzZHohlQgjWcelkJGlKIwIj+l8a1W62r1W+dR1ZIGRzURtBvE1bCiIHGjeTRW+Bowc1LWZcaxpKTbNCUKU1fIl4IKNK97QRhr9J4hoyayA9JgpN8aKPXkuKWBj93P8Gu0ZJ79xrfsO6WGiDi3SK+trgZMHhs7rU1rthlmya4GL8DYfCp3/EO1GeArXUDjVKZNMxPv1Ptb57Nf4KV6Vt6+JnWhdOjuURCMUOchJHd6iM0E3/bLXzDWJhpagaRe1ehRMMOPOFPqF/Eskn3qiUJmcOkSjA5aY5ELq/umlRMfmUcFG2/eEaJ6EkOMq/E1gidMX/WmOhScMQEXyjiwsAp6e4a5BWYh+AT+A0gqoBxXOgYVhx34VR1oAeVrPs0uNEDpt9L9nrXxvpFR/nH4bZtQbzDlHflJ6X2fsX4d/Dr9m3GE4VJlbTIYx6IcYOsRTtfd46A5yjrCMv9KwafR+iXex0SC3X+hArJ+SpIeoQGVcGl0BdhMURBbBmxZRXf4dAvCkdw5rCkth7uTEKfUp9lQNz00asHsZ3gYJ/gN//EmegrbvUaekMr+TOHMAdWOiVGya3nda2OO4kTj3JSOBrGwNVYy0= </div>]]></content>
       <categories>
         <category>随笔</category>
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作用域与函数</title>
+    <url>/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>-</p>
+<h2 id="作用域："><a href="#作用域：" class="headerlink" title="作用域："></a>作用域：</h2><p>众所周知，js作用域分为两类：全局作用域和局部（函数）作用域。</p>
+<ul>
+<li>全局作用域：即在<code>script</code>定义的变量。</li>
+<li>局部作用域：在函数内部定义的变量。</li>
+</ul>
+<p>js规定了函数内部可以访问全局变量，而外部无法访问局部变量。</p>
+<span id="more"></span>
+<h2 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h2><ul>
+<li><code>var</code>：由<code>var</code>声明的变量属于全局变量，在函数内声明则是局部变量。并且<code>var</code>会有变量提升。</li>
+<li><code>let</code>，由<code>let</code>声明的变量属于块级变量，即大括号。所以大括号之外的区域不可访问，且不会被提升。</li>
+<li><code>const</code>：由<code>const</code>声明的变量也属于块级变量，且由它声明的变量会锁定，不可以进行重新赋值，但可以被更改。</li>
+</ul>
+<h2 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h2><blockquote>
+<p>函数实际上是对象，每个函数都是Function实例，而函数名就是指向函数对象的指针。</p>
+</blockquote>
+<h2 id="函数定义："><a href="#函数定义：" class="headerlink" title="函数定义："></a>函数定义：</h2><ul>
+<li>函数声明：(最后没有分号)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function sayHello()&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>函数表达式：（最后有分号）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let sayHello = function()&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>构造函数：（不推荐）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let sayHello = new Function()&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;</span><br><span class="line">//箭头函数</span><br><span class="line">let sayHello = ()=&gt;&#123;</span><br><span class="line">    let message = &quot;hello!&quot;</span><br><span class="line">    return message;</span><br><span class="line">&#125;</span><br><span class="line">//箭头函数则是上方的构造函数</span><br></pre></td></tr></table></figure>
+<p>构造函数声明不推荐是因为会被解释两次：第一次是当作常规代码执行，第二次是解释传给构造函数。</p>
+<h2 id="箭头函数缺点：-以下都不能使用"><a href="#箭头函数缺点：-以下都不能使用" class="headerlink" title="箭头函数缺点：(以下都不能使用)"></a>箭头函数缺点：(以下都不能使用)</h2><ul>
+<li>arguments</li>
+<li>super</li>
+<li>prototype</li>
+</ul>
+<h2 id="函数名："><a href="#函数名：" class="headerlink" title="函数名："></a>函数名：</h2><p>函数名就是指向函数的指针，因此一个函数可以有多个名称。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function sum(num1,num2)&#123;</span><br><span class="line">    return num1+num2;</span><br><span class="line">&#125;</span><br><span class="line">let sum1 = sum();</span><br></pre></td></tr></table></figure>
+<p>但下面的赋值代表着什么呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let sum2= sum;</span><br></pre></td></tr></table></figure>
+<p>是给将该函数赋值给了sum2吗？显然不是。上文已经提到，函数就是对象。<br><br><font color="red">使用不带括号的函数名会访问函数指针，指向相同的函数，且不会执行该函数。</font></p>
+<h2 id="函数参数："><a href="#函数参数：" class="headerlink" title="函数参数："></a>函数参数：</h2><p>JavaScript参数有所不同，它不关心参数的多少、类型，<font color="red"> 因为在函数内部，参数表现为一个数组</font>。因此有了<code>arguments</code><br><code>arguments</code>可以访问到传递给函数的所有参数，它是一个伪数组，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function a(num) &#123;</span><br><span class="line">  for (let i = 0; i &lt; arguments.length; i++) &#123;</span><br><span class="line">    console.log(arguments[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">a(1, 2, 3, 4);</span><br></pre></td></tr></table></figure>
+<h2 id="闭包："><a href="#闭包：" class="headerlink" title="闭包："></a>闭包：</h2><blockquote>
+<p>闭包就是间接访问变量或者隐藏变量。</p>
+</blockquote>
+<h3 id="闭包作用："><a href="#闭包作用：" class="headerlink" title="闭包作用："></a>闭包作用：</h3><ul>
+<li>访问函数局部变量</li>
+<li>让变量保存在内存中<h2 id="闭包实例："><a href="#闭包实例：" class="headerlink" title="闭包实例："></a>闭包实例：</h2></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">（</span><br><span class="line">var a = 10;</span><br><span class="line">function num()&#123;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">)</span><br><span class="line"> console.log(num()); //10</span><br></pre></td></tr></table></figure>
+<p>函数访问到了a变量，因此函数和能够访问到的变量就是闭包。外部是一个立即执行函数访问到了a变量。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">  var local = 1;</span><br><span class="line">  foo1 = function () &#123;</span><br><span class="line">    local++;</span><br><span class="line">    return local;</span><br><span class="line">  &#125;;</span><br><span class="line">  return foo1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var func = foo();  //2 第一次执行foo1</span><br><span class="line">console.log(func());</span><br><span class="line">foo1();  //4 第二次执行foo2</span><br><span class="line">console.log(func());</span><br></pre></td></tr></table></figure>
+<p>上方代码也是闭包，也是经常看到的函数嵌套函数。由此可见，foo访问到了foo1的local变量，这就是闭包。并且，在foo执行完后，local变量没有消失，而是保存在了内存里。<br><br>因为foo1依赖于foo，并且foo1是全局变量。所以foo1始终存在，因此foo也始终存在。</p>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><h3 id="this在标准函数中："><a href="#this在标准函数中：" class="headerlink" title="this在标准函数中："></a>this在标准函数中：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Window.color=&quot;red&quot;;</span><br><span class="line">let o = &#123;</span><br><span class="line">    color:&#x27;blue&#x27;;  </span><br><span class="line">&#125;;</span><br><span class="line">function sayColor()&#123;</span><br><span class="line">    console.log(this.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor();//red</span><br><span class="line">o.sayColor = sayColor;</span><br><span class="line">o.sayColor();//blue</span><br></pre></td></tr></table></figure>
+<p>上面代码中函数<code>sayColor</code>运用了<code>this</code>。<font color="red"><code>this</code>到底引用哪个对象，要到函数被调用时才能确定。</font><br></p>
+<ul>
+<li><code>sayColor()</code>之所以是red，因为此时这个方法的调用是在全局上下文中，因此指向<code>Window</code>。</li>
+<li><code>o.sayColor()</code>之所以是blue，是因为把函数<code>sayColor</code>赋给了o，因此this指向o。<h3 id="this在箭头函数中："><a href="#this在箭头函数中：" class="headerlink" title="this在箭头函数中："></a>this在箭头函数中：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Window.color=&quot;red&quot;;</span><br><span class="line">let o = &#123;</span><br><span class="line">    color:&#x27;blue&#x27;;  </span><br><span class="line">&#125;;</span><br><span class="line">function sayColor=&gt;()&#123;</span><br><span class="line">    console.log(this.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor();//red</span><br><span class="line">o.sayColor = sayColor;</span><br><span class="line">o.sayColor();//red</span><br></pre></td></tr></table></figure>
+此时，两次都指向<code>Window</code>，因为<font color="red">箭头函数是在全局上下文定义的</font>。<br>箭头函数中，this的指向会保留定义函数的上下文。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript 函数</tag>
       </tags>
   </entry>
   <entry>
@@ -379,6 +451,69 @@
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>标签分类</title>
+    <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<p>-</p>
+<h2 id="HTML常用标签分类"><a href="#HTML常用标签分类" class="headerlink" title="HTML常用标签分类"></a>HTML常用标签分类</h2><ul>
+<li><p>行内元素：不独立成行；不能设定宽高；只嵌套文本；添加<code>margin-top/bottom</code>与<code>padding-top/bottom</code>无效。</p>
+</li>
+<li><p>块级元素：独立成行；可以设定其宽高；可作为其他元素的父元素（<code>p</code>标签除外）。</p>
+</li>
+<li><p>行内块元素：不独立成行，可改变宽高。</p>
+<span id="more"></span></li>
+<li><p>可变元素：即可根据上下文决定是块级元素或是行内元素，即设置display属性。</p>
+</li>
+<li><p>空元素：没有内容的元素即为空元素，例如<code>br</code>、<code>hr</code>、<code>input</code>、<code>img</code>、<code>link</code>。</p>
+</li>
+<li><p>不可替换元素：HTML大多数元素是不可替换元素，就是直接表现出来的。</p>
+</li>
+<li><p>可替换元素：根据元素标签和属性，决定显示内容；替换元素一般都有内在尺寸，例如<code>img</code>、<code>input</code>。</p>
+</li>
+</ul>
+<blockquote>
+<p>HTML标签大致可分为行内元素和块级元素，其他分类都是细分或根据不同角度进行分类，因此我们只讨论常用的行内元素和常用的块级元素。</p>
+</blockquote>
+<h3 id="常用行内元素有哪些？"><a href="#常用行内元素有哪些？" class="headerlink" title="常用行内元素有哪些？"></a>常用行内元素有哪些？</h3><ul>
+<li><code>a</code> - 超链接</li>
+<li><code>i</code> - 斜体</li>
+<li><code>img</code> - 图片（行内块元素）</li>
+<li><code>input</code> - 输入框(行内块元素)</li>
+<li><code>label</code> - 表格标签</li>
+<li><code>select</code> - 项目选择</li>
+<li><code>span</code> - 定义文本区块</li>
+<li><code>textarea</code> - 多行文本输入框</li>
+</ul>
+<h3 id="常用块级元素-有哪些？"><a href="#常用块级元素-有哪些？" class="headerlink" title="常用块级元素 有哪些？"></a>常用块级元素 有哪些？</h3><ul>
+<li><code>div</code> - 常用块级</li>
+<li><code>dl</code> - 自定义列表</li>
+<li><code>fieldset</code> - form控制组</li>
+<li><code>form</code> - 交互表单</li>
+<li><code>h1</code>-<code>h6</code>-标题</li>
+<li><code>hr</code> - 水平分隔线</li>
+<li><code>menu</code> - 菜单列表</li>
+<li><code>ol</code> - 有序表单</li>
+<li><code>p</code> - 段落</li>
+<li><code>table</code> - 表格</li>
+<li><code>ul</code> - 无序列表</li>
+</ul>
+<hr>
+<h3 id="img真的是行内元素吗？"><a href="#img真的是行内元素吗？" class="headerlink" title="img真的是行内元素吗？"></a><code>img</code>真的是行内元素吗？</h3><p>​    既然是行内元素为什么可以设置宽高呢？<strong>其实<code>img</code>属于替换元素，其内有设置宽高属性。</strong></p>
+<p>​    <code>img</code>标签同时具有行内、行内块和块级元素特性。</p>
+<hr>
+<h3 id="行内元素如何转为块元素？"><a href="#行内元素如何转为块元素？" class="headerlink" title="行内元素如何转为块元素？"></a>行内元素如何转为块元素？</h3><ul>
+<li>添加<code>display</code>属性：<code>display:block</code>；</li>
+<li>添加定位：<code>position:absolute/fixed</code>；</li>
+<li>添加浮动:<code>float:left/right/center</code>；</li>
+</ul>
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
@@ -452,66 +587,41 @@
       </tags>
   </entry>
   <entry>
-    <title>标签分类</title>
-    <url>/2021/07/21/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/</url>
+    <title>线性递归</title>
+    <url>/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/</url>
     <content><![CDATA[<p>-</p>
-<h2 id="HTML常用标签分类"><a href="#HTML常用标签分类" class="headerlink" title="HTML常用标签分类"></a>HTML常用标签分类</h2><ul>
-<li><p>行内元素：不独立成行；不能设定宽高；只嵌套文本；添加<code>margin-top/bottom</code>与<code>padding-top/bottom</code>无效。</p>
-</li>
-<li><p>块级元素：独立成行；可以设定其宽高；可作为其他元素的父元素（<code>p</code>标签除外）。</p>
-</li>
-<li><p>行内块元素：不独立成行，可改变宽高。</p>
-<span id="more"></span></li>
-<li><p>可变元素：即可根据上下文决定是块级元素或是行内元素，即设置display属性。</p>
-</li>
-<li><p>空元素：没有内容的元素即为空元素，例如<code>br</code>、<code>hr</code>、<code>input</code>、<code>img</code>、<code>link</code>。</p>
-</li>
-<li><p>不可替换元素：HTML大多数元素是不可替换元素，就是直接表现出来的。</p>
-</li>
-<li><p>可替换元素：根据元素标签和属性，决定显示内容；替换元素一般都有内在尺寸，例如<code>img</code>、<code>input</code>。</p>
-</li>
-</ul>
-<blockquote>
-<p>HTML标签大致可分为行内元素和块级元素，其他分类都是细分或根据不同角度进行分类，因此我们只讨论常用的行内元素和常用的块级元素。</p>
+<h2 id="何为递归？"><a href="#何为递归？" class="headerlink" title="何为递归？"></a>何为递归？</h2><blockquote>
+<p>递归其实就是迭代的语法糖，曾看过这么一个解释：递归就像查字典，为了解释一个词往往需要使用更多的词。当开始查一个字的时候，发现不懂又去查另一个词，如此循环往复，直到有一个能够看明白的词，那么也代表着递归的结束。</p>
 </blockquote>
-<h3 id="常用行内元素有哪些？"><a href="#常用行内元素有哪些？" class="headerlink" title="常用行内元素有哪些？"></a>常用行内元素有哪些？</h3><ul>
-<li><code>a</code> - 超链接</li>
-<li><code>i</code> - 斜体</li>
-<li><code>img</code> - 图片（行内块元素）</li>
-<li><code>input</code> - 输入框(行内块元素)</li>
-<li><code>label</code> - 表格标签</li>
-<li><code>select</code> - 项目选择</li>
-<li><code>span</code> - 定义文本区块</li>
-<li><code>textarea</code> - 多行文本输入框</li>
-</ul>
-<h3 id="常用块级元素-有哪些？"><a href="#常用块级元素-有哪些？" class="headerlink" title="常用块级元素 有哪些？"></a>常用块级元素 有哪些？</h3><ul>
-<li><code>div</code> - 常用块级</li>
-<li><code>dl</code> - 自定义列表</li>
-<li><code>fieldset</code> - form控制组</li>
-<li><code>form</code> - 交互表单</li>
-<li><code>h1</code>-<code>h6</code>-标题</li>
-<li><code>hr</code> - 水平分隔线</li>
-<li><code>menu</code> - 菜单列表</li>
-<li><code>ol</code> - 有序表单</li>
-<li><code>p</code> - 段落</li>
-<li><code>table</code> - 表格</li>
-<li><code>ul</code> - 无序列表</li>
-</ul>
-<hr>
-<h3 id="img真的是行内元素吗？"><a href="#img真的是行内元素吗？" class="headerlink" title="img真的是行内元素吗？"></a><code>img</code>真的是行内元素吗？</h3><p>​    既然是行内元素为什么可以设置宽高呢？<strong>其实<code>img</code>属于替换元素，其内有设置宽高属性。</strong></p>
-<p>​    <code>img</code>标签同时具有行内、行内块和块级元素特性。</p>
-<hr>
-<h3 id="行内元素如何转为块元素？"><a href="#行内元素如何转为块元素？" class="headerlink" title="行内元素如何转为块元素？"></a>行内元素如何转为块元素？</h3><ul>
-<li>添加<code>display</code>属性：<code>display:block</code>；</li>
-<li>添加定位：<code>position:absolute/fixed</code>；</li>
-<li>添加浮动:<code>float:left/right/center</code>；</li>
-</ul>
+<p>递归有许多分类，如线性递归、二分递归、尾递归、互递归、嵌套递归，在此只讨论线性递归。</p>
+<h2 id="递归的优缺点？"><a href="#递归的优缺点？" class="headerlink" title="递归的优缺点？"></a>递归的优缺点？</h2><p>优点则是代码简洁，尤其遍历树；<br><br>缺点则是对于时间和空间的消耗,每一次调用都需要在内存栈分配空间保存参数等；其次可能会造成栈溢出；</p>
+<span id="more"></span>
+<h2 id="如何递归？"><a href="#如何递归？" class="headerlink" title="如何递归？"></a>如何递归？</h2><p>每次用递归算法建议遵循以下三要素。</p>
+<h3 id="递归三要素："><a href="#递归三要素：" class="headerlink" title="递归三要素："></a>递归三要素：</h3><h4 id="1-明确所要解决的问题"><a href="#1-明确所要解决的问题" class="headerlink" title="1. 明确所要解决的问题"></a>1. 明确所要解决的问题</h4><h4 id="2-找出中止条件"><a href="#2-找出中止条件" class="headerlink" title="2. 找出中止条件"></a>2. 找出中止条件</h4><h4 id="3-找出等价关系"><a href="#3-找出等价关系" class="headerlink" title="3. 找出等价关系"></a>3. 找出等价关系</h4><p>百闻不如一见，那来实践一下吧。</p>
+<h4 id="递归实现阶乘"><a href="#递归实现阶乘" class="headerlink" title="递归实现阶乘"></a>递归实现阶乘</h4><p>问题描述：输入一个数字，返回所有小于及等于该数的正整数的积<br><br>第一步，要明确解决的是什么问题。显然，我们想要实现一个阶乘算法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fac(num)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在我们已经完成了第一步，接下来是找出中止条件。前文用查字典比喻递归，如果你一直找不到一个能理解的词，那就会一直查下去。递归也是如此，如果找不出中止条件，就会一直调用，进入死循环。<br><br>因此，对于阶乘我们显然知道：当num=1时结果为1，即fac(1)=1，那我们继续编写。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fac(num)&#123;</span><br><span class="line">    if(num===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第二步也已经完成，只剩下最后一步，也是最难的一步。我们如何找出等价关系呢？就要缩小范围，把抽象变得具体一点，比如当fac(num)时，阶乘就是n*fac(num-1)。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fac(num)&#123;</span><br><span class="line">    if(num===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return n*fac(num-1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么阶乘的递归算法也就完成了，那他内部到底怎么计算的呢？请看下图：<br><img src="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210818202325.png" alt="递归"></p>
+<h4 id="递归实现棋盘问题"><a href="#递归实现棋盘问题" class="headerlink" title="递归实现棋盘问题"></a>递归实现棋盘问题</h4><p>问题描述：有一个棋盘 棋盘上有16个格子 第一个格子有一粒芝麻第二个格子有两粒芝麻第三个格子有四粒芝麻 第四个格子有八粒芝麻后续格子依次翻倍求总共有多少粒芝麻。<br><br>第一步，明确解决什么问题。我们要求十六个格子芝麻之和。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
+<p>第一步搞定，进入第二步，中止条件是什么呢？显然题目已经给出，第一个格子有一粒芝麻，因此Sesame(1)=1。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line">   if(num===1)&#123;</span><br><span class="line">       return 1;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
+<p>第二步也大功告成，第三步则是找等价条件，我们不难发现，肯定和2的倍数有关。是不是2*Sesame(num-1)呢？我们试一试：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line">   if(num===1)&#123;</span><br><span class="line">       return 1;</span><br><span class="line">   &#125;</span><br><span class="line">   return 2*Sesame(num-1);</span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
+
+<p>我们验证一下，当num=2时返回2，但要求的是总量，应该为3啊，为什么错了呢？因为我们现在求的是每个芝麻的数量，总量应该是2*Sesame(num-1)+1，现在没问题了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line">   if(num===1)&#123;</span><br><span class="line">       return 1;</span><br><span class="line">   &#125;</span><br><span class="line">   return 2*Sesame(num-1)+1;</span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>HTML</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>递归</tag>
       </tags>
   </entry>
 </search>

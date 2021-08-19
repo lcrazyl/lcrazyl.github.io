@@ -23,20 +23,22 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="- 媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。">
+  <meta name="description" content="- 何为递归？ 递归其实就是迭代的语法糖，曾看过这么一个解释：递归就像查字典，为了解释一个词往往需要使用更多的词。当开始查一个字的时候，发现不懂又去查另一个词，如此循环往复，直到有一个能够看明白的词，那么也代表着递归的结束。  递归有许多分类，如线性递归、二分递归、尾递归、互递归、嵌套递归，在此只讨论线性递归。 递归的优缺点？优点则是代码简洁，尤其遍历树；缺点则是对于时间和空间的消耗,每一次调用都">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安好">
-<meta property="og:url" content="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/index.html">
+<meta property="og:title" content="线性递归">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="- 媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。">
+<meta property="og:description" content="- 何为递归？ 递归其实就是迭代的语法糖，曾看过这么一个解释：递归就像查字典，为了解释一个词往往需要使用更多的词。当开始查一个字的时候，发现不懂又去查另一个词，如此循环往复，直到有一个能够看明白的词，那么也代表着递归的结束。  递归有许多分类，如线性递归、二分递归、尾递归、互递归、嵌套递归，在此只讨论线性递归。 递归的优缺点？优点则是代码简洁，尤其遍历树；缺点则是对于时间和空间的消耗,每一次调用都">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-12T02:00:52.972Z">
-<meta property="article:modified_time" content="2021-08-14T07:57:02.717Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210818202325.png">
+<meta property="article:published_time" content="2021-08-19T12:45:15.672Z">
+<meta property="article:modified_time" content="2021-08-19T12:49:40.456Z">
 <meta property="article:author" content="swiftslee">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="递归">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210818202325.png">
 
-<link rel="canonical" href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/">
 
 
 <script id="page-configurations">
@@ -49,7 +51,7 @@
   };
 </script>
 
-  <title>安好 | IFTS</title>
+  <title>线性递归 | IFTS</title>
   
 
 
@@ -201,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
@@ -214,7 +216,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          安好
+          线性递归
         </h1>
 
         <div class="post-meta">
@@ -224,23 +226,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-07-12 10:00:52" itemprop="dateCreated datePublished" datetime="2021-07-12T10:00:52+08:00">2021-07-12</time>
+              <time title="创建时间：2021-08-19 20:45:15 / 修改时间：20:49:40" itemprop="dateCreated datePublished" datetime="2021-08-19T20:45:15+08:00">2021-08-19</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-14 15:57:02" itemprop="dateModified" datetime="2021-08-14T15:57:02+08:00">2021-08-14</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
                 </span>
             </span>
 
@@ -253,9 +249,9 @@
               <span id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 20字</span>|
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 873字</span>|
 			<span title="post.min2read">阅读时长:
-    1 分钟
+    3 分钟
 </span>|
   
   <span class="post-meta-item">
@@ -265,8 +261,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/07/12/%E5%AE%89%E5%A5%BD/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/07/12/%E5%AE%89%E5%A5%BD/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -282,8 +278,33 @@
 
       
         <p>-</p>
-<center>媚眼含羞合，丹唇逐笑开。风卷葡萄带，日照石榴裙。
-</center>
+<h2 id="何为递归？"><a href="#何为递归？" class="headerlink" title="何为递归？"></a>何为递归？</h2><blockquote>
+<p>递归其实就是迭代的语法糖，曾看过这么一个解释：递归就像查字典，为了解释一个词往往需要使用更多的词。当开始查一个字的时候，发现不懂又去查另一个词，如此循环往复，直到有一个能够看明白的词，那么也代表着递归的结束。</p>
+</blockquote>
+<p>递归有许多分类，如线性递归、二分递归、尾递归、互递归、嵌套递归，在此只讨论线性递归。</p>
+<h2 id="递归的优缺点？"><a href="#递归的优缺点？" class="headerlink" title="递归的优缺点？"></a>递归的优缺点？</h2><p>优点则是代码简洁，尤其遍历树；<br><br>缺点则是对于时间和空间的消耗,每一次调用都需要在内存栈分配空间保存参数等；其次可能会造成栈溢出；</p>
+<span id="more"></span>
+<h2 id="如何递归？"><a href="#如何递归？" class="headerlink" title="如何递归？"></a>如何递归？</h2><p>每次用递归算法建议遵循以下三要素。</p>
+<h3 id="递归三要素："><a href="#递归三要素：" class="headerlink" title="递归三要素："></a>递归三要素：</h3><h4 id="1-明确所要解决的问题"><a href="#1-明确所要解决的问题" class="headerlink" title="1. 明确所要解决的问题"></a>1. 明确所要解决的问题</h4><h4 id="2-找出中止条件"><a href="#2-找出中止条件" class="headerlink" title="2. 找出中止条件"></a>2. 找出中止条件</h4><h4 id="3-找出等价关系"><a href="#3-找出等价关系" class="headerlink" title="3. 找出等价关系"></a>3. 找出等价关系</h4><p>百闻不如一见，那来实践一下吧。</p>
+<h4 id="递归实现阶乘"><a href="#递归实现阶乘" class="headerlink" title="递归实现阶乘"></a>递归实现阶乘</h4><p>问题描述：输入一个数字，返回所有小于及等于该数的正整数的积<br><br>第一步，要明确解决的是什么问题。显然，我们想要实现一个阶乘算法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function fac(num)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在我们已经完成了第一步，接下来是找出中止条件。前文用查字典比喻递归，如果你一直找不到一个能理解的词，那就会一直查下去。递归也是如此，如果找不出中止条件，就会一直调用，进入死循环。<br><br>因此，对于阶乘我们显然知道：当num=1时结果为1，即fac(1)=1，那我们继续编写。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function fac(num)&#123;</span><br><span class="line">    if(num===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第二步也已经完成，只剩下最后一步，也是最难的一步。我们如何找出等价关系呢？就要缩小范围，把抽象变得具体一点，比如当fac(num)时，阶乘就是n*fac(num-1)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function fac(num)&#123;</span><br><span class="line">    if(num===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return n*fac(num-1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么阶乘的递归算法也就完成了，那他内部到底怎么计算的呢？请看下图：<br><img src="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210818202325.png" alt="递归"></p>
+<h4 id="递归实现棋盘问题"><a href="#递归实现棋盘问题" class="headerlink" title="递归实现棋盘问题"></a>递归实现棋盘问题</h4><p>问题描述：有一个棋盘 棋盘上有16个格子 第一个格子有一粒芝麻第二个格子有两粒芝麻第三个格子有四粒芝麻 第四个格子有八粒芝麻后续格子依次翻倍求总共有多少粒芝麻。<br><br>第一步，明确解决什么问题。我们要求十六个格子芝麻之和。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
+<p>第一步搞定，进入第二步，中止条件是什么呢？显然题目已经给出，第一个格子有一粒芝麻，因此Sesame(1)=1。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line">   if(num===1)&#123;</span><br><span class="line">       return 1;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
+<p>第二步也大功告成，第三步则是找等价条件，我们不难发现，肯定和2的倍数有关。是不是2*Sesame(num-1)呢？我们试一试：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line">   if(num===1)&#123;</span><br><span class="line">       return 1;</span><br><span class="line">   &#125;</span><br><span class="line">   return 2*Sesame(num-1);</span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
+
+<p>我们验证一下，当num=2时返回2，但要求的是总量，应该为3啊，为什么错了呢？因为我们现在求的是每个芝麻的数量，总量应该是2*Sesame(num-1)+1，现在没问题了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function Sesame(num)&#123;</span><br><span class="line">   if(num===1)&#123;</span><br><span class="line">       return 1;</span><br><span class="line">   &#125;</span><br><span class="line">   return 2*Sesame(num-1)+1;</span><br><span class="line">&#125;</span><br><span class="line">Sesame(16);</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -328,7 +349,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.swiftslee.me/2021/07/12/%E5%AE%89%E5%A5%BD/" title="安好">http://www.swiftslee.me/2021/07/12/安好/</a>
+    <a href="http://www.swiftslee.me/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/" title="线性递归">http://www.swiftslee.me/2021/08/19/线性递归/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -340,7 +361,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"><i class="fa fa-tag"></i>随笔</a>
+              <a href="/tags/%E9%80%92%E5%BD%92/" rel="tag"><i class="fa fa-tag"></i>递归</a>
           </div>
 
         
@@ -348,11 +369,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/07/12/%E5%8D%B3%E5%B0%86/" rel="next" title="即将">
-      即将 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/08/19/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%87%BD%E6%95%B0/" rel="prev" title="作用域与函数">
+      <i class="fa fa-chevron-left"></i> 作用域与函数
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -412,6 +433,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%95%E4%B8%BA%E9%80%92%E5%BD%92%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">何为递归？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">递归的优缺点？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E9%80%92%E5%BD%92%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何递归？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E4%B8%89%E8%A6%81%E7%B4%A0%EF%BC%9A"><span class="nav-number">3.1.</span> <span class="nav-text">递归三要素：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%98%8E%E7%A1%AE%E6%89%80%E8%A6%81%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">3.1.1.</span> <span class="nav-text">1. 明确所要解决的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%89%BE%E5%87%BA%E4%B8%AD%E6%AD%A2%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.1.2.</span> <span class="nav-text">2. 找出中止条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%89%BE%E5%87%BA%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB"><span class="nav-number">3.1.3.</span> <span class="nav-text">3. 找出等价关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E9%98%B6%E4%B9%98"><span class="nav-number">3.1.4.</span> <span class="nav-text">递归实现阶乘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E6%A3%8B%E7%9B%98%E9%97%AE%E9%A2%98"><span class="nav-number">3.1.5.</span> <span class="nav-text">递归实现棋盘问题</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
