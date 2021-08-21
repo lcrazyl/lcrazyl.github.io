@@ -23,17 +23,20 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="分享生活，复盘总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="IFTS">
-<meta property="og:url" content="http://www.swiftslee.me/tags/%E9%80%92%E5%BD%92/index.html">
+  <meta name="description" content="- 什么是时间和空间复杂度？ 时间复杂度：代码执行时间的增长变化趋势。 空间复杂度：运行过程中临时占用存储空间大小的一个量度。有什么用？  对于同一个问题，往往有不同的解决方案，那么也代表使用了不同的算法，那如何衡量算法之间的优劣，就要从时间和空间考虑。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="时间复杂度">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/21/%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="分享生活，复盘总结">
+<meta property="og:description" content="- 什么是时间和空间复杂度？ 时间复杂度：代码执行时间的增长变化趋势。 空间复杂度：运行过程中临时占用存储空间大小的一个量度。有什么用？  对于同一个问题，往往有不同的解决方案，那么也代表使用了不同的算法，那如何衡量算法之间的优劣，就要从时间和空间考虑。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-21T03:30:09.568Z">
+<meta property="article:modified_time" content="2021-08-21T03:33:02.271Z">
 <meta property="article:author" content="swiftslee">
+<meta property="article:tag" content="时间复杂度">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.swiftslee.me/tags/%E9%80%92%E5%BD%92/">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/21/%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
 
 
 <script id="page-configurations">
@@ -41,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 递归 | IFTS</title>
+  <title>时间复杂度 | IFTS</title>
   
 
 
@@ -191,57 +194,246 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/21/%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
+      <meta itemprop="name" content="swiftslee">
+      <meta itemprop="description" content="分享生活，复盘总结">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IFTS">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          时间复杂度
+        </h1>
+
+        <div class="post-meta">
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-21 11:30:09 / 修改时间：11:33:02" itemprop="dateCreated datePublished" datetime="2021-08-21T11:30:09+08:00">2021-08-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+			<span class="post-meta-divider">|</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1k字</span>|
+			<span title="post.min2read">阅读时长:
+    3 分钟
+</span>|
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">递归
-          <small>标签</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/08/21/%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/21/%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <p>-</p>
+<h2 id="什么是时间和空间复杂度？"><a href="#什么是时间和空间复杂度？" class="headerlink" title="什么是时间和空间复杂度？"></a>什么是时间和空间复杂度？</h2><ul>
+<li>时间复杂度：代码执行时间的增长变化趋势。</li>
+<li>空间复杂度：运行过程中临时占用存储空间大小的一个量度。<h2 id="有什么用？"><a href="#有什么用？" class="headerlink" title="有什么用？"></a>有什么用？</h2></li>
+</ul>
+<p>对于同一个问题，往往有不同的解决方案，那么也代表使用了不同的算法，那如何衡量算法之间的优劣，就要从时间和空间考虑。</p>
+<span id="more"></span>
+
+<h2 id="时间复杂度："><a href="#时间复杂度：" class="headerlink" title="时间复杂度："></a>时间复杂度：</h2><p>这还不好说，我把程序运行一遍不就知道时间是多少了吗？为啥还要用晦涩又难懂的时间复杂度来描述呢？<br><br>不得不说这种方法可行，但如果程序在不同环境下执行，那变量可就不止执行时间那么简单了。可见要想客观的衡量程序执行时间，还得继续往下看。</p>
+<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote>
+<p>算法的时间复杂度，也就是算法的时间量度，记作：T(n)=O(f(n))。它表示随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的渐近时间复杂度，简称为时间复杂度。</p>
+</blockquote>
+<p><font color="red">时间复杂度越大，执行的效率越低</font></p>
+<h3 id="大O表示法："><a href="#大O表示法：" class="headerlink" title="大O表示法："></a>大O表示法：</h3><p>定义说的太官方，也难理解，那我们用这个方法试着理解一下。</p>
+<h4 id="常数阶："><a href="#常数阶：" class="headerlink" title="常数阶："></a>常数阶：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int sum = 0,n = 100;      /* 执行一次 */</span><br><span class="line">sum = (1 + n) * n / 2;    /* 执行一次 */</span><br><span class="line">printf(&quot;%d&quot;, sum);        /* 执行一次 */</span><br></pre></td></tr></table></figure>
+<p>上方代码的时间复杂度为O(1),为什么呢？<br><br>首先来看表达式：：T(n)=O(f(n))，其中f(n)表示代码执行次数之和，上方代码为3：f(3)。但n为输入数据的长度，因此无论n多大，执行次数是不变的，因此我们说时间复杂度为O(1)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let n = 10;</span><br><span class="line">console.log(10);</span><br><span class="line"></span><br><span class="line">let n = 100;</span><br><span class="line">console.log(n);</span><br></pre></td></tr></table></figure>
+<p>如果还不懂，那现在呢？无论n的值是多少，执行次数是不变的。</p>
+<h4 id="线性阶："><a href="#线性阶：" class="headerlink" title="线性阶："></a>线性阶：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(let i = 0;i&lt;=n;i++)&#123;  //执行n次</span><br><span class="line">    //O(1)程序代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上方代码，随着n的变化，程序运行时间也在相应变化，因此此时的时间复杂度为O(n)。</p>
+<h4 id="平方阶："><a href="#平方阶：" class="headerlink" title="平方阶："></a>平方阶：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(let i = 0;i&lt;n;i++)&#123;</span><br><span class="line">    for(let j = 0;j&lt;n;j++)&#123;</span><br><span class="line">        //O(1)程序代码</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上方代码就是循环嵌套，程序执行时间随着两个for的循环次数变化而变化，因此时间复杂度为O(n*n)，即循环次数乘循环体复杂度。</p>
+<h4 id="推导大O阶："><a href="#推导大O阶：" class="headerlink" title="推导大O阶："></a>推导大O阶：</h4><ol>
+<li>用常数1取代运行时间中的所有加法常数。</li>
+<li>在修改后的运行次数函数中，只保留最高阶项。</li>
+<li>如果最高阶项存在且不是1，则去除与这个项相乘的常数</li>
+</ol>
+<h4 id="常见时间复杂度表："><a href="#常见时间复杂度表：" class="headerlink" title="常见时间复杂度表："></a>常见时间复杂度表：</h4><table>
+<thead>
+<tr>
+<th>执行次数</th>
+<th>函数阶</th>
+<th>非正式术语</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12</td>
+<td>O(1)</td>
+<td>常数阶</td>
+</tr>
+<tr>
+<td>2n+3</td>
+<td>O(n)</td>
+<td>线性阶</td>
+</tr>
+<tr>
+<td>3n2+2n+1</td>
+<td>O(n<sup>2</sup>)</td>
+<td>平方阶</td>
+</tr>
+<tr>
+<td>5log<sub>2</sub>n+20</td>
+<td>O(logn)</td>
+<td>对数阶</td>
+</tr>
+<tr>
+<td>2n+3nlog<sub>2</sub>n+19</td>
+<td>O(nlogn)</td>
+<td>nlogn阶</td>
+</tr>
+<tr>
+<td>6n<sup>3</sup>+2n<sup>2</sup>+3n+4</td>
+<td>O(n3)</td>
+<td>立方阶</td>
+</tr>
+<tr>
+<td>2<sup>n</sup></td>
+<td>O(2n)</td>
+<td>指数阶</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="时间复杂度：-1"><a href="#时间复杂度：-1" class="headerlink" title="时间复杂度："></a>时间复杂度：</h2><h4 id="定义：-1"><a href="#定义：-1" class="headerlink" title="定义："></a>定义：</h4><blockquote>
+<p>算法的空间复杂度通过计算算法所需的存储空间实现，算法空间复杂度的计算公式记作：S(n)=O(f(n))，其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数。</p>
+</blockquote>
+<p>我们在写代码时，完全可以用空间来换取时间，比如说，要判断某某年是不是闰年，你可能会花一点心思写了一个算法，而且由于是一个算法，要通过计算得到是否是闰年的结果。还有另一个办法就是，事先建立一个有2050个元素的数组，然后把所有的年份按下标的数字对应，如果是闰年，此数组项的值就是1，如果不是值为0。这样，所谓的判断某一年是否是闰年，就变成了查找这个数组的某一项的值是多少的问题。此时，我们的运算是最小化.</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-19T20:45:15+08:00"
-              content="2021-08-19">
-          08-19
-        </time>
+ 
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+ 
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    请作者喝杯茶吧
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/wechet.png" alt="swiftslee 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/alipay.png" alt="swiftslee 支付宝">
+        <p>支付宝</p>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/" itemprop="url">
-            <span itemprop="name">线性递归</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>swiftslee
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.swiftslee.me/2021/08/21/%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="时间复杂度">http://www.swiftslee.me/2021/08/21/时间和空间复杂度/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" rel="tag"><i class="fa fa-tag"></i>时间复杂度</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/21/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/" rel="prev" title="基本类型和引用类型">
+      <i class="fa fa-chevron-left"></i> 基本类型和引用类型
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -288,6 +480,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是时间和空间复杂度？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">有什么用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">时间复杂度：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">3.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7O%E8%A1%A8%E7%A4%BA%E6%B3%95%EF%BC%9A"><span class="nav-number">3.2.</span> <span class="nav-text">大O表示法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E6%95%B0%E9%98%B6%EF%BC%9A"><span class="nav-number">3.2.1.</span> <span class="nav-text">常数阶：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E9%98%B6%EF%BC%9A"><span class="nav-number">3.2.2.</span> <span class="nav-text">线性阶：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E9%98%B6%EF%BC%9A"><span class="nav-number">3.2.3.</span> <span class="nav-text">平方阶：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A8%E5%AF%BC%E5%A4%A7O%E9%98%B6%EF%BC%9A"><span class="nav-number">3.2.4.</span> <span class="nav-text">推导大O阶：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%A1%A8%EF%BC%9A"><span class="nav-number">3.2.5.</span> <span class="nav-text">常见时间复杂度表：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%EF%BC%9A-1"><span class="nav-number">4.</span> <span class="nav-text">时间复杂度：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">定义：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

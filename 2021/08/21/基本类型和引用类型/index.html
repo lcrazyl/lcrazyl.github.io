@@ -23,17 +23,23 @@
     var CONFIG = {"hostname":"www.swiftslee.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="分享生活，复盘总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="IFTS">
-<meta property="og:url" content="http://www.swiftslee.me/tags/%E9%80%92%E5%BD%92/index.html">
+  <meta name="description" content="- 基本类型和引用类型是什么？ 基本类型包括： number string boolean undefined null   引用类型：除了基本类型之外的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基本类型和引用类型">
+<meta property="og:url" content="http://www.swiftslee.me/2021/08/21/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="IFTS">
-<meta property="og:description" content="分享生活，复盘总结">
+<meta property="og:description" content="- 基本类型和引用类型是什么？ 基本类型包括： number string boolean undefined null   引用类型：除了基本类型之外的。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210820171035.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210820171252.png">
+<meta property="article:published_time" content="2021-08-21T03:29:02.540Z">
+<meta property="article:modified_time" content="2021-08-21T03:34:50.889Z">
 <meta property="article:author" content="swiftslee">
+<meta property="article:tag" content="数据类型">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210820171035.png">
 
-<link rel="canonical" href="http://www.swiftslee.me/tags/%E9%80%92%E5%BD%92/">
+<link rel="canonical" href="http://www.swiftslee.me/2021/08/21/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">
 
 
 <script id="page-configurations">
@@ -41,12 +47,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 递归 | IFTS</title>
+  <title>基本类型和引用类型 | IFTS</title>
   
 
 
@@ -191,57 +197,237 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.swiftslee.me/2021/08/21/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/lcrazyl/image/master/image/avatar.jpg">
+      <meta itemprop="name" content="swiftslee">
+      <meta itemprop="description" content="分享生活，复盘总结">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IFTS">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基本类型和引用类型
+        </h1>
+
+        <div class="post-meta">
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-21 11:29:02 / 修改时间：11:34:50" itemprop="dateCreated datePublished" datetime="2021-08-21T11:29:02+08:00">2021-08-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+			<span class="post-meta-divider">|</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 749字</span>|
+			<span title="post.min2read">阅读时长:
+    3 分钟
+</span>|
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">递归
-          <small>标签</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/08/21/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/21/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <p>-</p>
+<h2 id="基本类型和引用类型是什么？"><a href="#基本类型和引用类型是什么？" class="headerlink" title="基本类型和引用类型是什么？"></a>基本类型和引用类型是什么？</h2><ul>
+<li>基本类型包括：<ul>
+<li>number</li>
+<li>string</li>
+<li>boolean</li>
+<li>undefined</li>
+<li>null</li>
+</ul>
+</li>
+<li>引用类型：除了基本类型之外的。<span id="more"></span>
+<h2 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h2><h4 id="存储位置："><a href="#存储位置：" class="headerlink" title="存储位置："></a>存储位置：</h4></li>
+<li>基本类型保存在栈中，且进行比较时，比较的时值</li>
+<li>引用类型同时保存在栈和堆中，其中栈保存地址，堆保存数据，且进行比较时，比较的是地址</li>
+</ul>
+<p>这在说啥呢？又是堆又是栈，请继续看。</p>
+<h4 id="什么是栈、堆？"><a href="#什么是栈、堆？" class="headerlink" title="什么是栈、堆？"></a>什么是栈、堆？</h4><ul>
+<li>栈：由系统自动分配释放，存储函数的参数值、局部变量等，访问速度块。</li>
+<li>堆：由开发人员分配释放，访问速度慢。<blockquote>
+<p>简单来说栈就像租房，可以领包入住，不需要考虑房间的布局、地板的颜色；而堆就像自己动手装修，要考虑房间布局、整体色调。</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let a = 10;</span><br><span class="line">let b = 10;</span><br><span class="line">console.log(a===b) //true or false?</span><br></pre></td></tr></table></figure>
+<p>答案肯定是<code>true</code>，因为基本类型是保存在栈中的，而且比较的是值，如下图：<br><img src="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210820171035.png" alt="基本类型"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let obj1 =&#123;&#125;;</span><br><span class="line">let obj2 = &#123;&#125;;</span><br><span class="line">console.log(a===b) //true or false?</span><br></pre></td></tr></table></figure>
+<p>答案是<code>false</code>,因为引用类型将地址保存在栈中，显然二者的地址是不同的，如下图：<br><img src="https://cdn.jsdelivr.net/gh/lcrazyl/image/image/20210820171252.png" alt="引用类型"></p>
+<h3 id="保存方式："><a href="#保存方式：" class="headerlink" title="保存方式："></a>保存方式：</h3><ul>
+<li>引用类型：当声明一个对象时，会将该对象的地址保存在栈内存；当给变量赋值时，会在堆内存开辟一个空间，并把值保存在堆内存，与此同时，栈内存里的地址指向堆内存里的值。</li>
+<li>基本类型：当声明变量时，会在栈内存开辟一个空间将变量值保存在栈内。</li>
+</ul>
+<hr>
+<h2 id="深浅拷贝："><a href="#深浅拷贝：" class="headerlink" title="深浅拷贝："></a>深浅拷贝：</h2><h4 id="浅拷贝："><a href="#浅拷贝：" class="headerlink" title="浅拷贝："></a>浅拷贝：</h4><p>当对某个数据进行拷贝时，生成的新数据会和原数据相关联，也就是修改原数据或新数据都会相互影响。<br><br><font color="red">浅拷贝只是复制值。</font></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 2, 3, 4];</span><br><span class="line">function shallowCopy(target) &#123;</span><br><span class="line">  let newArr = [];</span><br><span class="line">  for (item in target) &#123;</span><br><span class="line">    newArr[item] = target[item];</span><br><span class="line">  &#125;</span><br><span class="line">  return newArr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let newArr = shallowCopy(arr);</span><br><span class="line">console.log(&quot;原数据：&quot; + arr);//1,2,3,4</span><br><span class="line">console.log(&quot;新数据：&quot; + newArr);//1,2,3,4</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>那我们现在看如下实例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> let obj = &#123;</span><br><span class="line">   name: &quot;harry&quot;,</span><br><span class="line">   age: 20,</span><br><span class="line">   sleep: &#123;</span><br><span class="line">     after: &quot;one&quot;,</span><br><span class="line">     evening: &quot;two&quot;,</span><br><span class="line">   &#125;,</span><br><span class="line"> &#125;;</span><br><span class="line">function shallowCopy(target) &#123;</span><br><span class="line">   let newObj = &#123;&#125;;</span><br><span class="line">   for (let item in target) &#123;</span><br><span class="line">     newObj[item] = target[item];</span><br><span class="line">   &#125;</span><br><span class="line">   return newObj;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> console.log(obj);//after:&quot;11&quot;</span><br><span class="line"> let newObj = shallowCopy(obj);</span><br><span class="line"> obj.sleep.after = &quot;11&quot;;</span><br><span class="line"> console.log(newObj);//after:&quot;11&quot;</span><br></pre></td></tr></table></figure>
+<p>我们发现，通过改变obj里面的数据，newObj里面的数据也在发生变化，这显然不是我们想要的。</p>
+<h4 id="深拷贝："><a href="#深拷贝：" class="headerlink" title="深拷贝："></a>深拷贝：</h4><p>深拷贝是拷贝一个独立的对象，不仅会拷贝数据，还会拷贝地址。</p>
+<pre><code> let obj = &#123;
+        name: &quot;harry&quot;,
+        age: 20,
+        sleep: &#123;
+          after: &quot;one&quot;,
+          evening: &quot;two&quot;,
+        &#125;,
+      &#125;;
+    function deepCopy(target) &#123;
+          let newObj = &#123;&#125;;
+          for (item in target) &#123;
+            if (typeof target[item] === &quot;object&quot; &amp;&amp; target[item] != null) &#123;
+              newObj[item] = deepCopy(target[item]);
+            &#125; else &#123;
+              newObj[item] = target[item];
+            &#125;
+          &#125;
+          return newObj;
+        &#125;
+
+        console.log(obj);//after:&quot;11&quot;
+        let newObj = deepCopy(obj);
+        obj.sleep.after = &quot;11&quot;;
+        console.log(newObj);//after:&quot;one&quot;
+</code></pre>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-19T20:45:15+08:00"
-              content="2021-08-19">
-          08-19
-        </time>
+ 
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+ 
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    请作者喝杯茶吧
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/wechet.png" alt="swiftslee 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://raw.githubusercontent.com/lcrazyl/image/master/image/alipay.png" alt="swiftslee 支付宝">
+        <p>支付宝</p>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/" itemprop="url">
-            <span itemprop="name">线性递归</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>swiftslee
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.swiftslee.me/2021/08/21/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/" title="基本类型和引用类型">http://www.swiftslee.me/2021/08/21/基本类型和引用类型/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i>数据类型</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/19/%E7%BA%BF%E6%80%A7%E9%80%92%E5%BD%92/" rel="prev" title="线性递归">
+      <i class="fa fa-chevron-left"></i> 线性递归
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/21/%E6%97%B6%E9%97%B4%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" rel="next" title="时间复杂度">
+      时间复杂度 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -288,6 +474,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">基本类型和引用类型是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">区别：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE%EF%BC%9A"><span class="nav-number">2.0.1.</span> <span class="nav-text">存储位置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%88%E3%80%81%E5%A0%86%EF%BC%9F"><span class="nav-number">2.0.2.</span> <span class="nav-text">什么是栈、堆？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">保存方式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">深浅拷贝：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D%EF%BC%9A"><span class="nav-number">3.0.1.</span> <span class="nav-text">浅拷贝：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%9A"><span class="nav-number">3.0.2.</span> <span class="nav-text">深拷贝：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
